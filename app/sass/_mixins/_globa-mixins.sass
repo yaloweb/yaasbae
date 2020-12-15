@@ -1,0 +1,35 @@
+@mixin tr
+	transition: all .3s ease
+
+@mixin td
+	text-decoration: none !important
+
+@mixin ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+@mixin on
+	outline: none !important
+
+@mixin ruble
+	&:after
+		content: '\e914'
+		font-family: icon
+		font-size: 0.75em
+		margin-left: 3px
+
+@mixin ruble2
+	&:after
+		content: '\e918'
+		font-family: icon
+		font-size: 0.75em
+		margin-left: 3px
+
+@mixin scroll
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+		background-color: #eee
+	&::-webkit-scrollbar-thumb
+		background-color: #acacac
