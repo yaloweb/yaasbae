@@ -40,6 +40,9 @@ h1, .h1
 	display: flex
 	flex-direction: column
 
+main
+	flex-grow: 1
+
 b, strong
 	font-weight: bold
 
@@ -71,7 +74,8 @@ b, strong
 				color: #848484
 				&:after
 					background-color: #C4FFDB
-				&:hover
+				&:hover,
+				&.active
 					color: #fff
 		.acc-link
 			color: #fff
@@ -543,14 +547,14 @@ b, strong
 				height: 46px
 				span
 					&:after
-						content: '\e911'
+						content: '\e918'
 			&.owl-next
 				width: 60px
 				height: 60px
 				margin-left: 10px
 				span
 					&:after
-						content: '\e912'
+						content: '\e919'
 
 
 .main-banner
@@ -756,13 +760,13 @@ b, strong
 		height: 70px
 		line-height: 70px
 		padding: 0 69px
-		font-weight: 900
+		font-weight: 700
 	&.btn-xl
 		font-size: 17px
 		height: 83px
 		line-height: 83px
 		padding: 0 69px
-		font-weight: 900
+		font-weight: 700
 	span
 		display: inline-block
 		max-width: 100%
@@ -796,7 +800,13 @@ b, strong
 			&:before
 				border-color: #D6FFE6
 				background-color: #D6FFE6
-
+	&.btn-dark
+		color: #fff !important
+		&:before
+			background-color: #434242
+		&:hover
+			&:before
+				background-color: #000
 
 .check-all-rotate
 	position: absolute
@@ -871,11 +881,11 @@ b, strong
 	overflow: hidden
 	z-index: 2
 	&:after
-		content: '\e90a'
+		content: '\e911'
 		font-family: icon
 		+tr
 	&:before
-		content: '\e90b'
+		content: '\e912'
 		font-family: icon
 		color: $red
 		position: absolute
@@ -962,13 +972,13 @@ b, strong
 			span
 				transform: translateX(-1px)
 				&:after
-					content: '\e911'
+					content: '\e918'
 		&.owl-next
 			right: -30px
 			span
 				transform: translateX(2px)
 				&:after
-					content: '\e912'
+					content: '\e919'
 
 .s-adbanner
 	height: 248px
@@ -1358,6 +1368,9 @@ b, strong
 
 .form-group
 	margin-bottom: 18px
+	position: relative
+	.checkbox
+		margin-top: 12px
 
 .form-control
 	width: 100%
@@ -1369,6 +1382,7 @@ b, strong
 	+on
 	+tr
 	background-color: #fff
+	font-family: $font2
 	&::placeholder
 		color: #B8B8B8
 		+tr
@@ -1377,7 +1391,15 @@ b, strong
 			transform: translateY(-10px)
 			opacity: 0
 	&.is-invalid
-		border-color: #FFABAB
+		border-color: #FFABAB !important
+		color: #FF7346 !important
+
+textarea.form-control
+	resize: none
+	height: 69px
+	line-height: 1.1
+	padding-top: 10px
+	+scroll
 
 .form-label
 	color: #B8B8B8
@@ -1521,7 +1543,7 @@ b, strong
 	font-weight: 500
 	font-family: $font2
 	&:after
-		content: '\e910'
+		content: '\e917'
 		font-family: icon
 		font-size: 9px
 		position: absolute
@@ -1624,7 +1646,7 @@ b, strong
 			border: 1px solid #848484
 			+tr
 		&:after
-			content: '\e903'
+			content: '\e90a'
 			font-family: icon
 			position: absolute
 			top: 3px
@@ -1787,7 +1809,7 @@ b, strong
 	color: #848484
 	padding-right: 18px
 	&:after
-		content: '\e910'
+		content: '\e917'
 		font-size: 9px
 		font-family: icon
 		color: #848484
@@ -1975,7 +1997,7 @@ b, strong
 	line-height: 36px
 	color: #fff
 	&:after
-		content: '\e915'
+		content: '\e91c'
 		font-size: 11.25px
 		font-family: icon
 		display: inline-block
@@ -2014,14 +2036,14 @@ b, strong
 				height: 46px
 				span
 					&:after
-						content: '\e911'
+						content: '\e918'
 			&.owl-next
 				width: 60px
 				height: 60px
 				margin-left: 10px
 				span
 					&:after
-						content: '\e912'
+						content: '\e919'
 
 .product-images-gallery-item
 	height: 100%
@@ -2380,14 +2402,14 @@ b, strong
 				height: 46px
 				span
 					&:after
-						content: '\e911'
+						content: '\e918'
 			&.owl-next
 				width: 60px
 				height: 60px
 				margin-left: 10px
 				span
 					&:after
-						content: '\e912'
+						content: '\e919'
 
 .lookbook-product
 	margin-bottom: 80px
@@ -2510,6 +2532,9 @@ b, strong
 		height: 42px
 		border: 1px solid #EDEDED
 
+.lookbook-liked
+	margin-bottom: 60px
+
 .lookbook-prod-name
 	font-size: 18px
 	flex-grow: 1
@@ -2524,7 +2549,7 @@ b, strong
 		font-size: 18px
 		margin-right: 10px
 		&:after
-			content: '\e918'
+			content: '\e91f'
 	.old-price
 		font-size: 10px
 		&:before
@@ -3049,5 +3074,154 @@ b, strong
 		button
 			margin-top: 0
 			top: 90px
+
+.not-found-page
+	position: relative
+	flex-grow: 1
+	margin-top: 70px
+	padding-bottom: 150px
+
+.not-found-img
+	position: absolute
+	top: 92px
+	bottom: 0
+	left: 0
+	width: 100%
+	overflow: hidden
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: top center
+
+.not-found-content
+	position: relative
+	z-index: 1
+	text-align: center
+	.h2
+		font-size: 44px
+		margin-bottom: 95px
+		font-weight: 600
+	p
+		font-size: 24px
+		margin-bottom: 20px
+
+.not-found-composition
+	font-family: $font2
+	font-size: 300px
+	line-height: 1
+
+.contacts-item
+	margin-bottom: 40px
+
+.contacts-item-header
+	display: flex
+	align-items: center
+	margin-bottom: 25px
+
+.contacts-item-header-icon
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 53px
+	height: 53px
+	background-color: #C4FFDB
+	font-size: 19px
+	margin-right: 18px
+
+.contacts-item-header-name
+	font-size: 18px
+	text-transform: uppercase
+
+.contacts-item-row
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -15px
+
+.contacts-item-contact
+	margin-bottom: 30px
+	padding: 0 15px
+	width: 50%
+	flex-shrink: 0
+	color: #848484
+	span
+		display: block
+		font-size: 18px
+		font-weight: bold
+		color: #434242
+		margin-bottom: 6px
+		a
+			color: #434242
+			+td
+			+tr
+			&:hover
+				color: #000
+
+.contacts-form-block
+	padding: 40px 50px 50px
+	background-color: #C4FFDB
+
+.contacts-form
+	.h3
+		font-size: 28px
+		font-weight: 600
+		margin-bottom: 30px
+	.form-label
+		color: #434242
+	.form-control
+		color: #434242
+		background-color: transparent
+		border: 1px solid rgba(#434242, .2)
+		&.is-invalid
+			border-color: #FF7346
+			color: #FF7346
+	.form-danger
+		color: #FF7346
+		position: absolute
+		top: calc(100% + 2px)
+		left: 0
+		width: 100%
+
+.select2-container--default .select2-selection--single
+	border-radius: 0
+	border: 1px solid rgba(#434242, .2)
+	background-color: transparent
+	height: 48px
+	+on
+	font-family: $font2
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	color: #434242
+	line-height: 46px
+
+.select2-container .select2-selection--single .select2-selection__rendered
+	padding: 0 50px 0 18px
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	height: 46px
+	font-size: 20px
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 48px
+	b
+		display: none
+	&:after
+		content: '\e917'
+		font-family: icon
+		font-size: 14px
+		font-weight: bold
+		+tr
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow
+	&:after
+		transform: rotate(180deg)
+
+.select2-dropdown
+	border-radius: 0 !important
+	font-family: $font2
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
+	background-color: #434242
 
 @import "media" // Always at the end

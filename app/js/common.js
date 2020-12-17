@@ -461,6 +461,11 @@ $(function() {
     margin: 30,
     nav: true,
     dots: false
-  })
+  });
+
+  $('.select-style').select2({
+    minimumResultsForSearch: -1,
+    width: '100%'
+  });
 
 });
