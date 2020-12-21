@@ -153,6 +153,7 @@ b, strong
 	display: flex
 	align-items: center
 	justify-content: flex-end
+	position: relative
 
 .acc-link
 	display: flex
@@ -164,8 +165,96 @@ b, strong
 	+tr
 	&:hover
 		color: #848484
-	&:last-child
+	&:last-of-type
 		margin-right: 0
+
+.acc-menu
+	position: absolute
+	right: -40px
+	z-index: 5
+	top: calc(100% + 23px)
+	background-color: #fff
+	box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.07)
+	border-radius: 3px
+	padding: 20px 24px
+	font-size: 12px
+	width: 209px
+	visibility: hidden
+	opacity: 0
+	transform: translateY(15px)
+	transition: all .4s ease
+	&:after
+		content: ''
+		position: absolute
+		width: 14px
+		height: 14px
+		background-color: #fff
+		border-radius: 1px
+		top: -7px
+		left: calc(50% - 7px)
+		transform: rotate(45deg)
+	&.opened
+		transform: translateY(0)
+		opacity: 1
+		visibility: visible
+
+.acc-menu-header-name
+	line-height: 1.11
+	font-weight: 600
+
+.acc-menu-header
+	margin-bottom: 18px
+	display: flex
+	align-items: center
+
+.acc-menu-header-avatar
+	margin-right: 10px
+	img
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		object-fit: cover
+		flex-shrink: 0
+
+.acc-menu-link
+	display: flex
+	align-items: center
+	white-space: nowrap
+	color: #434242
+	height: 25px
+	+tr
+	+td
+	font-family: $font2
+	&:hover
+		color: #000
+		.acc-menu-title
+			transform: translateX(3px)
+
+.acc-menu-link-icon
+	position: relative
+	font-size: 12px
+	margin-right: 11px
+	display: flex
+	width: 12px
+	height: 12px
+	text-align: center
+	.qnt
+		position: absolute
+		width: 11px
+		height: 11px
+		border-radius: 50%
+		text-align: center
+		line-height: 11px
+		font-family: $font2
+		font-size: 8px
+		font-weight: 500
+		background-color: #C4FFDB
+		right: -5px
+		top: -5px
+
+.acc-menu-title
+	font-size: 10px
+	+tr
 
 .header-bottom-row
 	height: rem(67px)
@@ -215,6 +304,8 @@ b, strong
 					visibility: hidden
 					z-index: 5
 					transform: translateY(-10px)
+					box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05)
+					border-radius: 3px
 					li
 						margin-right: 0
 						margin-bottom: 7px
@@ -672,7 +763,7 @@ b, strong
 	position: relative
 	overflow: hidden
 	&:after
-		content: '\e900'
+		content: '\e907'
 		font-family: icon
 		position: absolute
 		bottom: 23px
@@ -1071,7 +1162,7 @@ b, strong
 		font-size: 40px
 		color: #fff
 	&:after
-		content: '\e900'
+		content: '\e907'
 		font-family: icon
 		position: absolute
 		bottom: 33px
@@ -1308,7 +1399,7 @@ b, strong
 	top: -12px
 	z-index: 1
 	&:after
-		content: '\e905'
+		content: '\e90c'
 		font-family: icon
 		font-size: 21px
 	&:before
@@ -3223,5 +3314,255 @@ textarea.form-control
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
 	background-color: #434242
+
+.map-wrapper
+	margin-top: 50px
+	margin-bottom: 118px
+
+.map-container
+	width: 100%
+	height: 372px
+	[class*=ground-pane]
+		filter: grayscale(1)
+
+.req-list
+	+ul
+	font-size: 16px
+	color: #000
+	line-height: 1.81
+	margin-bottom: 28px
+
+.download-doc-link
+	display: flex
+	align-items: flex-start
+	color: #434242
+	+td
+	+tr
+	&:hover
+		color: #000
+	.icon-file
+		font-size: 28px
+		margin-right: 14px
+		margin-top: 5px
+
+.doc-info-title
+	display: block
+	font-size: 16px
+	font-weight: 600
+
+.doc-size
+	color: #848484
+
+.soc-item
+	position: relative
+	+tr
+	height: 85px
+	display: flex
+	align-items: center
+	font-family: $font2
+	margin-bottom: 17px
+	&:hover
+		padding: 0 25px
+		background-color: #C4FFDB
+
+.soc-icon
+	margin-right: 17px
+	font-size: 38px
+	display: flex
+	align-items: center
+	justify-content: center
+	.icon-vk
+		color: #4D7198
+	.icon-youtube
+		color: #C4302B
+
+.soc-acc
+	font-weight: 500
+	font-size: 30px
+	flex-grow: 1
+
+.soc-arrow
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 38px
+	span
+		font-weight: 700
+
+.soc-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1
+
+.s-account
+	padding-bottom: 100px
+
+.acc-sidebar
+	border: 1px solid #C1C1C1
+	padding: 42px 0 28px
+	margin-top: 10px
+	.acc-menu-link
+		height: 48px
+		padding: 0 33px
+		font-size: 12px
+		text-transform: uppercase
+		font-weight: 500
+		&.active
+			background-color: #C4FFDB
+	.acc-menu-link-icon
+		font-size: 20px
+		margin-right: 15px
+		width: 20px
+		height: 20px
+		.qnt
+			width: 16px
+			height: 16px
+			line-height: 16px
+			font-size: 10px
+			font-weight: 500
+			top: -6px
+			right: -6px
+	.acc-menu-title
+		font-size: 12px
+
+.acc-sidebar-user
+	text-align: center
+	margin-bottom: 44px
+	img
+		width: 140px
+		height: 140px
+		border-radius: 50%
+		object-fit: cover
+		margin-bottom: 25px
+	.h6
+		font-size: 24px
+		font-weight: 600
+
+.acc-main
+	h1
+		font-size: 52px
+		font-weight: 600
+		text-transform: none
+		margin-bottom: 30px
+	.acc-tabs
+		margin-bottom: 50px
+
+.orders-row
+	display: flex
+	align-items: center
+	border-bottom: 1px solid rgba(#434242, .1)
+	.number
+		width: 20%
+	.date
+		width: 20%
+	.sum
+		width: 20%
+	.status
+		width: 23%
+	.more
+		width: 17%
+
+.orders-header-th
+	flex-shrink: 0
+	font-size: 14px
+	color: #828282
+	padding-bottom: 10px
+	padding: 0 15px 10px 0
+
+.orders-header-td
+	padding: 12px 20px 12px 0
+	flex-shrink: 0
+	font-size: 18px
+	&:last-child
+		padding-right: 0
+	&.number
+		font-weight: bold
+	&.more
+		text-align: right
+	.price
+		+ruble2
+
+.orders-body
+	.orders-tab:last-child
+		.orders-row
+			border-bottom: none
+
+.label
+	display: inline-block
+	height: 34px
+	line-height: 34px
+	border-radius: 3px
+	padding: 0 10px
+	font-size: 18px
+	background-color: #ECECEC
+	&.green
+		background-color: #E7FFF1
+	&.yellow
+		background-color: #FBF5C2
+	&.purple
+		background-color: #F7E6FF
+	&.red
+		background-color: #FFC7B5
+
+.more-btn
+	display: inline-flex
+	align-items: center
+	white-space: nowrap
+	font-size: 12px
+	font-weight: 500
+	font-family: $font2
+	color: #434242
+	+td
+	+tr
+	align-items: center
+	span
+		font-size: 14px
+		margin-right: 6px
+		+tr
+	&:hover
+		color: #000
+		span
+			transform: rotate(180deg)
+
+.order-back
+	margin-bottom: 34px
+
+.order-info-header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 18px
+	.h2
+		font-size: 24px
+
+.order-info-btns
+	display: flex
+	align-items: center
+
+.order-info-btn
+	margin-left: 30px
+	display: inline-flex
+	align-items: center
+	white-space: nowrap
+	+tr
+	+td
+	color: #434242 !important
+	text-transform: uppercase
+	font-family: $font2
+	font-weight: 500
+	&:hover
+		span
+			transform: rotate(-90deg)
+	&.red
+		color: #FF7346 !important
+	span
+		font-size: 16px
+		margin-right: 9px
+		+tr
+		&.icon-close-3
+			font-size: 12px
 
 @import "media" // Always at the end

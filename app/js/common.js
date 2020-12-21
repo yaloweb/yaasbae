@@ -9,6 +9,9 @@ $(function() {
       $('.catalog-sort-selected').removeClass('opened');
       $('.catalog-sort-dropdown').removeClass('opened');
     }
+    if ( !$(e.target).closest('.acc-links-nav').length ) {
+      $('.acc-menu').removeClass('opened');
+    }
 	});
 
 	$('.search-link').on('click', function(e) {
@@ -300,7 +303,8 @@ $(function() {
   	dots: false,
     onTranslate: catalogTabsNav,
     onInitialized: catalogTabsNav,
-    onResized: catalogTabsNav
+    onResized: catalogTabsNav,
+    mouseDrag: false
   });
 
   function catalogTabsNav() {
@@ -466,6 +470,25 @@ $(function() {
   $('.select-style').select2({
     minimumResultsForSearch: -1,
     width: '100%'
+  });
+
+  $('.open-acc-menu').on('click', function(e) {
+    e.preventDefault();
+    $('.acc-menu').toggleClass('opened')
+  });
+
+  $('.filter-link').on('click', function(e) {
+    e.preventDefault();
+    let filter = $(this).data('filter');
+    $('.filter-link').removeClass('active');
+    $(this).addClass('active');
+    if ( filter == 'all' ) {
+      $('.orders-tab').fadeIn(400)
+    }
+    else {
+      $('.orders-tab').hide();
+      $(`.orders-tab[data-filter=${filter}]`).fadeIn(400)
+    }
   });
 
 });
