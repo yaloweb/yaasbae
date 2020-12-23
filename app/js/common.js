@@ -183,6 +183,11 @@ $(function() {
   	showMaskOnHover: false
   });
 
+  $('.date-mask').inputmask({
+    mask: "99.99.9999",
+    showMaskOnHover: false
+  });
+
   $('.check-password').on('click', function() {
   	let ths = $(this),
   			inp = ths.parent().find('input');
@@ -487,5 +492,20 @@ $(function() {
       $(`.orders-tab[data-filter=${filter}]`).fadeIn(400)
     }
   });
+
+  $('.invite-friends').each(function() {
+    let ths = $(this);
+    ths.find('.copy-promocode').on('click', function(e) {
+      e.preventDefault();
+      let inp = ths.find('.promocode-input').eq(0);
+      inp.select();
+      document.execCommand('copy');
+      ths.find('.promocode-copied').addClass('active');
+      setTimeout(() => {
+        ths.find('.promocode-copied').removeClass('active')
+      }, 3000)
+    });
+  });
+  
 
 });
