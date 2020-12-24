@@ -51,12 +51,415 @@
 					transform: scale(.8)
 				.total-look-price
 					transform: scale(.7) translateY(0)
+	.products-slider
+		.owl-nav
+			button								
+				top: 148px
+
+@media (max-width: 1365.98px)
+	.container
+		max-width: 1160px
+	.check-all-rotate
+		right: -5px
+	.products-slider
+		.owl-nav
+			button								
+				top: 141px
+	.adbanner-img
+		.h2
+			font-size: 56px
+			margin-top: -20px
+	.adbanner-text
+		font-size: 24px
+		margin-top: 0
+	.adbanner-row
+		align-items: center
+	.adbanner-btn
+		margin-top: 0
+	.instagram-item
+		width: 283px
+
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	.container
+		padding: 0 20px
+	.row
+		margin-left: -10px
+		margin-right: -10px
+		[class*=col-]
+			padding-left: 10px
+			padding-right: 10px
+	.search-dropdown
+		width: 455px
+	.main-banner-content
+		left: 45px
+		bottom: 40px
+		.h1
+			font-size: 55px
+		.promo-stick
+			width: 115px
+			height: 115px
+			line-height: 115px
+			font-size: 16px
+			left: 170px
+			bottom: 55px
+	.main-banners
+		.owl-nav
+			bottom: 30px
+			right: 30px
+			button
+				&.owl-next
+					width: 50px
+					height: 50px
+				&.owl-prev
+					width: 36px
+					height: 36px
+				span
+					&:after
+						font-size: 13px
+	.left-banners-promo-text
+		font-size: 16px
+	.search-dropdown
+		padding-right: 45px
+	.search-dropdown-close
+		right: 47px
+	.promo-content
+		left: 25px
+		bottom: 15px
+		transform: translateY(0)
+		p
+			font-size: 18px
+			max-width: 200px
+		.h3
+			font-size: 27px
+			opacity: 1
+	.categories-item
+		.h3
+			font-size: 18px
+			left: 15px
+			bottom: 15px
+		&.big
+			.h3
+				left: 30px
+				bottom: 30px
+				font-size: 40px
+	.check-all-rotate
+		right: 0
+	.products-slider
+		padding-right: 40px
+		.owl-nav
+			display: none
+		.owl-stage-outer
+			overflow: visible
+	.s-total-look
+		padding-bottom: 115px
+	.product-stick
+		left: 20px
+		top: 20px
+	.product-liked
+		top: 20px
+	.total-look-item
+		.h2
+			bottom: 20px
+			left: 20px
+			font-size: 30px
+	.owl-nav
+		button
+			width: 46px
+			height: 46px
+			margin-top: -23px
+			span
+				&:after
+					font-size: 12px
+			&.owl-next
+				right: 10px
+			&.owl-prev
+				left: 10px
+	.section-title
+		.h2
+			font-size: 22px
+	.s-instagram
+		.section-title
+			.h2
+				a
+					font-size: 22px
+	.instagram-item
+		width: 203px
+	.instagram-hover
+		display: none
+	.footer-soc-icon
+		font-size: 20px
+		margin-right: 8px
+	.footer-soc-name
+		font-size: 18px
+	.footer-soc-arrow
+		font-size: 18px
+	.header-catalog
+		ul
+			& > li
+				&:last-child
+					ul
+						left: auto
+						right: -78px
+			li
+				&.has-child 
+					ul
+						padding-left: 20px
+						padding-right: 20px
+						li
+							margin-bottom: 0
+						a
+							display: block
+	.main-banners-row
+		margin-left: -10px
+		margin-right: -10px
+	.main-banners-left
+		padding-left: 10px
+		padding-right: 10px
+	.main-banners-right
+		padding-right: 10px
+		padding-left: 10px
+	.categories
+		grid-gap: 20px
+	.product-image
+		max-height: none
+		display: flex
+		flex-direction: column
+	.product-cart
+		transform: none
+		position: static
+	.lookbook-popup-block
+		max-height: 100%
+		overflow: hidden auto
+		.popup-content
+			max-height: none
+		.popup-content
+			padding-left: 20px
+			padding-right: 20px
+		.popup-close
+			height: 64px
+			width: 64px
+			top: 0
+			right: 0
+			&:before
+				display: none
+	.lookbook-info
+		.h2
+			font-size: 30px
+	.lookbook-prod-item
+		padding-left: 0
+		padding-right: 0
+	.lookbook-prod-name
+		font-size: 14px
+	.lookbook-prod-price
+		margin-right: 20px
+		.current-price
+			font-size: 14px
+	.lookbook-liked
+		margin-bottom: 20px
+	.lookbook-total
+		margin-top: 40px
+		.product-page-prices
+			margin-bottom: 0
+			.current-price
+				font-size: 22px
+			.old-price
+				font-size: 14px
+	.lookbook-total-right
+		.btn
+			padding-left: 30px
+			padding-right: 30px
+	.lookbook-total-left
+		margin-right: 10px
 
 // ≥992px
 +media-breakpoint-down(md)
+	.mob-no-scroll
+		overflow: hidden !important
+		touch-action: none !important
+	.open-header-catalog-btn
+		display: flex
+		align-items: center
+		color: #fff
+		+tr
+		+td
+		font-size: 13px
+		font-weight: 800
+		font-size: 13px
+		text-transform: uppercase
+		margin-right: auto
+		height: 57px
+		padding-right: 20px
+		&:before
+			content: '\e92f'
+			font-family: icon
+			font-weight: normal
+			font-size: 16px
+			margin-right: 8px
+	.header-catalog
+		position: fixed
+		top: 0
+		left: 0
+		width: 375px
+		max-width: 100%
+		height: 100%
+		z-index: 101
+		background-color: #fff
+		padding: 37px 24px 27px
+		margin: 0
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.11)
+		display: block
+		overflow-y: auto
+		overflow-x: hidden
+		transform: translateX(-150%)
+		transition: transform .4s ease
+		&.opened
+			transform: translateX(0)
+		> ul
+			flex-wrap: wrap
+			margin: 0 -7px
+			justify-content: flex-start
+			position: static
+			> li
+				width: 50%
+				flex-shrink: 0
+				padding: 0 7px
+				margin: 0 0 15px
+				&:after
+					content: ''
+					display: block
+					padding-bottom: 100%
+				> a
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: center
+					color: #fff !important
+					position: absolute
+					top: 0
+					left: 7px
+					width: calc(100% - 14px)
+					height: 100%
+					display: flex
+					flex-direction: column
+					justify-content: flex-end
+					padding: 16px 18px
+					font-size: 20px
+					font-weight: 900
+					line-height: 1.05
+				&.has-child
+					position: relative
+					ul
+						position: fixed
+						display: block
+						top: 0
+						left: 0
+						width: 375px
+						min-height: 100%
+						z-index: 10
+						background-color: #fff
+						opacity: 1
+						visibility: visible !important
+						transform: translate(-200%, 0) !important
+						box-shadow: none
+						max-width: none
+						min-width: 0
+						opacity: 1 !important
+						padding: 31px 24px 90px
+						overflow: hidden auto
+						max-height: 100vh
+						.header-catalog-close
+							top: -1px
+							right: 6px
+						&.opened
+							transform: translate(0, 0) !important
+
+	.header-catalog-title
+		display: block
+		font-size: 13px
+		font-weight: 800
+		text-transform: uppercase
+		margin-bottom: 34px
+		line-height: 1.05
+	.header-catalog-close
+		position: absolute
+		display: flex
+		align-items: center
+		justify-content: center
+		right: 30px
+		top: 30px
+		font-size: 18px
+		z-index: 0
+	.submenu-header
+		display: block
+		margin-bottom: 47px !important
+	.submenu-header-back
+		display: flex
+		align-items: center
+		color: #434242
+		font-size: 13px
+		font-weight: 800
+		text-transform: uppercase
+		margin-right: 40px
+		&:before
+			content: '\e920'
+			font-family: icon
+			font-size: 16px
+			margin-right: 19px
+	.main-banners-left
+		width: 31%
+	.main-banners-right
+		width: 69%
+	.main-banner-content
+		.h1
+			font-size: 36px
+		.promo-stick
+			width: 95px
+			height: 95px
+			line-height: 95px
+			left: 110px
+			bottom: 35px
+	.promo-slider
+		padding-right: 40px
+		.owl-stage-outer
+			overflow: visible
+		.owl-nav
+			display: none
+	.check-all-rotate
+		bottom: -76px
+	.adbanner-img
+		width: 40%
+		.h2
+			font-size: 45px
+	.adbanner-text
+		font-size: 17px
+	.s-adbanner
+		margin-bottom: 15px
+	.total-look-item
+		transform: scale(1) !important
+		opacity: 1 !important
+		.product-stick
+			transform: scale(1) !important
+		.product-liked
+			transform: scale(1) !important
+	.total-look-img
+		opacity: 1
+	.s-total-look
+		.section-title
+			margin-bottom: 55px
+	.total-look-slider
+		padding-right: 40px
+		.owl-stage-outer
+			visibility: visible
+		.owl-nav
+			display: none !important
+	.total-look-prices
+		display: none !important
+	.total-look-item
+		.h2
+			bottom: 80px
+	.check-look
+		display: block
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -75,6 +478,17 @@
 
 // ≤992px
 +media-breakpoint-up(lg)
+	.header-catalog>ul>li>a
+		background-image: none !important
 
 // ≤1200px
 +media-breakpoint-up(xl)
+	.lookbook-prod-item
+		&:hover
+			background-color: #D6FFE6
+			&:after
+				background-color: #D6FFE6
+			.lookbook-prod-add
+				border-color: #434242
+				color: #434242
+				background-color: transparent
