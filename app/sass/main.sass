@@ -110,6 +110,9 @@ b, strong
 		width: 160px
 		flex-shrink: 0
 
+.header-menu-btn
+	display: none
+
 .header-menu
 	width: 50%
 	flex-shrink: 0
@@ -563,9 +566,21 @@ b, strong
 		width: 100%
 		height: 100%
 		object-fit: cover
+	span
+		display: none
 
-.left-banners-images
+.left-banners-images-block
 	margin-bottom: 49px
+	position: relative
+
+.left-banners-images-stories-tape
+	display: none
+
+.left-banners-images-stories-current
+	display: none
+
+.left-banners-images-stories-close
+	display: none
 
 .left-banners-image
 	img
@@ -652,6 +667,8 @@ b, strong
 	width: 71.5%
 	flex-shrink: 0
 	padding: 0 15px
+	.left-banners-promo-slider
+		display: none
 
 .main-banners
 	.owl-nav
@@ -1368,6 +1385,7 @@ b, strong
 	color: #fff
 	background-color: #434242
 	padding: 50px 0
+	position: relative
 
 .footer-row
 	display: flex
@@ -4107,5 +4125,104 @@ textarea.form-control
 
 .lookbook-popup-block
 	width: 1300px
+
+.mob-menu-block
+	position: fixed
+	top: 0
+	left: 0
+	height: 100%
+	width: 375px
+	z-index: 100
+	background-color: #434242
+	color: #fff
+	padding: 21px 24px 41px
+	overflow: hidden auto
+	transition: transform .4s ease
+	transform: translateX(-150%)
+	display: none
+	&.opened
+		transform: translateX(0)
+
+.mob-menu-header
+	display: flex
+	align-items: center
+	margin-bottom: 67px
+
+.mob-menu-close
+	font-size: 14px
+	display: flex
+	margin-right: 28px
+	position: relative
+	&:after
+		content: ''
+		width: 40px
+		height: 40px
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		position: absolute
+
+.mob-menu-logo
+	display: flex
+	.logo
+		img
+			width: 107px
+
+.mob-menu-list
+	a
+		display: block
+		color: #fff !important
+		+td
+		font-size: 22px
+		margin-bottom: 50px
+		text-transform: uppercase
+
+.mob-menu-soc
+	.footer-soc-item
+		border-bottom: none
+	.footer-soc-icon
+		font-size: 23px
+	.footer-soc-name
+		font-size: 20px
+	.footer-soc-arrow
+		font-size: 27px
+
+.mob-menu-accordion
+	margin-top: 131px
+
+.mob-menu-accordion-item
+	border-bottom: 1px solid rgba(#fff, .1)
+	&:first-child
+		border-top: 1px solid rgba(#fff, .1)
+
+.mob-menu-accordion-title
+	padding: 22px 35px 20px 0
+	cursor: pointer
+	font-weight: 500
+	color: #fff
+	position: relative
+	&.opened
+		&:after
+			transform: rotate(180deg)
+	&:after
+		content: '\e917'
+		font-family: icon
+		position: absolute
+		font-size: 11px
+		right: 10px
+		top: 25px
+		+tr
+
+.mob-menu-accordion-body
+	display: none
+	padding-bottom: 20px
+
+.mob-menu-footer-links
+	a
+		display: block
+		color: #fff !important
+		font-size: 12px
+		+td
+		margin-bottom: 10px
 
 @import "media" // Always at the end
