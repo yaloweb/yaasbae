@@ -125,7 +125,9 @@ $(function() {
   });
 
   function currentStoriesThumb(i) {
-    $('.left-banners-images-stories-current').html($('.left-banners-thumb').eq(i).html())
+    $('.left-banners-images-stories-current')
+      .html($('.left-banners-thumb').eq(i).html())
+      .attr('href', $('.left-banners-image').eq(i).find('a').attr('href'));
   }
 
   function nextStoriesSlide() {
@@ -152,6 +154,7 @@ $(function() {
 		$('.left-banners-thumb').removeClass('active');
 		$(this).addClass('active').addClass('viewed');
 		leftBannersImages.trigger('to.owl.carousel', i);
+    currentStoriesThumb(i);
     if ( $(window).width() < 768 ) {
       storiesBlock.show();
       setTimeout(() => {
@@ -218,7 +221,7 @@ $(function() {
 		nav: true,
     responsive: {
       0: {
-        margin: 20
+        margin: 12
       },
       576: {
         items: 1
@@ -243,9 +246,13 @@ $(function() {
 		margin: 20,
     responsive: {
       0: {
-        margin: 20
+        margin: 12,
+        items: 2
       },
       576: {
+        items: 2
+      },
+      768: {
         items: 3
       },
       992: {
@@ -264,7 +271,6 @@ $(function() {
 	$('.total-look-slider').owlCarousel({
 		items: 2,
 		loop: false,
-		margin: true,
 		center: false,
 		nav: true,
 		dots: false,
@@ -272,8 +278,15 @@ $(function() {
 		touchDrag: true,
 		mouseDrag: false,
     responsive: {
+      0: {
+        items: 1,
+        center: true,
+        loop: true,
+      },
       576: {
         items: 2,
+        center: false,
+        loop: false,
       },
       992: {
         touchDrag: false,
@@ -749,6 +762,14 @@ $(function() {
 
   $('.mob-menu-close').on('click', function() {
     $('.mob-menu-block').removeClass('opened');
+  });
+
+  $('.footer-nav').each(function() {
+    let ths = $(this);
+    ths.find('.h5').on('click', function() {
+      $(this).toggleClass('opened');
+      ths.find('ul').slideToggle(400)
+    });
   });
 
 });

@@ -272,6 +272,8 @@
 			padding-right: 30px
 	.lookbook-total-left
 		margin-right: 10px
+	.categories-item:after
+		display: none !important
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -738,13 +740,453 @@
 		padding-bottom: 23px
 	.s-categories
 		padding-top: 23px
-
-
-
-
+	.categories
+		grid-gap: 10px
+	.adbanner-row
+		flex-wrap: wrap
+	.adbanner-img
+		width: 100%
+		padding-right: 0
+		margin-bottom: 30px
+	.s-total-look
+		.section-title
+			margin-bottom: 20px
+	.s-adbanner
+		margin-bottom: 0
+	.s-total-look
+		padding-bottom: 23px
+	.s-instagram
+		padding-top: 23px
+		padding-bottom: 30px
+	.main-banners
+		.owl-nav
+			position: static
+			button
+				width: 25px !important
+				height: 25px !important
+				position: absolute
+				top: 50%
+				margin-top: -12px
+				z-index: 1
+				opacity: 0.3
+				span
+					&:after
+						font-size: 9px
+				&.owl-next
+					right: 15px
+				&.owl-prev
+					left: 15px
+	.main-banner-content
+		width: 100%
+		left: 24px
+		bottom: 18px
+		.h1
+			font-size: 32px
+		.promo-stick
+			width: 60px
+			height: 60px
+			line-height: 60px
+			font-size: 10px
+			font-weight: bold
+	.s-instagram
+		.section-title
+			.h2
+				a
+					font-size: 14px
+					margin-left: 5px
+	.lookbook-images
+		margin-bottom: 30px
 
 // ≥576px
 +media-breakpoint-down(xs)
+	section
+		padding: 23px 0
+	.promo-content
+		left: 20px
+		p
+			font-size: 16px
+			margin-bottom: 3px
+		.h3
+			font-size: 24px
+	.promo-slider
+		padding-right: 30px
+	.categories
+		grid-gap: 15px
+		grid-template-columns: repeat(2, 1fr)
+	.categories-item
+		.h3
+			font-size: 20px !important
+			left: 18px
+			bottom: 16px
+		&.big
+			.h3
+				left: 25px
+				bottom: 24px
+	.check-all-rotate
+		position: static
+		margin-top: 24px
+		.btn
+			display: block
+			width: 100%
+			height: 65px
+			line-height: 65px
+			&:before
+				transform: none !important
+			span
+				transform: none !important
+	.s-categories
+		padding-bottom: 23px
+	.products-slider
+		padding-right: 30px
+	.product-liked
+		top: 9px
+		right: 9px
+	.product-item
+		padding-bottom: 55px
+	.product-cart
+		position: absolute
+		bottom: 0
+		left: 0
+		.btn
+			width: 42px
+			height: 42px
+			line-height: 42px
+			span
+				font-size: 0
+				&:after
+					content: '\e909'
+					font-family: icon
+					font-size: 18px
+					font-weight: normal
+	.product-image
+		position: static
+		margin-bottom: 7px
+	.product-name
+		font-size: 14px
+		line-height: 1.15
+		margin-bottom: 7px
+	.current-price
+		font-size: 15px
+		margin-right: 12px
+	.old-price
+		font-size: 13px
+	.s-products-slider
+		padding-bottom: 46px
+	.s-adbanner
+		padding-top: 90px
+		padding-bottom: 74px
+		height: auto
+	.adbanner-img
+		display: flex
+		justify-content: center
+	.adbanner-img
+		margin-bottom: 60px
+	.adbanner-text
+		width: 100%
+		font-size: 20px
+		margin-bottom: 26px
+	.btn
+		font-size: 12px
+		font-weight: 800
+		&.btn-lg
+			height: 65px
+			line-height: 65px
+		&.btn-rotate
+			&:before
+				transform: none !important
+			span
+				transform: none !important
+		&.btn-xl
+			height: 65px
+			line-height: 65px
+			font-size: 13px
+	.adbanner-btn
+		width: 100%
+		.btn
+			width: 100%
+	.total-look-slider
+		padding: 45px 30px 0
+		.owl-stage-outer
+			overflow: visible
+		.owl-item
+			&.active
+				.total-look-item
+					.h2, .check-look, .product-stick
+						opacity: 1
+	.total-look-item
+		.product-stick
+			top: -35px
+			right: 0
+			left: auto
+			background-color: #F9F9F9
+			+tr
+			opacity: 0
+		.h2
+			font-size: 20px
+			color: #434242
+			line-height: 23px
+			top: -35px
+			left: 0
+			bottom: auto
+			right: auto
+			max-width: 55%
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis
+			+tr
+			opacity: 0
+		.check-look
+			opacity: 0
+			span
+				font-size: 13px
+				font-weight: 900
+	.instagram-slider
+		.owl-item
+			&.center
+				.instagram-hover
+					opacity: 1
+	.instagram-item
+		padding-bottom: 0
+	.instagram-img
+		padding-bottom: 100%
+		position: relative
+		margin-bottom: 5px
+	.instagram-hover
+		padding: 0
+		+tr
+		display: block
+		position: static
+		color: #434242
+		background-color: transparent
+		opacity: 0
+		.h6
+			transform: none !important
+			font-size: 12px
+			margin-bottom: 3px
+	.instagram-stat-item
+		transform: none !important
+	.instagram-stat-item
+		font-size: 12px
+		color: #848484
+		margin-right: 25px
+		span
+			margin-right: 4px
+	.instagram-item
+		width: 252px
+	.footer
+		padding: 24px 0 94px
+	.footer-logo
+		.logo
+			img
+				width: 107px
+	.footer-nav
+		width: 100%
+		position: relative
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 15px
+			right: 15px
+			height: 1px
+			background-color: #565555
+		&:before
+			top: auto
+			bottom: -1px
+		.h5
+			position: relative
+			font-size: 14px
+			font-weight: 500
+			padding: 18px 30px 16px 0
+			margin: 0
+			&.opened
+				&:after
+					transform: rotate(180deg)
+			&:after
+				content: '\e917'
+				font-family: icon
+				position: absolute
+				font-size: 11px
+				right: 0
+				top: 22px
+				+tr
+		ul
+			display: none
+			padding-bottom: 18px
+			a
+				padding-left: 15px
+				display: block
+				font-size: 12px
+	.footer-soc
+		width: 100%
+		margin-top: 3px
+		.h5
+			display: none
+	.footer
+		.footer-soc-item
+			padding: 23px 0
+			border-bottom-color: rgba(#fff, .1)
+		.footer-soc-arrow
+			font-size: 26px
+	.dev-link
+		img
+			opacity: 0.6
+	.mob-menu-block
+		width: 100%
+	.header-catalog
+		width: 100%
+	.search-dropdown
+		width: 100%
+	.popup-wrapper#lookbook
+		background-color: rgba(#000, 0)
+		overflow-y: auto
+		transition: background-color .4s ease
+		&.opened
+			background-color: rgba(#000, .7)
+			.popup-flex
+				opacity: 1
+				transform: translateY(0)
+		.popup-flex
+			margin-top: 57px
+			height: auto
+			bottom: 0
+			background-color: #fff
+			border-radius: 6px 6px 0 0
+			overflow: hidden
+			position: static
+			transition: opacity .4s ease, transform .4s ease
+			opacity: 0
+			transform: translateY(50px)
+		.popup-bg
+			display: none !important
+		.popup-block
+			opacity: 1 !important
+			transform: none !important
+		.popup-close
+			height: 44px
+			width: 44px
+			line-height: 44px
+			top: 7px
+			right: 7px
+			&:after
+				content: '\e90d'
+				font-size: 16px	
+				color: #000
+	.lookbook-popup-block
+		.popup-content
+			padding: 80px 20px 35px
+		.lookbook-product
+			[class*=col-]
+				position: static
+			.h2
+				position: absolute
+				top: 40px
+				left: 20px
+				font-weight: 900
+				font-size: 20px
+				white-space: nowrap
+				padding-right: 20px
+				overflow: hidden
+				text-overflow: ellipsis
+				text-transform: none
+				max-width: calc(100% - 40px)
+		.lookbook-liked
+			display: none
+		.lookbook-images
+			margin-bottom: 8px
+		.lookbook-prod-item
+			padding-top: 20px
+			padding-bottom: 20px
+			align-items: flex-start
+		.lookbook-prod-body
+			display: block
+			margin-top: -5px
+		.lookbook-prod-price
+			.current-price
+				color: #000
+				margin-right: 14px
+		.lookbook-prod-add
+			width: 44px
+			height: 44px
+			line-height: 44px
+		.lookbook-prod-img
+			margin-right: 10px
+			img
+				width: 58px
+				height: 58px
+		.lookbook-total
+			display: block
+			margin-top: 22px
+		.lookbook-total-left
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			margin-right: 0
+			margin-bottom: 15px
+			.product-page-prices
+				line-height: 1
+				display: block
+				text-align: right
+				.current-price
+					display: block
+					margin-right: 0
+					font-size: 20px
+					margin-bottom: 7px
+				.old-price
+					margin-right: 0
+					font-size: 10p
+		.lookbook-total-right
+			.btn
+				width: 100%
+	.popup-block
+		height: 100%
+		width: 100%
+	.popup-close
+		height: 76px
+		width: 76px
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 19px
+		right: 0
+		top: 0
+		&:before
+			display: none
+	.popup-content
+		padding: 105px 24px 32px
+	.auth-link
+		color: rgba(#000, .3)
+		&.active
+			color: #000
+	.form-submit
+		margin-top: 30px
+		.btn
+			width: 100%
+	.auth-wrapper
+		position: relative
+	.auth-form
+		padding-bottom: 0
+		min-height: 405px
+		.form-group
+			position: static
+		.forgot-pass-link
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			text-align: center
+			font-size: 16px
+			color: #BEBEBE
+	.search-dropdown
+		padding-left: 20px
+		padding-right: 20px
+	.search-dropdown-close
+		right: 21px
+
+
+
+
 
 
 /*==========  Mobile First  ==========*/
