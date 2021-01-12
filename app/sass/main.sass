@@ -987,7 +987,7 @@ b, strong
 	position: relative
 	display: flex
 	flex-direction: column
-	height: 100%
+	height: calc(100% - 54px)
 	&:hover
 		.product-image-link
 			img
@@ -996,7 +996,7 @@ b, strong
 			transform: translateY(0)
 
 .product-image
-	flex-grow: 1
+	// flex-grow: 1
 	margin-bottom: 23px
 	position: relative
 	overflow: hidden
@@ -2180,7 +2180,7 @@ textarea.form-control
 			+tr
 
 .s-recently-viewed
-	padding: 60px
+	padding: 60px 0
 
 .owl-carousel
 	.product-item
@@ -2191,6 +2191,16 @@ textarea.form-control
 		button
 			top: 123px
 			margin-top: 0
+
+.owl-carousel
+	.owl-stage
+		display: flex
+	.owl-item
+		height: auto
+		flex-shrink: 0
+	.product-item
+		margin-bottom: 0
+		height: 100%
 
 .s-product
 	padding-top: 34px !important
@@ -2303,6 +2313,7 @@ textarea.form-control
 
 .product-images-gallery-item
 	height: 100%
+	margin-bottom: auto
 	img
 		width: 100%
 		height: 100%
@@ -2422,7 +2433,7 @@ textarea.form-control
 		&:before
 			+tr
 		&:after
-			content: '\e90b'
+			content: '\e912'
 			font-family: icon
 			position: absolute
 			top: 0
@@ -2460,10 +2471,11 @@ textarea.form-control
 	display: flex
 	align-items: center
 	flex-wrap: wrap
-	margin-bottom: 40px
+	margin-bottom: 20px
 
 .select-size-item
 	margin-right: 20px
+	margin-bottom: 20px
 	label
 		position: relative
 		margin: 0
@@ -4230,5 +4242,11 @@ textarea.form-control
 		font-size: 12px
 		+td
 		margin-bottom: 10px
+
+.open-mob-filter
+	display: none
+
+.filter-header
+	display: none
 
 @import "media" // Always at the end

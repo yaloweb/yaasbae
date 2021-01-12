@@ -55,6 +55,13 @@
 		.owl-nav
 			button								
 				top: 148px
+	.main
+		&:before
+			width: 1240px
+	.product-descr-link
+		margin-right: 20px
+	.product-page
+		padding-right: 0
 
 @media (max-width: 1365.98px)
 	.container
@@ -78,6 +85,8 @@
 		margin-top: 0
 	.instagram-item
 		width: 283px
+	.catalog-sort-dropdown
+		right: 0
 
 
 // ≥1200px
@@ -274,6 +283,17 @@
 		margin-right: 10px
 	.categories-item:after
 		display: none !important
+	.filter-title
+		padding-left: 15px
+		padding-right: 40px
+		&:after
+			right: 15px
+	.filter-body
+		padding-left: 15px
+		padding-right: 15px
+	.product-descr-tabs-nav
+		overflow: auto hidden
+		white-space: nowrap
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -283,7 +303,7 @@
 	.open-header-catalog-btn
 		display: flex
 		align-items: center
-		color: #fff
+		color: #000
 		+tr
 		+td
 		font-size: 13px
@@ -299,6 +319,9 @@
 			font-weight: normal
 			font-size: 16px
 			margin-right: 8px
+	.site-header.dark
+		.open-header-catalog-btn
+			color: #fff
 	.header-catalog
 		position: fixed
 		top: 0
@@ -403,11 +426,14 @@
 		font-weight: 800
 		text-transform: uppercase
 		margin-right: 40px
-		&:before
-			content: '\e920'
-			font-family: icon
-			font-size: 16px
-			margin-right: 19px
+	.submenu-header-back-icon
+		font-size: 16px
+		margin-right: 19px
+		display: flex
+	.submenu-header-back-link
+		a
+			color: #000 !important
+			font-weight: bold !important
 	.main-banners-left
 		width: 31%
 	.main-banners-right
@@ -484,7 +510,96 @@
 		padding-bottom: 90px
 	.footer-copyright
 		margin-bottom: 0
-		
+	.filter-sidebar
+		position: fixed
+		left: 0
+		top: 0
+		height: 100%
+		z-index: 50
+		width: 300px
+		background-color: #fff
+		overflow: hidden
+		transition: transform .4s ease
+		transform: translateX(-200%)
+		&.opened
+			transform: translateX(0)
+	.filter-help-btn
+		display: none
+	.filter-header
+		padding: 20px 15px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-bottom: 1px solid rgba(67,66,66,.1)
+		.h6
+			font-size: 13px
+			text-transform: uppercase
+			font-weight: 900
+	.filter-close
+		display: flex
+	.filter-sidebar
+		border-width: 0 1px 0 0
+	.filter-main
+		flex-grow: 1
+		overflow-y: auto
+	.filter-sidebar-container
+		display: flex
+		flex-direction: column
+		height: 100%
+	.filter-submit
+		border-top: 1px solid rgba(67,66,66,.1)
+	.filter-clear
+		padding: 8px 0 11px
+	.open-mob-filter
+		display: flex
+		align-items: center
+		font-size: 13px
+		font-weight: 900
+		color: #434242
+		text-transform: uppercase
+		font-family: $font
+		margin-right: 30px
+		span
+			margin-right: 5px
+	.catalog-sort-qnt
+		margin-right: auto
+	.recently-viewed-slider
+		padding-right: 40px
+		.owl-stage-outer
+			overflow: visible
+		.owl-nav
+			display: none !important
+	.catalog-tabs
+		padding-right: 0
+		.owl-nav
+			display: none !important
+		.owl-stage-outer
+			overflow: visible
+	.footer-copyright
+		position: absolute
+		bottom: 32px
+		left: 20px
+	.footer-dev
+		position: absolute
+		bottom: 30px
+		right: 20px
+	.product-page
+		padding-top: 30px
+	.product-page-prices
+		margin-bottom: 30px
+	.product-page-colors-list
+		margin-bottom: 20px
+	.product-page-size
+		margin-bottom: 30px
+	.product-page-buy
+		margin-bottom: 30px
+	.product-descr-tab
+		max-width: none
+	.s-product
+		padding-bottom: 20px
+	.product-left
+		padding-right: 0
+
 // ≥768px
 +media-breakpoint-down(sm)
 	.site-header
@@ -564,13 +679,19 @@
 			margin-top: 8px
 	.header-menu-btn
 		display: flex
-		color: #fff
+		color: #000
 		font-size: 24px
 		margin-right: 20px
+	.site-header.dark
+		.header-menu-btn
+			color: #fff
 	.header-top-row
 		border-bottom: none
 	.header-bottom
-		border: 1px solid #585757
+		border-top: 1px solid rgba(#585757, .2)
+	.site-header.dark
+		.header-bottom
+			border-top: 1px solid #585757
 	.header-logo
 		margin-right: auto
 	.logo
@@ -796,6 +917,37 @@
 					margin-left: 5px
 	.lookbook-images
 		margin-bottom: 30px
+	.pagination-prev,
+	.pagination-next
+		display: none
+	.pagination-list
+		padding-left: 0
+		padding-right: 0
+	.product-image-thumbs
+		display: none
+	.product-images-gallery
+		margin-left: -20px
+		margin-right: -20px
+		position: relative
+		.owl-nav
+			display: none
+		.owl-dots
+			display: flex
+			justify-content: center
+			position: absolute
+			bottom: 16px
+			left: 0
+			width: 100%
+			z-index: 1
+			button
+				border-radius: 50%
+				width: 6px
+				height: 6px
+				background-color: #fff !important
+				margin: 0 4px
+				+tr
+				&.active
+					background-color: #434242 !important
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -1183,11 +1335,187 @@
 		padding-right: 20px
 	.search-dropdown-close
 		right: 21px
-
-
-
-
-
+	.total-look-link
+		display: none
+	.product-item
+		.product-stick
+			display: none
+	.product-item
+		margin-bottom: 35px
+		height: calc(100% - 35px)
+	.main
+		margin-top: 0
+		background-color: #fff
+		padding-top: 18px
+		&:before
+			display: none
+	.breadcrumbs
+		display: none
+	.page-title
+		margin-bottom: 20px
+		.h1, h1
+			font-size: 14px
+			text-transform: uppercase
+	.btn
+		&.btn-sm
+			height: 36px
+			line-height: 36px
+			font-size: 10px
+			font-weight: bold
+			padding: 0 14px
+	.catalog-tabs
+		margin-bottom: 20px
+	.catalog-sort-qnt
+		display: none
+	.catalog-sort-row
+		margin-bottom: 15px
+	.pagination-list
+		a
+			width: auto
+			height: auto
+			font-size: 14px
+			color: #848484
+			font-family: $font2
+			margin: 0 13px
+			&.active
+				color: #434242
+	.s-recently-viewed
+		padding: 30px 0
+	.filter-sidebar
+		width: 100%
+		overflow: visible
+		border: none
+		background-color: rgba(#000, .7)
+		transform: translate(0, 200%)
+		transition: all .4s ease
+		opacity: 0
+		visibility: hidden
+		transform: none !important
+		&.opened
+			transform: translate(0, 0)
+			visibility: visible
+			opacity: 1
+			.filter-sidebar-container
+				transform: translateY(0)
+	.filter-sidebar-container
+		position: relative
+		z-index: 1
+		background-color: #fff
+		margin-top: 57px
+		height: calc(100% - 57px)
+		border-radius: 10px 10px 0 0
+		transition: all .4s ease
+		transform: translateY(200%)
+	.filter-header
+		border: none
+	.filter-close
+		font-size: 14px
+		color: #000
+	.filter-title
+		padding-top: 20px
+		padding-bottom: 20px
+		font-size: 12px
+		text-transform: uppercase
+		font-family: $font2
+		&:after
+			display: none
+	.filter-item
+		padding-bottom: 0
+		border: none
+	.slider-range-inp
+		span
+			font-size: 14px
+		.form-control
+			font-size: 14px
+			padding-left: 36px
+	.checkbox
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+		label
+			span
+				padding-left: 30px
+				font-size: 14px
+				&:before
+					width: 18px
+					height: 18px
+				&:after
+					font-size: 11px
+	.select-color-item
+		margin-bottom: 37px
+		label
+			span
+				width: 27px
+				height: 27px
+				&:after
+					width: 41px
+					height: 41px
+					top: -7px
+					left: -7px
+	.filter-header
+		order: 1
+	.filter-main
+		padding-bottom: 20px
+		order: 2
+	.filter-submit
+		display: none
+	.filter-help-btn
+		display: block
+		position: static
+		opacity: 1
+		visibility: visible
+		height: 65px
+		line-height: 65px
+		text-align: center
+		background-color: #C4FFDB
+		font-size: 13px
+		text-transform: uppercase
+		font-weight: 900
+		color: #434242
+		order: 3
+		margin: 10px 23px
+		&:after
+			display: none
+	.filter-clear
+		order: 4
+		margin-bottom: 7px
+	.s-product
+		padding-top: 0 !important
+		margin-top: -36px
+	.product-page
+		padding-top: 16px
+	.product-sale
+		margin-bottom: 13px
+	.product-page
+		h1
+			font-size: 24px
+			margin-bottom: 10px
+	.product-page-prices
+		position: relative
+		padding-right: 62px
+		padding-top: 5px
+		.product-page-liked
+			position: absolute
+			width: 42px
+			height: 42px
+			font-size: 0
+			right: 0
+			top: 0
+			background-color: #C4FFDB
+			font-size: 0
+			border-radius: 50%
+			overflow: hidden
+			span
+				margin: auto
+				font-size: 22px
+				&:after
+					font-size: 22px
+		.current-price
+			font-size: 24px
+			margin-right: 15px
+		.old-price
+			font-size: 16px
+			margin-right: 0
 
 /*==========  Mobile First  ==========*/
 

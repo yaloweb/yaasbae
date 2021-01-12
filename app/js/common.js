@@ -17,6 +17,9 @@ $(function() {
       $('.header-catalog .has-child ul').removeClass('opened');
       catalogHasScroll();
     }
+    if ( !$(e.target).closest('.filter-sidebar').length && !$(e.target).closest('.catalog-sort-filter').length ) {
+      $('.filter-sidebar').removeClass('opened');
+    }
 	});
 
 	$('.search-link').on('click', function(e) {
@@ -517,7 +520,28 @@ $(function() {
     loop: false,
     nav: true,
     dots: false,
-    margin: 30
+    margin: 30,
+    responsive: {
+      0: {
+        items: 2,
+        margin: 20
+      },
+      576: {
+        items: 2,
+        margin: 20
+      },
+      768: {
+        items: 3,
+        margin: 20
+      },
+      992: {
+        items: 4,
+        margin: 20
+      },
+      1200: {
+        items: 5
+      }
+    }
   });
 
   let prodImgGallery = $('.product-images-gallery');
@@ -525,7 +549,15 @@ $(function() {
   prodImgGallery.owlCarousel({
     items: 1,
     nav: true,
-    dots: false
+    dots: false,
+    responsive: {
+      0: {
+        dots: true
+      },
+      768: {
+        dots: false
+      }
+    }
   });
 
   $(window).on('load', function() {
@@ -731,12 +763,12 @@ $(function() {
     else if ( $(window).width() < 992 ) {
       e.preventDefault();
       $(this).parent().find('ul').addClass('opened');
-      $('.submenu-header-back').text($(this).text());
+      $('.submenu-header-back-link').html(`<a href="${$(this).attr('href')}">${$(this).text()}</a>`);
       catalogNoScroll();
     }
   });
   
-  $('.submenu-header-back').on('click', function() {
+  $('.submenu-header-back-icon').on('click', function() {
     $('.header-catalog .has-child ul').removeClass('opened');
     catalogHasScroll();
   });
@@ -770,6 +802,14 @@ $(function() {
       $(this).toggleClass('opened');
       ths.find('ul').slideToggle(400)
     });
+  });
+
+  $('.open-mob-filter').on('click', function() {
+    $('.filter-sidebar').addClass('opened')
+  });
+
+  $('.filter-close').on('click', function() {
+    $('.filter-sidebar').removeClass('opened')
   });
 
 });
