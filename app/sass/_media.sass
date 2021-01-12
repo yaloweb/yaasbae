@@ -550,6 +550,8 @@
 		border-top: 1px solid rgba(67,66,66,.1)
 	.filter-clear
 		padding: 8px 0 11px
+	.catalog-sort-filter
+		display: block
 	.open-mob-filter
 		display: flex
 		align-items: center
@@ -1516,6 +1518,98 @@
 		.old-price
 			font-size: 16px
 			margin-right: 0
+	.product-page
+		.product-page-colors-list
+			flex-wrap: nowrap
+			overflow-x: auto
+			margin-right: -20px
+			margin-left: -20px
+			padding: 8px 20px
+			margin-bottom: 32px
+			&:after
+				content: ''
+				width: 20px
+				top: 0
+				height: 100%
+				display: block
+				height: 32px
+				flex-shrink: 0
+			.select-color-item
+				margin-right: 6px
+				margin-bottom: 0
+				label
+					span
+						width: 32px
+						height: 32px
+						&:after
+							width: 48px
+							height: 48px
+							top: -8px
+							left: -8px
+		.select-size-item
+			margin-right: 16px
+			label
+				span
+					width: 48px
+					height: 48px
+					line-height: 46px
+					font-size: 12px
+		.product-page-size
+			.product-page-size-list
+				flex-wrap: nowrap
+				margin-right: -20px
+				margin-left: -20px
+				padding: 0 20px
+				overflow-x: auto
+				&:after
+					content: ''
+					width: 16px
+					top: 0
+					height: 100%
+					display: block
+					height: 32px
+					flex-shrink: 0
+			.select-size-item
+				margin-bottom: 0
+		.product-page-size-link
+			font-weight: bold
+		.product-page-buy
+			margin-bottom: 50px
+			.product-page-qnt
+				display: none
+		.product-page-add-to-cart
+			.btn
+				height: 65px
+				line-height: 65px
+		.product-descr-link
+			font-size: 13px
+			margin-right: 33px
+			&:before
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				height: 1px
+				background-color: rgba(#434242, .1)
+				right: -33px
+			&:last-of-type
+				&:before
+					right: 0
+		.product-descr-tabs-nav
+			margin-left: -20px
+			margin-right: -20px
+			padding: 0 20px 15px
+			margin-bottom: 7px
+			&:after
+				content: ''
+				width: 20px
+				flex-shrink: 0
+				display: block
+				height: 1px
+			&:before
+				display: none
+		.product-descr-tab
+			font-size: 14px
 
 /*==========  Mobile First  ==========*/
 
