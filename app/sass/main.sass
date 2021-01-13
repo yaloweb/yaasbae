@@ -2873,9 +2873,10 @@ textarea.form-control
 	.select-size-item
 		margin: 0 10px 10px 0
 		label
-			width: 35px
-			height: 35px
-			line-height: 33px
+			span
+				width: 35px
+				height: 35px
+				line-height: 33px
 	.form-submit
 		margin-top: 30px
 
@@ -4248,5 +4249,42 @@ textarea.form-control
 
 .filter-header
 	display: none
+
+.selected-product
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+
+.selected-product-img
+	display: flex
+	margin-right: 8px
+	img
+		width: 33px
+		height: 33px
+		object-fit: cover
+
+.selected-product-name
+	font-size: 16px
+	flex-grow: 1
+	padding-right: 10px
+
+.selected-product-price
+	display: flex
+	align-items: center
+	.current-price
+		font-weight: normal
+		font-size: 12px
+		color: #000
+		margin-right: 7px
+		&:after
+			content: '\e91f'
+	.old-price
+		font-size: 10px
+		color: #848484
+		&:before
+			transform: rotate(-8deg)
+
+.select-size-form
+	.select-size-item
 
 @import "media" // Always at the end
