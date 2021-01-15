@@ -647,7 +647,15 @@ $(function() {
   $('.lookbook-images-slider').owlCarousel({
     items: 1,
     nav: true,
-    dots: false
+    dots: false,
+    responsive: {
+      0: {
+        dots: true
+      },
+      576: {
+        dots: false
+      }
+    }
   });
 
   $('.lookbook-dot').on('click', function() {
@@ -811,6 +819,55 @@ $(function() {
 
   $('.filter-close').on('click', function() {
     $('.filter-sidebar').removeClass('opened')
+  });
+
+  $('.lookbook-product-full').each(function() {
+    let ths = $(this),
+        img = ths.find('.lookbook-images-slider').find('img').eq(0),
+        body = ths.find('.lookbook-info');
+    ths.find('.lookbook-open-full-btn').on('click', function(e) {
+      e.preventDefault();
+      $('#lookbook .popup-lookbook').html([
+        '<div class="lookbook-product">',
+          '<div class="row">',
+            '<div class="col-md-6">',
+              '<div class="lookbook-images">',
+                '<div class="lookbook-img">',
+                  `<img src="${img.attr('src')}" alt="${img.attr('alt')}">`,
+                '</div>',
+              '</div>',
+            '</div>',
+            '<div class="col-md-6">',
+              '<div class="lookbook-info">',
+                body.html(),
+              '</div>',
+            '</div>',
+          '</div>',
+       '</div>',
+      ].join(''));
+      openPopup('#lookbook');
+    });
+  });
+
+  $('.popup-title-type-2').on('click', function() {
+    if ( $(window).width() < 576 ) {
+      let id = $(this).parents('.popup-wrapper').attr('id');
+      closePopup(`#${id}`);
+    }
+  });
+
+  $('.promocode').each(function() {
+    let ths = $(this),
+        input = ths.find('.promocode-insert-input'),
+        btn = ths.find('.promocode-confirm');
+    input.on('input', function() {
+      if ( input.val().trim().length > 0 ) {
+        ths.addClass('can-confirm')
+      }
+      else {
+        ths.removeClass('can-confirm')
+      }
+    });
   });
 
 });

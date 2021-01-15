@@ -601,6 +601,8 @@
 		padding-bottom: 20px
 	.product-left
 		padding-right: 0
+	.lookbook-images
+		margin-bottom: 30px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -950,6 +952,10 @@
 				+tr
 				&.active
 					background-color: #434242 !important
+	.page-descr
+		font-size: 18px
+		padding-top: 0
+		margin-bottom: 20px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -1212,6 +1218,7 @@
 			transition: opacity .4s ease, transform .4s ease
 			opacity: 0
 			transform: translateY(50px)
+			align-items: flex-end
 		.popup-bg
 			display: none !important
 		.popup-block
@@ -1227,6 +1234,8 @@
 				content: '\e90d'
 				font-size: 16px	
 				color: #000
+		.popup-content
+			max-height: 100%
 	.lookbook-popup-block
 		.popup-content
 			padding: 80px 20px 35px
@@ -1610,8 +1619,114 @@
 				display: none
 		.product-descr-tab
 			font-size: 14px
-	.lookbook-total .product-page-prices
-		padding-right: 0
+	.page-descr
+		font-size: 16px
+	.lookbook-total
+		.product-page-prices
+			padding-right: 0
+	.lookbook-product-full
+		.product-liked
+			display: block
+		.lookbook-info
+			display: none
+	.lookbook-mob-title
+		display: block
+		margin-right: 10px
+		flex-grow: 1
+		font-size: 24px
+		line-height: 1.1
+	.lookbook-top-sticks
+		display: flex
+		align-items: flex-start
+		margin-bottom: 15px
+		.product-stick
+			position: static
+			background-color: #F8F8F8
+			margin-top: 3px
+	.s-lookbook
+		padding-top: 10px
+	.lookbook-images-slider-wrapper
+		position: relative
+		.product-liked
+			top: 18px
+			right: 18px
+	.lookbook-dot
+		display: none
+	.lookbook-images-slider
+		.owl-nav
+			display: none
+		.owl-dots
+			display: flex
+			justify-content: center
+			position: absolute
+			bottom: 16px
+			left: 0
+			width: 100%
+			button
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				background-color: #fff !important
+				+tr
+				margin: 0 4.5px
+				&.active
+					background-color: #434242 !important
+	.lookbook-open-full-btn
+		font-weight: 900
+	.lookbook-product
+		margin-bottom: 20px
+	.popup-mob-2
+		background-color: rgba(#000, 0)
+		overflow-y: auto
+		transition: background-color .4s ease
+		&.opened
+			background-color: rgba(#000, .7)
+			.popup-flex
+				opacity: 1
+				transform: translateY(0)
+		.popup-flex
+			margin-top: 57px
+			height: calc(100% - 57px)
+			bottom: 0
+			background-color: #fff
+			border-radius: 6px 6px 0 0
+			overflow: hidden
+			position: static
+			transition: opacity .4s ease, transform .4s ease
+			opacity: 0
+			transform: translateY(50px)
+			align-items: flex-end
+		.popup-bg
+			display: none !important
+		.popup-block
+			opacity: 1 !important
+			transform: none !important
+		.popup-close
+			height: 44px
+			width: 44px
+			line-height: 44px
+			top: 7px
+			right: 7px
+			&:after
+				content: '\e90d'
+				font-size: 16px	
+				color: #000
+		.popup-content
+			padding-top: 45px
+			max-height: 100%
+	.popup-title-type-2
+		font-size: 13px !important
+		font-weight: bold !important
+		position: relative
+		padding-left: 30px
+		&:before
+			content: '\e920'
+			font-family: icon
+			position: absolute
+			font-size: 17px
+			left: 0
+			top: -3px
+			font-weight: normal
 
 /*==========  Mobile First  ==========*/
 
