@@ -870,4 +870,11 @@ $(function() {
     });
   });
 
+  $('.select-size-next').on('click', function(e) {
+    e.preventDefault();
+    let tab = $(`.size-selection-tab[data-tab=${$(this).data('next-step')}]`);
+    $('.size-selection-tab').hide();
+    tab.fadeIn(400);
+  });
+
 });

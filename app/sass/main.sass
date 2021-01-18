@@ -999,6 +999,8 @@ b, strong
 				transform: scale(1.1)
 		.product-cart
 			transform: translateY(0)
+	&.disabled
+		opacity: 0.7
 
 .product-image
 	// flex-grow: 1
@@ -1040,7 +1042,7 @@ b, strong
 	border-radius: 50%
 	background-color: #fff
 	right: 15px
-	top: 21px
+	top: 15px
 	cursor: pointer
 	font-size: 15px
 	line-height: 30px
@@ -3689,6 +3691,7 @@ textarea.form-control
 	padding: 0 10px
 	font-size: 18px
 	background-color: #ECECEC
+	white-space: nowrap
 	&.green
 		background-color: #E7FFF1
 	&.yellow
@@ -3810,6 +3813,7 @@ textarea.form-control
 	font-size: 20px
 	+ruble2
 	margin-bottom: 10px
+	white-space: nowrap
 
 .order-prod-qnt
 	font-size: 14px
@@ -4534,5 +4538,160 @@ textarea.form-control
 
 .s-basket
 	padding-bottom: 72px
+
+.size-selection-popup
+	width: 700px
+
+.size-selection
+	display: flex
+
+.size-selection-img
+	width: 138px
+	flex-shrink: 0
+	margin-right: 40px
+	img
+		width: 100%
+		margin-bottom: 8px
+	p
+		margin: 0
+		font-size: 12px
+		color: #848484
+		line-height: 1.33333
+
+.size-selection-main
+	flex-grow: 1
+
+.size-selection-form
+	height: 100%
+	display: flex
+	flex-direction: column
+	.row
+		flex-grow: 1
+	.form-label
+		font-size: 16px
+		font-weight: bold
+		color: #434242
+		margin-bottom: 7px
+	.form-control
+		font-size: 18px
+		padding: 0 15px
+	.form-submit
+		margin-top: auto
+		padding-top: 40px
+
+.size-selection-tab
+	display: none
+
+.size-selection-back
+	+td
+	+tr
+	color: #434242
+	display: inline-flex
+	align-items: center
+	margin-top: 38px
+	margin-bottom: 32px
+	span
+		font-size: 18px
+		margin-right: 14px
+	&:hover
+		color: #000
+
+.size-selection-result
+	font-size: 24px
+
+.size-selection-finish
+	margin-bottom: 22px
+
+.not-available
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	z-index: 1
+	height: 35px
+	line-height: 35px
+	text-align: center
+	font-size: 14px
+	font-weight: bold
+	text-transform: uppercase
+	color: #fff
+	background-color: #848484
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+
+.liked-empty
+	margin-bottom: 40px
+	color: #848484
+	font-size: 20px
+	font-weight: 500
+
+.add-to-liked
+	display: flex
+	align-items: center
+	text-transform: uppercase
+	+tr
+	+td
+	color: #434242
+	font-weight: 500
+	&:hover
+		color: #000
+		span:before
+			transform: rotate(90deg)
+	span
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 48px
+		height: 48px
+		flex-shrink: 0
+		background-color: #C4FFDB
+		margin-right: 15px
+		font-size: 16px
+		&:before
+			display: inline-block
+			+tr
+
+.liked-list
+	.row
+		margin-left: -11px
+		margin-right: -11px
+		[class*=col-]
+			padding-left: 11px
+			padding-right: 11px
+
+.product-preorder
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	z-index: 1
+	display: flex
+	align-items: center
+	padding: 14px 20px
+	background-color: #848484
+	color: #fff
+
+.product-preorder-info
+	margin-right: 10px
+	flex-grow: 1
+	.h4
+		font-weight: bold
+		font-size: 14px
+		text-transform: uppercase
+		line-height: 1.11
+		margin-bottom: 5px
+	p
+		margin: 0
+		line-height: 1.11
+
+.product-preorder-delete
+	display: flex
+
+.product-preorder-delete-link
+	color: #fff !important
+	+td
+	+tr
+	font-size: 19px
 
 @import "media" // Always at the end
