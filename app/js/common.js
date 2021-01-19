@@ -20,6 +20,12 @@ $(function() {
     if ( !$(e.target).closest('.filter-sidebar').length && !$(e.target).closest('.catalog-sort-filter').length ) {
       $('.filter-sidebar').removeClass('opened');
     }
+    if ( !$(e.target).closest('.share-block').length ) {
+      $('.share-block').removeClass('active')
+    }
+    if ( !$(e.target).closest('.cities-search').length ) {
+      $('.cities-search-dropdown').removeClass('opened')
+    }
 	});
 
 	$('.search-link').on('click', function(e) {
@@ -373,9 +379,13 @@ $(function() {
   	showMaskOnHover: false
   });
 
-  $('.date-mask').inputmask({
-    mask: "99.99.9999",
-    showMaskOnHover: false
+  $('.date-mask').each(function() {
+    let format = $(this).data('format'),
+        currFormat;
+    format == undefined || format.length == 0 ? currFormat = "dd.mm.yyyy" : currFormat = format;
+    $(this).datepicker({
+      dateFormat: currFormat
+    })
   });
 
   $('.check-password').on('click', function() {
@@ -692,9 +702,24 @@ $(function() {
 
   $('.article-slider').owlCarousel({
     items: 3,
-    margin: 30,
+    margin: 20,
     nav: true,
-    dots: false
+    dots: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      576: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+        margin: 20
+      },
+      992: {
+        margin: 30
+      }
+    }
   });
 
   $('.select-style').select2({
@@ -875,6 +900,27 @@ $(function() {
     let tab = $(`.size-selection-tab[data-tab=${$(this).data('next-step')}]`);
     $('.size-selection-tab').hide();
     tab.fadeIn(400);
+  });
+
+  $('.share-link').on('click', function(e) {
+    e.preventDefault();
+    let par = $(this).parent();
+    par.toggleClass('active')
+  });
+
+  $('.cities-search-input').on('input', function() {
+    let ths = $(this);
+    if ( ths.val().trim().length > 0 ) {
+      $('.cities-search-dropdown').addClass('opened')
+    }
+    else {
+      $('.cities-search-dropdown').removeClass('opened')
+    }
+  });
+
+  $('.cities-search-item').on('click', function() {
+    $('.cities-search-input').val($(this).text());
+    $('.cities-search-dropdown').removeClass('opened');
   });
 
 });

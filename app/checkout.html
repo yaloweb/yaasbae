@@ -85,11 +85,11 @@
 			</div>
 		</div>
 
-		<header class="site-header" style="background-color: #fff;">
+		<header class="site-header dark" style="background-color: #434242;">
 
 			<style>
 				.site-header:after {
-					background-color: #fff;
+					background-color: #434242;
 				}
 			</style>
 
@@ -101,7 +101,7 @@
 
 						<div class="header-logo">
 							<a href="#" class="logo">
-								<img src="img/logo-dark.svg" alt="">
+								<img src="img/logo.svg" alt="">
 							</a>
 						</div>
 
@@ -383,19 +383,324 @@
 
 		</header>
 
-		<div class="not-found-page">
-			<div class="not-found-img">
-				<img src="img/404.png" alt="">
-			</div>
-			<div class="not-found-content">
+		<main class="main">
+
+			<nav class="breadcrumbs">
 				<div class="container">
-					<div class="not-found-composition">404</div>
-					<div class="h2">Страница не найдена</div>
-					<p>Возможно страница была удалена или вовсе не существовала</p>
-					<a href="#" class="btn btn-lg btn-dark"><span>Перейти в каталог</span></a>
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Оформление заказа</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="page-title">
+				<div class="container">
+					<h1>Оформление заказа</h1>
 				</div>
 			</div>
-		</div>
+			
+			<section class="s-checkout s-basket">
+				<div class="container">
+					
+					<div class="row">
+						
+						<div class="col-lg-8">
+							<div class="checkout">
+								
+								<div class="checkout-step">
+									<div class="h2">Город получения</div>
+									<div class="cities-search">
+										<input type="text" class="cities-search-input form-control">
+										<div class="cities-search-dropdown">
+											<div class="cities-search-item">Казань</div>
+											<div class="cities-search-item">Москва</div>
+											<div class="cities-search-item">Санкт-Петербург</div>
+											<div class="cities-search-item">Ташкент</div>
+											<div class="cities-search-item">Нью-Йорк сити</div>
+											<div class="cities-search-item">Казань</div>
+											<div class="cities-search-item">Москва</div>
+											<div class="cities-search-item">Санкт-Петербург</div>
+											<div class="cities-search-item">Ташкент</div>
+											<div class="cities-search-item">Нью-Йорк сити</div>
+											<div class="cities-search-item">Казань</div>
+											<div class="cities-search-item">Москва</div>
+											<div class="cities-search-item">Санкт-Петербург</div>
+											<div class="cities-search-item">Ташкент</div>
+											<div class="cities-search-item">Нью-Йорк сити</div>
+											<div class="cities-search-item">Казань</div>
+											<div class="cities-search-item">Москва</div>
+											<div class="cities-search-item">Санкт-Петербург</div>
+											<div class="cities-search-item">Ташкент</div>
+											<div class="cities-search-item">Нью-Йорк сити</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-step">
+									<div class="h2">Способ получения</div>
+									<div class="del-items">
+										<div class="del-item">
+											<input type="radio" name="del-radio" class="del-item-radio" checked>
+											<div class="del-item-content">
+												<span class="icon-checkmark"></span>
+												<div class="del-item-brand">
+													<img src="img/brands/yandex-go.png" alt="">
+												</div>
+												<div class="del-item-price">от 100</div>
+												<p>До квартиры или  пункта выдачи в любой день</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-step">
+									<div class="h2">Адрес доставки</div>
+									<div class="del-form">
+										<div class="row">
+											<div class="col-12">
+												<div class="form-group">
+													<label class="form-label">Адрес</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<div class="form-group">
+													<label class="form-label">Квартира</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<div class="form-group">
+													<label class="form-label">Подъезд</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<div class="form-group">
+													<label class="form-label">Этаж</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<div class="form-group">
+													<label class="form-label">Домофон</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="form-label">Имя получателя</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="form-label">Телефон</label>
+													<input type="text" class="form-control phone-mask">
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="checkbox big">
+													<label>
+														<input type="checkbox" checked>
+														<span>Я согласен на обработку персональных данных</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-step">
+									<div class="h2">Дата и время доставки</div>
+									<div class="del-form">
+										<div class="row">
+											<div class="col-sm-6">
+												<input type="text" class="form-control date-mask" data-format="DD, d MM">
+											</div>
+											<div class="col-sm-6">
+												<select class="select-style">
+													<option value="С 9:00 до 11:00">С 9:00 до 11:00</option>
+													<option value="С 11:00 до 13:00">С 11:00 до 13:00</option>
+													<option value="С 13:00 до 15:00">С 13:00 до 15:00</option>
+													<option value="С 15:00 до 17:00">С 15:00 до 17:00</option>
+													<option value="С 17:00 до 19:00">С 17:00 до 19:00</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-step">
+									<div class="h2">Способ оплаты</div>
+									<div class="del-form">
+										<div class="radio-list">
+											<div class="radio">
+												<label>
+													<input type="radio" name="payment" checked>
+													<span>Картой онлайн</span>
+												</label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" name="payment">
+													<span>Наличными при получении</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-step">
+									<div class="h2">Комментарии к заказу</div>
+									<div class="del-form">
+										<div class="form-group">
+											<label class="form-label">Ваш комментарий</label>
+											<textarea class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+
+								<div class="checkout-submit">
+									<button class="btn btn-xl"><span>Оплатить заказ</span></button>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="checkout-sidebar basket-sidebar">
+								<div class="h2">В корзине 3 товара</div>
+								<div class="checkout-items">
+									<div class="checkout-item">
+										<div class="checkout-item-img">
+											<img src="img/categories/1.jpg" alt="">
+										</div>
+										<div class="checkout-item-body">
+											<div class="checkout-item-price">4 490</div>
+											<div class="checkout-item-name">Худи оверсайз бежевого цвета</div>
+											<div class="checkout-item-descr">Цвет: розовый · Размер: XS · 1 шт</div>
+										</div>
+									</div>
+									<div class="checkout-item">
+										<div class="checkout-item-img">
+											<img src="img/categories/1.jpg" alt="">
+										</div>
+										<div class="checkout-item-body">
+											<div class="checkout-item-price">4 490</div>
+											<div class="checkout-item-name">Худи оверсайз бежевого цвета</div>
+											<div class="checkout-item-descr">Цвет: розовый · Размер: XS · 1 шт</div>
+										</div>
+									</div>
+									<div class="checkout-item">
+										<div class="checkout-item-img">
+											<img src="img/categories/1.jpg" alt="">
+										</div>
+										<div class="checkout-item-body">
+											<div class="checkout-item-price">4 490</div>
+											<div class="checkout-item-name">Худи оверсайз бежевого цвета</div>
+											<div class="checkout-item-descr">Цвет: розовый · Размер: XS · 1 шт</div>
+										</div>
+									</div>
+									<div class="checkout-item">
+										<div class="checkout-item-img">
+											<img src="img/categories/1.jpg" alt="">
+										</div>
+										<div class="checkout-item-body">
+											<div class="checkout-item-price">4 490</div>
+											<div class="checkout-item-name">Худи оверсайз бежевого цвета</div>
+											<div class="checkout-item-descr">Цвет: розовый · Размер: XS · 1 шт</div>
+										</div>
+									</div>
+								</div>
+								<ul class="basket-sidebar-list">
+									<li>Скидка по промокоду <span class="current-price red">− 1 500</span></li>
+									<li>Вес <span class="current-price">500</span></li>
+								</ul>
+								<div class="basket-total">
+									<div class="basket-total-name">Итого</div>
+									<div class="basket-total-price">
+										<div class="current-price">14 490</div>
+									</div>
+								</div>
+								<div class="basket-confirm">
+									<button class="btn btn-xl btn-block"><span>Оплатить заказ</span></button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				
+				<div class="footer-row">
+					
+					<div class="footer-logo">
+						<a href="#" class="logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<div class="footer-copyright">© 2020, YASSBAE</div>
+						<div class="footer-dev">
+							<a href="#" class="dev-link">Создание сайтов <img src="img/mw-logo.svg" alt=""></a>
+						</div>
+					</div>
+
+					<div class="footer-nav">
+						<div class="h5">Меню</div>
+						<ul>
+							<li><a href="#">Каталог</a></li>
+							<li><a href="#">LookBook</a></li>
+							<li><a href="#">Медиа</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-nav">
+						<div class="h5">Информация</div>
+						<ul>
+							<li><a href="#">Помощь</a></li>
+							<li><a href="#">Как оформить заказ</a></li>
+							<li><a href="#">Как выбрать размер</a></li>
+							<li><a href="#">Условия доставки</a></li>
+							<li><a href="#">Мои заказы</a></li>
+							<li><a href="#">Бонусы и скидки</a></li>
+							<li><a href="#">Возврат</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-nav">
+						<div class="h5">Информация</div>
+						<ul>
+							<li><a href="#">Помощь</a></li>
+							<li><a href="#">Как оформить заказ</a></li>
+							<li><a href="#">Как выбрать размер</a></li>
+							<li><a href="#">Условия доставки</a></li>
+							<li><a href="#">Мои заказы</a></li>
+							<li><a href="#">Бонусы и скидки</a></li>
+							<li><a href="#">Возврат</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-soc">
+						<div class="h5">Социальные сети</div>
+						<a href="#" class="footer-soc-item">
+							<span class="footer-soc-icon icon-instagram"></span>
+							<span class="footer-soc-name">@yassbae</span>
+							<span class="footer-soc-arrow icon-arrow-right-2"></span>
+						</a>
+					</div>
+
+				</div>
+
+			</div>
+		</footer>
 
 	</div>
 
@@ -528,84 +833,6 @@
 
 			<div class="popup-bg"></div>
 
-		</div>
-	</div>
-
-	<div class="popup-wrapper popup-mob-2" id="select-size">
-		<div class="popup-flex">
-			
-			<div class="popup-block">
-
-				<div class="popup-close"></div>
-
-				<div class="popup-content">
-					<div class="h2">Выберите размер</div>
-					<form class="select-size-form">
-						<div class="product-page-size">
-							<div class="product-page-selected-size">Размер: <span>S</span></div>
-							<div class="product-page-size-list">
-								<div class="select-size-item">
-									<label>
-										<input type="radio" name="size-item" class="size-item">
-										<span>XS</span>
-									</label>
-								</div>
-								<div class="select-size-item">
-									<label>
-										<input type="radio" name="size-item" class="size-item" checked>
-										<span>S</span>
-									</label>
-								</div>
-								<div class="select-size-item">
-									<label>
-										<input type="radio" name="size-item" class="size-item">
-										<span>M</span>
-									</label>
-								</div>
-								<div class="select-size-item">
-									<label>
-										<input type="radio" name="size-item" class="size-item">
-										<span>L</span>
-									</label>
-								</div>
-								<div class="select-size-item">
-									<label>
-										<input type="radio" name="size-item" class="size-item">
-										<span>XL</span>
-									</label>
-								</div>
-								<div class="select-size-item">
-									<label>
-										<input type="radio" name="size-item" class="size-item" disabled>
-										<span>XXL</span>
-									</label>
-								</div>
-							</div>
-						</div>
-						<div class="product-page-size">
-							<div class="h6">Не можете выбрать размер?</div>
-							<a href="#size-selection" class="product-page-size-link open-popup no-close-popup"><span class="icon-hanger"></span>Подобрать размер</a>
-						</div>
-						<div class="form-submit">
-							<button type="submit" class="btn btn-lg"><span>Добавить в корзину</span></button>
-						</div>
-					</form>
-				</div>
-
-			</div>
-
-			<div class="popup-bg"></div>
-
-		</div>
-	</div>
-
-	<div class="alert" id="add-prod-alert">
-		<div class="alert-close"><span class="icon-close-2"></span></div>
-		<div class="alert-row">
-			<div class="alert-text">Товар добавлен в корзину</div>
-			<div class="alert-btn">
-				<a href="#" class="btn btn-sm"><span>Оформить заказ</span></a>
-			</div>
 		</div>
 	</div>
 
