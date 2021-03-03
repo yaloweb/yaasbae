@@ -923,4 +923,8 @@ $(function() {
     $('.cities-search-dropdown').removeClass('opened');
   });
 
+  $('.acc-sidebar-close').on('click', function() {
+    $('.acc-menu').removeClass('opened')
+  });
+
 });

@@ -134,6 +134,18 @@
 		margin-bottom: 30px
 	.text-content > *
 		max-width: none
+	.checkout-success-img
+		img
+			width: 135px
+	.checkout-success-box
+		.h2
+			font-size: 42px
+	.checkout-success-detail
+		padding: 30px
+		ul
+			font-size: 14px
+			li span:first-child
+				width: 150px
 
 // ≥1200px
 +media-breakpoint-down(lg)
@@ -920,6 +932,14 @@
 			display: none !important
 	.checkout-submit
 		display: none
+	.checkout-success-box
+		.h2
+			font-size: 30px
+		p
+			font-size: 16px
+	.alert
+		right: 48px
+		bottom: 20px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1361,6 +1381,57 @@
 		.owl-dots
 			button
 				margin: 0 4px
+	.form-mute-text
+		margin-top: 4px
+		max-width: none
+	.checkout-success-img
+		text-align: left
+		img
+			width: 110px
+	.s-checkout-success
+		margin-top: 0
+	.checkout-success-box
+		margin-bottom: 25px
+		.h2
+			font-size: 24px
+			margin-bottom: 8px
+		p
+			font-size: 16px
+	.s-checkout-success
+		padding-bottom: 50px
+	.checkout-success-btn
+		margin-top: 25px
+	.acc-menu
+		position: fixed
+		border-radius: 0
+		top: 0
+		right: 0
+		width: 250px
+		height: 100%
+		padding: 40px 20px 30px
+		overflow: hidden auto
+		transform: translate(150%, 0)
+	.acc-menu-header-avatar img
+		width: 55px
+		height: 55px
+	.acc-menu-header-name
+		font-size: 16px
+	.acc-menu-list
+		margin-left: -20px
+		margin-right: -20px
+	.acc-menu-link
+		height: 37px
+		padding: 0 20px
+		margin-bottom: 8px
+	.acc-menu-link-icon
+		font-size: 16px
+		width: 16px
+		height: 16px
+	.acc-menu-title
+		font-size: 14px
+	.acc-sidebar-close
+		display: block
+
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -2362,6 +2433,13 @@
 		margin-right: 0
 		margin-bottom: 16px
 		width: auto
+	.del-item-radio
+		&:checked
+			& + .del-item-content
+				.icon-checkmark
+					&:after
+						opacity: 1
+						transform: scale(1)
 	.del-item-content
 		background-color: transparent !important
 		border: none !important
@@ -2371,6 +2449,8 @@
 		align-items: center
 		p
 			width: 100%
+			margin-top: 5px
+			margin-right: 77px
 		.icon-checkmark
 			border-radius: 50%
 			right: auto
@@ -2382,6 +2462,63 @@
 			background-color: transparent
 			opacity: 1
 			transform: scale(1)
+			&:before
+				display: none
+			&:after
+				content: ''
+				position: absolute
+				width: 14px
+				height: 14px
+				border-radius: 50%
+				transform: scale(0)
+				opacity: 0
+				+tr
+				background-color: #434242
+				left: 2px
+				top: 2px
+		.h3
+			margin-bottom: 0
+			font-size: 16px
+			font-family: $font2
+			font-weight: normal
+			line-height: 24px
+	.del-item-brand
+		margin: 0
+	.del-item-price
+		margin-bottom: 0
+		margin-left: 16px
+		font-size: 16px
+	.checkout-step
+		margin-bottom: 30px
+		.h2
+			font-size: 18px
+			margin-bottom: 17px
+	.cities-search-dropdown
+		max-height: 200px
+	.checkbox.big span
+		font-size: 14px
+		padding-top: 4px
+	textarea.form-control
+		height: 90px
+	.checkout-success-detail
+		margin-left: -20px
+		margin-right: -20px
+		border-left: none
+		border-right: none
+		padding: 20px
+	.checkout-success-detail
+		ul
+			font-size: 12px
+	.alert
+		width: auto
+		right: 0
+		left: 0
+		bottom: 0
+	.alert-close
+		right: 10px
+		left: auto
+		top: 10px
+
 
 /*==========  Mobile First  ==========*/
 

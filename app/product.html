@@ -430,7 +430,7 @@
 										<img src="img/products/6.jpg" alt="">
 									</div>
 									<div class="product-images-gallery-item">
-										<div class="product-video-wrapper">
+										<!-- <div class="product-video-wrapper">
 											<div class="product-video-play">
 												<span class="icon-play"></span>
 												<span class="icon-pause"></span>
@@ -439,6 +439,11 @@
 												<source src="video/1.mp4" type="video/mp4">
 												Видео не поддерживается вашим браузером
 											</video>
+										</div> -->
+										<div class="product-video-wrapper">
+											<div class="product-video-wrapper-frame">
+												<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -2240,6 +2245,17 @@
 
 			<div class="popup-bg"></div>
 
+		</div>
+	</div>
+
+	<!-- openAlert(id) -->
+	<div class="alert" id="add-prod-alert">
+		<div class="alert-close"><span class="icon-close-2"></span></div>
+		<div class="alert-row">
+			<div class="alert-text">Товар добавлен в корзину</div>
+			<div class="alert-btn">
+				<a href="#" class="btn btn-sm"><span>Оформить заказ</span></a>
+			</div>
 		</div>
 	</div>
 

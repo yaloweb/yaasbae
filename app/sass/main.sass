@@ -2331,6 +2331,8 @@ textarea.form-control
 .product-video-wrapper
 	position: relative
 	height: 100%
+	display: flex
+	flex-direction: column
 	video
 		width: 100%
 		height: 100%
@@ -2339,6 +2341,20 @@ textarea.form-control
 		.product-video-play
 			&.active
 				opacity: 1
+
+.product-video-wrapper-frame
+	margin-top: auto
+	margin-bottom: auto
+	position: relative
+	padding-bottom: 56.25%
+	width: 100%
+	flex-grow: 1
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
 
 .product-video-play
 	position: absolute
@@ -2897,7 +2913,7 @@ textarea.form-control
 	box-shadow: 0px 10px 40px rgba(118, 118, 118, 0.09)
 	padding: 26px
 	z-index: 10
-	transition: opacity .4s ease, transform .4s ease
+	transition: all .4s ease
 	opacity: 0
 	transform: translateY(20px)
 	visibility: hidden
@@ -3460,10 +3476,12 @@ textarea.form-control
 		top: calc(100% + 2px)
 		left: 0
 		width: 100%
+	.select2-container--default .select2-selection--single
+		border-color: rgba(67,66,66,.2)
 
 .select2-container--default .select2-selection--single
 	border-radius: 0
-	border: 1px solid rgba(#434242, .2)
+	border: 1px solid #e5e5e5
 	background-color: transparent
 	height: 48px
 	+on
@@ -4416,6 +4434,8 @@ textarea.form-control
 				+ruble
 				display: flex
 				align-items: center
+	.current-price
+		margin-right: 0
 
 .basket-total
 	margin-bottom: 32px
@@ -4834,7 +4854,7 @@ textarea.form-control
 .del-item-content
 	+tr
 	border: 1px solid #e5e5e5
-	padding: 14px 24px 20px
+	padding: 20px 24px
 	.h3
 		font-size: 18px
 		font-weight: bold
@@ -4861,7 +4881,6 @@ textarea.form-control
 
 .del-item-brand
 	margin-bottom: 13px
-	margin-top: 8px
 	img
 		height: 24px
 		width: auto
@@ -4921,5 +4940,69 @@ textarea.form-control
 
 .checkout-item-descr
 	color: #848484
+
+.form-mute-text
+	color: #b8b8b8
+	max-width: 227px
+
+.s-checkout-success
+	margin-top: 70px
+	padding-bottom: 90px
+
+.checkout-success-img
+	text-align: center
+	margin-bottom: 3px
+	img
+		width: 177px
+
+.checkout-success-box
+	.h2
+		font-size: 54px
+		line-height: 1.167
+		font-weight: 600
+		margin-bottom: 18px
+	p
+		font-size: 18px
+		line-height: 1.333
+		margin-bottom: 0
+
+.checkout-success-detail
+	border: 1px solid rgba(#848484, .5)
+	padding: 35px 45px
+	.h3
+		font-size: 18px
+		font-weight: bold
+		margin-bottom: 24px
+	ul
+		+ul
+		font-size: 16px
+		li
+			display: flex
+			margin-bottom: 24px
+			line-height: 1.125
+			&:last-child
+				margin-bottom: 0
+			span
+				&:first-child
+					font-weight: 500
+					color: #848484
+					width: 177px
+					flex-shrink: 0
+					padding-right: 10px
+				&:last-child
+					font-weight: bold
+					color: #434242
+
+.checkout-success-btn
+	margin-top: 60px
+	text-align: center
+
+.acc-sidebar-close
+	position: absolute
+	top: 15px
+	right: 15px
+	font-size: 18px
+	color: #000
+	display: none
 
 @import "media" // Always at the end
