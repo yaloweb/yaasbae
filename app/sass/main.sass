@@ -5037,4 +5037,53 @@ textarea.form-control
 			&.active
 				background-color: #1d1d1d
 
+.size-selection-block
+	width: 950px
+
+.size-table
+	margin-bottom: 30px
+	width: 100%
+	text-align: center
+	th
+		font-weight: bold
+		padding: 10px
+		border-bottom: 3px solid #E5E5E5
+		font-size: 12px
+		text-transform: uppercase
+	td
+		padding: 10px
+		border-bottom: 1px solid #E5E5E5
+		font-size: 12px
+		span
+			font-weight: bold
+	tr:last-child
+		td
+			border-bottom: none
+
+.size-table-info
+	.h3
+		margin-bottom: 25px
+		font-weight: bold
+		font-size: 21px
+	p:last-child
+		margin-bottom: 0
+
+.size-table-link
+	display: inline-block
+	position: relative
+	line-height: 1.2
+	color: #434242 !important
+	text-decoration: none !important
+	+tr
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: #434242 !important
+		+tr
+
+
 @import "media" // Always at the end

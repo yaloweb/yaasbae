@@ -944,6 +944,9 @@
 	.alert
 		right: 48px
 		bottom: 20px
+	.size-selection-block
+		.popup-content
+			padding: 30px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -2525,6 +2528,34 @@
 		right: 10px
 		left: auto
 		top: 10px
+	.size-selection-block .popup-content
+		padding-left: 24px
+		padding-right: 24px
+	.size-table
+		display: block
+		thead
+			display: none
+		tbody
+			display: block
+		tr
+			display: block
+			margin-left: -24px
+			margin-right: -24px
+			padding-left: 24px
+			padding-right: 24px
+			&:nth-child(odd)
+				background-color: #f6f6f6
+			td
+				display: flex
+				text-align: right
+				padding-left: 0
+				padding-right: 0
+				&:before
+					content: attr(data-th)
+					flex-grow: 1
+					padding-right: 15px
+					text-align: left
+					color: #b5b5b5
 
 
 /*==========  Mobile First  ==========*/
