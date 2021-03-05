@@ -119,8 +119,9 @@ b, strong
 	display: none
 
 .header-menu
-	width: 50%
+	// width: 50%
 	flex-shrink: 0
+	flex-grow: 1
 
 .main-menu
 	display: flex
@@ -4209,7 +4210,7 @@ textarea.form-control
 .mob-menu-header
 	display: flex
 	align-items: center
-	margin-bottom: 67px
+	margin-bottom: 24px
 
 .mob-menu-close
 	font-size: 14px
@@ -4251,7 +4252,7 @@ textarea.form-control
 		font-size: 27px
 
 .mob-menu-accordion
-	margin-top: 131px
+	margin-top: 70px
 
 .mob-menu-accordion-item
 	border-bottom: 1px solid rgba(#fff, .1)
@@ -5004,5 +5005,36 @@ textarea.form-control
 	font-size: 18px
 	color: #000
 	display: none
+
+.header-select-gender
+	display: flex
+	margin-right: 20px
+	a
+		height: 67px
+		line-height: 67px
+		padding: 0 15px
+		color: #fff
+		text-decoration: none !important
+		font-size: 12px
+		font-weight: bold
+		text-transform: uppercase
+		letter-spacing: 0.05em
+		+tr
+		// background-color: rgba(#fff, .05)
+		&.active
+			background-color: #1d1d1d
+
+.mob-menu
+	.header-select-gender
+		margin-left: -25px
+		margin-right: -25px
+		margin-bottom: 25px
+		a
+			width: 50%
+			flex-shrink: 0
+			text-align: center
+			background-color: rgba(#fff, .05)
+			&.active
+				background-color: #1d1d1d
 
 @import "media" // Always at the end
