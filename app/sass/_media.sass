@@ -150,6 +150,13 @@
 			font-size: 14px
 			li span:first-child
 				width: 150px
+	.header-logo
+		width: auto
+	.header-acc
+		width: auto
+		margin-left: auto
+	.header-menu
+		flex-grow: 0
 
 // ≥1200px
 +media-breakpoint-down(lg)
@@ -947,6 +954,31 @@
 	.size-selection-block
 		.popup-content
 			padding: 30px
+	.header-menu-btn
+		display: flex
+		color: #000
+		font-size: 24px
+		margin-right: 20px
+	.site-header.dark
+		.header-menu-btn
+			color: #fff
+	.header-top-row
+		border-bottom: none
+	.header-bottom
+		border-top: 1px solid rgba(#585757, .2)
+	.site-header.dark
+		.header-bottom
+			border-top: 1px solid #585757
+	.header-logo
+		margin-right: auto
+	.mob-menu-block
+		display: block
+	.header-top-row
+		.header-select-gender
+			display: none
+	.header-menu
+		display: none
+
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1025,23 +1057,6 @@
 			font-size: 10px
 			color: #434242
 			margin-top: 8px
-	.header-menu-btn
-		display: flex
-		color: #000
-		font-size: 24px
-		margin-right: 20px
-	.site-header.dark
-		.header-menu-btn
-			color: #fff
-	.header-top-row
-		border-bottom: none
-	.header-bottom
-		border-top: 1px solid rgba(#585757, .2)
-	.site-header.dark
-		.header-bottom
-			border-top: 1px solid #585757
-	.header-logo
-		margin-right: auto
 	.logo
 		img
 			width: 107px
@@ -1138,8 +1153,6 @@
 		img
 			height: 100%
 			object-fit: cover
-	.mob-menu-block
-		display: block
 	.main-banners-left
 		.left-banners-promo-slider
 			display: none
@@ -1438,9 +1451,6 @@
 		font-size: 14px
 	.acc-sidebar-close
 		display: block
-	.header-top-row
-		.header-select-gender
-			display: none
 
 
 // ≥576px
