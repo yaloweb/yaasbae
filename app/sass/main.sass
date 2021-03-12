@@ -5100,5 +5100,52 @@ textarea.form-control
 		background-color: #434242 !important
 		+tr
 
+.pick-up-points
+	display: flex
+	border: 1px solid rgba(#848484, .5)
+	height: 420px
+
+.pick-up-points-list
+	width: 38.7%
+	flex-shrink: 0
+	max-height: 100%
+	display: flex
+	flex-direction: column
+	.h2
+		padding: 15px 26px
+		font-size: 16px
+		border-bottom: 1px solid #E5E5E5
+		margin: 0
+
+.pick-up-points-nav
+	flex-grow: 1
+	overflow-y: auto
+
+.pick-up-points-nav-item
+	cursor: pointer
+	+tr
+	padding: 10px 26px
+	&:hover,
+	&.active
+		background-color: #C4FFDB
+
+.pick-up-points-nav-street
+	line-height: 1.1
+	font-size: 16px
+	font-weight: 500
+	color: #434242
+	margin-bottom: 4px
+
+.pick-up-points-nav-worktime
+	font-size: 12px
+	color: #848484
+	font-weight: normal
+
+.pick-up-points-map
+	flex-grow: 1
+	display: flex
+
+.pick-up-points-map-frame
+	flex-grow: 1
 
 @import "media" // Always at the end
