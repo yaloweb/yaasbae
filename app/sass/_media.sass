@@ -471,6 +471,8 @@
 		&.type-2
 			.news-body
 				padding: 20px
+	.pick-up-points-nav-street
+		font-size: 14px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -2573,6 +2575,64 @@
 					padding-right: 15px
 					text-align: left
 					color: #b5b5b5
+	.pick-up-points
+		display: block
+		border: none
+		.h2
+			margin: 0 0 25px
+			padding: 0
+			border: none
+	.pick-up-points-list
+		width: auto
+	.pick-up-points-nav
+		margin-left: -20px
+		margin-right: -20px
+		padding: 0 20px
+		margin-bottom: 25px
+		display: flex
+		&:after
+			content: ''
+			display: block
+			width: 1px
+			height: 20px
+			flex-shrink: 0
+	.pick-up-points-nav-item
+		padding: 0 0 10px
+		margin-right: 20px
+		background-color: transparent !important
+		position: relative
+		flex-grow: 1
+		flex-shrink: 0
+		max-width: 250px
+		&:last-child
+			&:after
+				right: 0
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			right: -20px
+			background-color: rgba(#d0d0d0, .5)
+			height: 3px
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 3px
+			background-color: #434242
+			+tr
+			transform: scale(0)
+			z-index: 1
+		&.active
+			&:before
+				transform: scale(1)
+	.pick-up-points-map
+		margin-left: -20px
+		margin-right: -20px
+		height: 250px
 
 
 /*==========  Mobile First  ==========*/

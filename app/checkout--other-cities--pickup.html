@@ -968,61 +968,69 @@
 
 			let cdekData = [
 				{
+					id: 1,
 					coord: [55.795889, 49.130956],
 					street: 'Казань, Карла Маркса, 45',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 2,
 					coord: [55.768107, 49.177713],
 					street: 'Казань, Гвардейская улица, 56А',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 3,
 					coord: [55.767625, 49.187038],
 					street: 'Казань, Даурская 44д',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 4,
 					coord: [55.784891, 49.178980],
 					street: 'г. Казань (Республика Татарстан), улица Аделя Кутуя, д. 54',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 5,
 					coord: [55.810101, 49.082707],
 					street: 'улица Ползунова, 5',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 6,
 					coord: [55.803219, 49.064282],
 					street: 'улица Жуковка, 14',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 7,
 					coord: [55.794345, 49.111133],
 					street: 'улица Чернышевского, 6к2',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 8,
 					coord: [55.794099, 49.100145],
 					street: 'Московская улица, 1',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 9,
 					coord: [55.802517, 49.066821],
 					street: 'микрорайон Адмиралтейская Слобода',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 				{
+					id: 10,
 					coord: [55.797575, 49.066616],
 					street: 'Большая улица, 4',
 					workTime: 'Ежедневно с 9:00 - 20:00'
 				},
 			]
 
-			let locationCoord = [55.786430, 49.124326];
-
 			let myMap = new ymaps.Map(document.querySelector('.pick-up-points-map-frame'), {
-				center: locationCoord,
+				center: [55.796127, 49.106405],
 				zoom: 12,
 				duration: 1000,
 				controls: []
@@ -1030,20 +1038,11 @@
 				searchControlProvider: 'yandex#search'
 			});
 
-			let mapLabel = new ymaps.Placemark(locationCoord, {}, {
-				iconLayout: 'default#image',
-				iconImageHref: 'img/cdek-marker.png',
-				iconImageSize: [25, 25],
-				iconImageOffset: [-12.5, -12.5],
-			});
-
-			myMap.geoObjects.add(mapLabel);
-
 			let placemarksList = new ymaps.GeoObjectCollection();
 
 			function addPlacemarks() {
 
-				cdekData.forEach(item => {
+				cdekData.forEach((item, index) => {
 
 					placemarksList.add(new ymaps.Placemark(item.coord, {}, {
 						iconLayout: 'default#image',
@@ -1053,7 +1052,7 @@
 					}));
 
 					$('.pick-up-points-nav').append([
-						'<div class="pick-up-points-nav-item">',
+						`<div class="pick-up-points-nav-item ${index == 0 ? 'active' : ''}" data-coord="${item.coord[0]}, ${item.coord[1]}">`,
 							`<div class="pick-up-points-nav-street">${item.street}</div>`,
 							`<div class="pick-up-points-nav-worktime">${item.workTime}</div>`,
 						'</div>'
@@ -1064,6 +1063,46 @@
 			}addPlacemarks();
 
 			myMap.geoObjects.add(placemarksList);
+
+			myMap.geoObjects.events.add('click', function(e) {
+				let coord = e.get('target').geometry.getCoordinates().toString().split(','),
+						currObj = cdekData.filter(item => item.coord[0] == parseFloat(coord[0]) && item.coord[1] == parseFloat(coord[1]))[0];
+						currNavItem = $('.pick-up-points-nav').find('.pick-up-points-nav-item').eq(currObj.id - 1);
+				$('.pick-up-points-nav').find('.pick-up-points-nav-item').removeClass('active');
+				currNavItem.addClass('active');
+				if ( $(window).width() < 576 ) {
+					$('.pick-up-points-nav').animate({
+						scrollLeft: $('.pick-up-points-nav').scrollLeft() + (currNavItem.offset().left - $('.pick-up-points-nav').offset().left) - 20
+					}, 400);
+				}
+				else {
+					$('.pick-up-points-nav').animate({
+						scrollTop: $('.pick-up-points-nav').scrollTop() + (currNavItem.offset().top - $('.pick-up-points-nav').offset().top)
+					}, 400);
+				}
+				myMap.setZoom(14);
+				myMap.panTo(currObj.coord);
+			});
+
+			$('.pick-up-points-nav').find('.pick-up-points-nav-item').on('click', function() {
+				let ths = $(this),
+						coord = ths.data('coord').split(', '),
+						coordFloat = [parseFloat(coord[0]), parseFloat(coord[1])];
+				$('.pick-up-points-nav').find('.pick-up-points-nav-item').removeClass('active');
+				ths.addClass('active');
+				if ( $(window).width() < 576 ) {
+					$('.pick-up-points-nav').animate({
+						scrollLeft: $('.pick-up-points-nav').scrollLeft() + (ths.offset().left - $('.pick-up-points-nav').offset().left) - 20
+					}, 400);
+				}
+				else {
+					$('.pick-up-points-nav').animate({
+						scrollTop: $('.pick-up-points-nav').scrollTop() + (ths.offset().top - $('.pick-up-points-nav').offset().top)
+					}, 400);
+				}
+				myMap.setZoom(15);
+				myMap.panTo(coordFloat);
+			});
 
 		}
 
