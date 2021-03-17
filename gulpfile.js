@@ -50,6 +50,7 @@ gulp.task('scripts', function() {
 		'app/libs/inputmask/jquery.inputmask.min.js',
 		'app/libs/select2/select2.min.js',
 		'app/libs/datepicker/datepicker.min.js',
+		'app/libs/dadata/jquery.suggestions.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

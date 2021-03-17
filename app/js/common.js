@@ -927,4 +927,46 @@ $(function() {
     $('.acc-menu').removeClass('opened')
   });
 
+  let dadataToken = 'd77e22a108fb39a09c37d542f854fe97c12611c5';
+
+  $("#select-city").suggestions({
+    token: dadataToken,
+    type: "ADDRESS",
+    bounds: "city",
+    hint: false,
+    onSelect: function(suggestion) {
+      initSelectAddres(suggestion.data.city)
+    }
+  });
+
+  $("#select-region").suggestions({
+    token: dadataToken,
+    type: "ADDRESS",
+    bounds: "region",
+    hint: false,
+  });
+
+  function initSelectAddres(city) {
+    let options = {
+      token: dadataToken,
+      type: "ADDRESS",
+      hint: false,
+      onSelect: function(suggestion) {
+        $('#select-index').val(suggestion.data.postal_code);
+        if ( $("#select-city").val().trim().length == 0 ) {
+          $("#select-city").val(suggestion.data.city)
+        }
+      }
+    }
+    if ( city != undefined ) {
+      options.constraints = {
+        locations: { city: city },
+      }
+    }
+    $("#select-address").suggestions(options);
+  }
+
+  initSelectAddres();
+  
+
 });

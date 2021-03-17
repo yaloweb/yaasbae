@@ -84,6 +84,8 @@ b, strong
 					color: #fff
 		.acc-link
 			color: #fff
+			&:hover
+				color: #848484
 		.header-catalog
 			ul
 				li
@@ -173,8 +175,9 @@ b, strong
 	+td
 	+tr
 	position: relative
+	cursor: pointer !important
 	&:hover
-		color: #848484
+		color: #848484 !important
 	&:last-of-type
 		margin-right: 0
 
@@ -309,7 +312,7 @@ b, strong
 				+td
 				+tr
 				&:hover
-					color: #848484
+					color: $green !important
 			&.has-child
 				&:hover
 					ul
@@ -960,8 +963,12 @@ b, strong
 		padding: 0 38px
 		&:before
 			transform: skew(0, $deg2)
+			+tr
 		span
 			transform: rotate($deg2)
+		&:hover
+			&:before
+				background-color: #9cffc2
 	&.btn-block
 		width: 100%
 		padding-left: 10px
@@ -4985,6 +4992,28 @@ textarea.form-control
 .checkout-success-detail
 	border: 1px solid rgba(#848484, .5)
 	padding: 35px 45px
+	position: relative
+	overflow: hidden
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+		width: 600px
+		height: 600px
+		margin-top: -300px
+		margin-left: -300px
+		border-radius: 50%
+		background-color: #f1f1f1
+		transform: scale(0)
+		transition: all .5s ease
+	&:hover
+		border-color: #68e699
+		&:after
+			transform: scale(1)
+			background-color: #fafafa
 	.h3
 		font-size: 18px
 		font-weight: bold
@@ -5037,7 +5066,9 @@ textarea.form-control
 		+tr
 		// background-color: rgba(#fff, .05)
 		&.active
-			background-color: #1d1d1d
+			background-color: #1d1d1d !important
+		&:hover
+			background-color: rgba(#fff, .05)
 
 .mob-menu
 	.header-select-gender
@@ -5147,5 +5178,84 @@ textarea.form-control
 
 .pick-up-points-map-frame
 	flex-grow: 1
+
+.s-adv-set
+	padding: 45px 0 65px
+
+.adv-set-wrapper
+	display: flex
+
+.adv-set-left
+	flex-shrink: 0
+	margin-right: 65px
+	max-width: 30%
+	.section-title
+		margin-bottom: 17px
+		.h2
+			color: #434242
+
+.adv-set-price-block
+	p
+		color: #848484
+		font-size: 15px
+		margin-bottom: 7px
+
+.adv-set-price-block-prices
+	display: flex
+	align-items: center
+	margin-bottom: 65px
+	.current-price
+		margin-right: 15px
+		font-size: 24px
+	.old-price
+		font-size: 12px
+		&:before
+			transform: rotate(-10deg)
+
+.adv-set-right
+	flex-grow: 1
+
+.adv-set
+	display: flex
+	flex-wrap: wrap
+
+.adv-set-item
+	margin-right: 95px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		right: -65px
+		top: 79px
+		width: 32px
+		height: 32px
+		background-image: url(../img/icons/plus.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+	&:last-child
+		margin-right: 0
+		&:after
+			display: none
+	.product-item
+		margin-bottom: 15px !important
+		padding-bottom: 0 !important
+		height: auto !important
+	.product-image
+		width: 145px
+		height: 190px
+		margin-bottom: 14px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+.checkout-success-detail-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1
 
 @import "media" // Always at the end
