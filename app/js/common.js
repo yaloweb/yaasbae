@@ -967,6 +967,5 @@ $(function() {
   }
 
   initSelectAddres();
-  
 
 });
