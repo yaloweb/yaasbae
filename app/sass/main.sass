@@ -1137,6 +1137,7 @@ b, strong
 	font-weight: bold
 	display: inline-block
 	+ruble
+	white-space: nowrap
 	&.red
 		color: $red
 
@@ -1146,6 +1147,7 @@ b, strong
 	color: #B9B9B9
 	font-size: 13px
 	display: inline-block
+	white-space: nowrap
 	&:before
 		content: ''
 		position: absolute
@@ -2944,9 +2946,10 @@ textarea.form-control
 		margin: 0 10px 10px 0
 		label
 			span
-				width: 35px
+				min-width: 35px
 				height: 35px
 				line-height: 33px
+				white-space: nowrap
 	.form-submit
 		margin-top: 30px
 
