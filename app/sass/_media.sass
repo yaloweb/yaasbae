@@ -97,6 +97,11 @@
 			top: 116px
 	.adbanner-text p
 		margin-bottom: 20px
+	.left-banners-image
+		video, img
+			height: 576px
+	.main-banner img
+		height: 576px
 
 @media (max-width: 1365.98px)
 	.container
@@ -164,6 +169,11 @@
 		margin-left: auto
 	.header-menu
 		flex-grow: 0
+	.left-banners-image
+		video, img
+			height: 554px
+	.main-banner img
+		height: 554px
 
 // ≥1200px
 +media-breakpoint-down(lg)
@@ -483,6 +493,13 @@
 			width: 278px
 		.owl-nav button
 			top: 200px
+
+@media (max-width: 1159.98px)
+	.left-banners-image
+		video, img
+			height: 48vw
+	.main-banner img
+		height: 48vw
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -1488,6 +1505,10 @@
 	.recently-viewed-slider
 		.product-item
 			width: 40vw
+	.main-banner img
+		height: auto
+	.left-banners-image img, .left-banners-image video
+		height: 100%
 
 
 // ≥576px
