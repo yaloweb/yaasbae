@@ -225,13 +225,10 @@ $(function() {
 
 	$('.promo-slider').owlCarousel({
 		items: 1,
-		margin: 20,
+		margin: 5,
 		dots: false,
 		nav: true,
     responsive: {
-      0: {
-        margin: 12
-      },
       576: {
         items: 1
       },
@@ -242,7 +239,6 @@ $(function() {
         items: 3
       },
       1200: {
-        margin: 30,
         items: 3
       }
     }
@@ -252,10 +248,9 @@ $(function() {
 		items: 4,
 		nav: true,
 		dots: false,
-		margin: 20,
+		margin: 5,
     responsive: {
       0: {
-        margin: 12,
         items: 2
       },
       576: {
@@ -267,9 +262,6 @@ $(function() {
       992: {
         items: 4
       },
-      1200: {
-        margin: 30
-      }
     }
 	});
 
@@ -310,19 +302,11 @@ $(function() {
 	$('.instagram-slider').owlCarousel({
 		items: 5,
 		autoWidth: true,
-		margin: 18,
+		margin: 5,
 		nav: false,
 		dots: false,
 		center: true,
 		loop: true,
-    responsive: {
-      0: {
-        margin: 10
-      },
-      1200: {
-        margin: 18
-      }
-    }
 	});
 
 	function openPopup(id, noClose = false) {
@@ -530,23 +514,20 @@ $(function() {
     loop: false,
     nav: true,
     dots: false,
-    margin: 30,
+    margin: 5,
+    autoWidth: true,
     responsive: {
       0: {
         items: 2,
-        margin: 20
       },
       576: {
         items: 2,
-        margin: 20
       },
       768: {
         items: 3,
-        margin: 20
       },
       992: {
         items: 4,
-        margin: 20
       },
       1200: {
         items: 5
@@ -967,5 +948,17 @@ $(function() {
   }
 
   initSelectAddres();
+
+  $('.product-descr-accordion-item').each(function() {
+    let ths = $(this),
+        head = ths.find('.product-descr-accordion-header'),
+        title = ths.find('.product-descr-accordion-title'),
+        text = ths.find('.product-descr-accordion-descr').html();
+    head.on('click', function() {
+      $('.product-descr-popup-title').text(title.text());
+      $('.product-descr-popup-content').html(text);
+      openPopup('#product-descr-popup');
+    });
+  });
 
 });

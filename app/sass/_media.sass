@@ -90,6 +90,13 @@
 		a
 			height: 57px
 			line-height: 57px
+	.recently-viewed-slider
+		.product-item
+			width: 218px
+		.owl-nav button
+			top: 116px
+	.adbanner-text p
+		margin-bottom: 20px
 
 @media (max-width: 1365.98px)
 	.container
@@ -298,8 +305,6 @@
 	.main-banners-right
 		padding-right: 10px
 		padding-left: 10px
-	.categories
-		grid-gap: 20px
 	.product-image
 		max-height: none
 		display: flex
@@ -473,6 +478,11 @@
 				padding: 20px
 	.pick-up-points-nav-street
 		font-size: 14px
+	.recently-viewed-slider
+		.product-item
+			width: 278px
+		.owl-nav button
+			top: 200px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -980,6 +990,16 @@
 			display: none
 	.header-menu
 		display: none
+	.recently-viewed-slider
+		.product-item
+			width: 30vw
+	.adbanner-text
+		.link
+			font-size: 12px
+			&:after
+				width: 14px
+				height: 14px
+				margin-left: 7px
 
 
 // ≥768px
@@ -1224,8 +1244,6 @@
 		padding-bottom: 23px
 	.s-categories
 		padding-top: 23px
-	.categories
-		grid-gap: 10px
 	.adbanner-row
 		flex-wrap: wrap
 	.adbanner-img
@@ -1467,6 +1485,9 @@
 			height: 20px
 			right: -26px
 			top: 85px
+	.recently-viewed-slider
+		.product-item
+			width: 40vw
 
 
 // ≥576px
@@ -1483,7 +1504,6 @@
 	.promo-slider
 		padding-right: 30px
 	.categories
-		grid-gap: 15px
 		grid-template-columns: repeat(2, 1fr)
 	.categories-item
 		.h3
@@ -2659,6 +2679,10 @@
 			width: 20px
 			height: 20px
 			flex-shrink: 0
+	.product-descr-popup-block .popup-content
+		padding: 105px 24px 32px
+	.lookbook-open-full
+		display: block
 
 
 /*==========  Mobile First  ==========*/
@@ -2680,10 +2704,10 @@
 +media-breakpoint-up(xl)
 	.lookbook-prod-item
 		&:hover
-			background-color: #D6FFE6
+			background-color: #E1E7E4
 			&:after
-				background-color: #D6FFE6
+				background-color: #E1E7E4
 			.lookbook-prod-add
 				border-color: #434242
-				color: #434242
-				background-color: transparent
+				background-color: #434242
+				color: #fff
