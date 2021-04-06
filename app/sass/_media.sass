@@ -18,7 +18,8 @@
 @media (max-width: 1439.98px)
 	.container
 		max-width: 1200px
-	.logo img
+	.logo img,
+	.logo svg
 		width: 120px
 	.header-top-row
 		height: 58px
@@ -509,7 +510,7 @@
 	.open-header-catalog-btn
 		display: flex
 		align-items: center
-		color: #000
+		color: rgba(var(--header-text-color), 1)
 		+tr
 		+td
 		font-size: 13px
@@ -985,7 +986,7 @@
 			padding: 30px
 	.header-menu-btn
 		display: flex
-		color: #000
+		color: rgba(var(--header-text-color), 1)
 		font-size: 24px
 		margin-right: 20px
 	.site-header.dark
@@ -994,7 +995,7 @@
 	.header-top-row
 		border-bottom: none
 	.header-bottom
-		border-top: 1px solid rgba(#585757, .2)
+		border-top: 1px solid rgba(var(--header-text-color), .2)
 	.site-header.dark
 		.header-bottom
 			border-top: 1px solid #585757
@@ -1097,7 +1098,8 @@
 			color: #434242
 			margin-top: 8px
 	.logo
-		img
+		img,
+		svg
 			width: 107px
 	.acc-links-nav
 		font-size: 22px

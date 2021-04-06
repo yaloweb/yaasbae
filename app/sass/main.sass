@@ -22,6 +22,7 @@ body
 	color: #434242
 	font-weight: normal
 	font-feature-settings: 'lnum'
+	background-color: var(--body-bg)
 
 section
 	position: relative
@@ -63,6 +64,7 @@ b, strong
 .site-header
 	position: relative
 	margin-bottom: 21px
+	background-color: var(--header-bg-color)
 	// &:after
 	// 	content: ''
 	// 	position: absolute
@@ -73,35 +75,38 @@ b, strong
 	// 	z-index: -1
 	// 	transform: skew(0, $deg) scaleY(4)
 	// 	transform-origin: bottom right
-	&.dark
-		.main-menu
-			a
-				color: #848484
-				&:after
-					background-color: #C4FFDB
-				&:hover,
-				&.active
-					color: #fff
-		.acc-link
-			color: #fff
-			&:hover
-				color: #848484
-		.header-catalog
-			ul
-				li
-					a
-						color: #fff
-		.search-link
-			color: #fff
-		.header-top-row
-			border-bottom-color: rgba(#fff, .3)
+	// &.dark
+	// 	.header-select-gender
+	// 		a
+	// 			color: #fff
+	// 	.main-menu
+	// 		a
+	// 			color: #848484
+	// 			&:after
+	// 				background-color: $accent
+	// 			&:hover,
+	// 			&.active
+	// 				color: #fff
+	// 	.acc-link
+	// 		color: #fff
+	// 		&:hover
+	// 			color: #848484
+	// 	.header-catalog
+	// 		ul
+	// 			li
+	// 				a
+	// 					color: #fff
+	// 	.search-link
+	// 		color: #fff
+	// 	.header-top-row
+	// 		border-bottom-color: rgba(#fff, .3)
 
 .header-top-row
 	display: flex
 	align-items: center
 	height: 68px
 	position: relative
-	border-bottom: 1px solid rgba(#000, .3)
+	border-bottom: 1px solid rgba(var(--header-text-color), .3)
 
 .header-logo
 	padding-right: 30px
@@ -113,9 +118,13 @@ b, strong
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	img
+	img,
+	svg
 		width: 160px
 		flex-shrink: 0
+	svg
+		path
+			fill: rgba(var(--header-text-color), 1)
 
 .header-menu-btn
 	display: none
@@ -134,7 +143,7 @@ b, strong
 		position: relative
 		margin: 0 8px
 		padding: 0 10px
-		color: #848484
+		color: rgba(var(--header-text-color), .55)
 		text-transform: uppercase
 		+tr
 		+td
@@ -143,7 +152,7 @@ b, strong
 			position: absolute
 			bottom: -2px
 			height: 3px
-			background-color: #000
+			background-color: $accent
 			z-index: 1
 			left: 0
 			width: 100%
@@ -151,7 +160,7 @@ b, strong
 			transform: scaleX(0)
 		&:hover,
 		&.active
-			color: #000
+			color: rgba(var(--header-text-color), 1)
 			&:after
 				transform: scaleX(1)
 
@@ -170,14 +179,14 @@ b, strong
 	display: flex
 	align-items: center
 	justify-content: center
-	color: #000
+	color: rgba(var(--header-text-color), 1)
 	margin-right: 35px
 	+td
 	+tr
 	position: relative
 	cursor: pointer !important
 	&:hover
-		color: #848484 !important
+		color: rgba(var(--header-text-color), .55) !important
 	&:last-of-type
 		margin-right: 0
 
@@ -186,7 +195,7 @@ b, strong
 	width: 15px
 	height: 15px
 	border-radius: 50%
-	background-color: #C5FFDC
+	background-color: $accent
 	top: -5px
 	right: -5px
 	line-height: 15px
@@ -275,7 +284,7 @@ b, strong
 		font-family: $font2
 		font-size: 8px
 		font-weight: 500
-		background-color: #C4FFDB
+		background-color: $accent
 		right: -5px
 		top: -5px
 
@@ -306,13 +315,13 @@ b, strong
 				margin-right: 0
 				margin-bottom: 0
 			a
-				color: #000
+				color: rgba(var(--header-text-color), 1)
 				padding: 8px 0
 				display: inline-block
 				+td
 				+tr
 				&:hover
-					color: $green !important
+					color: $accent !important
 			&.has-child
 				&:hover
 					ul
@@ -362,7 +371,7 @@ b, strong
 .search-link
 	display: inline-flex
 	font-size: 20px
-	color: #000
+	color: rgba(var(--header-text-color), 1)
 	+td
 	+tr
 	&:hover
@@ -780,7 +789,7 @@ b, strong
 	left: 75px
 	bottom: 70px
 	width: calc(100% - 300px)
-	color: #000
+	color: var(--banner-text-color)
 	.h1
 		font-weight: 900
 		line-height: 1.1
@@ -890,7 +899,7 @@ b, strong
 		bottom: 23px
 		right: 30px
 		font-size: 24px
-		color: #fff
+		color: var(--categories-text-color)
 		+tr
 		transform: translateX(100px)
 	&:hover
@@ -921,7 +930,7 @@ b, strong
 	.h3
 		font-size: 24px
 		font-weight: 900
-		color: #fff
+		color: var(--categories-text-color)
 		position: absolute
 		left: 30px
 		bottom: 28px
@@ -948,7 +957,7 @@ b, strong
 	height: 60px
 	line-height: 60px
 	text-transform: uppercase
-	color: #434242 !important
+	color: var(--btn-text-color) !important
 	position: relative
 	z-index: 1
 	border: none
@@ -962,12 +971,12 @@ b, strong
 		width: 100%
 		height: 100%
 		z-index: -1
-		background-color: #D5DDD9
+		background-color: $accent
 		+tr
 	&:hover,
 	&.active
 		&:before
-			background-color: #c1c6c4
+			background-color: var(--accent-color-hover)
 	&.btn-lg
 		height: 70px
 		line-height: 70px
@@ -1007,7 +1016,7 @@ b, strong
 		line-height: 38px
 		padding: 0 16px
 	&.btn-border
-		color: #4A5B4C !important
+		color: $accent !important
 		&:before
 			border: 1px solid #D9D9D9
 			background-color: transparent
@@ -1083,7 +1092,7 @@ b, strong
 	position: absolute
 	color: #434242
 	&.green
-		background-color: #D5DDD9
+		background-color: $accent
 		color: #4A5B4C
 
 
@@ -2839,9 +2848,10 @@ textarea.form-control
 		transform: scale(0)
 	span
 		position: absolute
-		top: 0
+		top: -3px
 		left: 0
-		padding-left: 16px
+		// padding-left: 16px
+		margin-left: 16px
 		+tr
 		display: inline-block
 		opacity: 0
@@ -2849,6 +2859,9 @@ textarea.form-control
 		visibility: hidden
 		font-size: 10px
 		white-space: nowrap
+		background-color: rgba(#fff, .75)
+		padding: 2px 4px
+		border-radius: 2px
 
 @keyframes dotScale
 	0%
@@ -3502,7 +3515,7 @@ textarea.form-control
 	justify-content: center
 	width: 53px
 	height: 53px
-	background-color: #D5DDD9
+	background-color: $accent
 	font-size: 19px
 	color: #4A5B4C
 	margin-right: 18px
@@ -3537,7 +3550,7 @@ textarea.form-control
 
 .contacts-form-block
 	padding: 40px 50px 50px
-	background-color: #D5DDD9
+	background-color: $accent
 
 .contacts-form
 	.h3
@@ -3665,7 +3678,7 @@ textarea.form-control
 	margin-bottom: 17px
 	&:hover
 		padding: 0 25px
-		background-color: #D5DDD9
+		background-color: $accent
 		color: #000
 		.soc-acc
 			color: #4A5B4C
@@ -3721,7 +3734,7 @@ textarea.form-control
 		text-transform: uppercase
 		font-weight: 500
 		&.active
-			background-color: #D5DDD9
+			background-color: $accent
 			.acc-menu-link-icon
 				.qnt
 					color: #fff
@@ -3981,7 +3994,7 @@ textarea.form-control
 			color: #C1C1C1
 	&.success
 		.order-step-icon
-			background-color: #D5DDD9
+			background-color: $accent
 		&:after
 			content: ''
 			position: absolute
@@ -4943,8 +4956,8 @@ textarea.form-control
 	cursor: pointer
 	&:checked
 		& + .del-item-content
-			background-color: #D5DDD9
-			border-color: #D5DDD9
+			background-color: $accent
+			border-color: $accent
 			.h3
 				color: #4A5B4C
 			.icon-checkmark
@@ -5136,16 +5149,18 @@ textarea.form-control
 		height: 67px
 		line-height: 67px
 		padding: 0 15px
-		color: #fff
+		color: #848484
 		text-decoration: none !important
 		font-size: 12px
 		font-weight: bold
 		text-transform: uppercase
 		letter-spacing: 0.05em
 		+tr
+		color: rgba(var(--header-text-color), .5)
 		// background-color: rgba(#fff, .05)
 		&.active
 			background-color: #1d1d1d !important
+			color: rgba(var(--header-text-color), 1) !important
 		&:hover
 			background-color: rgba(#fff, .05)
 
@@ -5159,8 +5174,10 @@ textarea.form-control
 			flex-shrink: 0
 			text-align: center
 			background-color: rgba(#fff, .05)
+			color: #fff
 			&.active
 				background-color: #1d1d1d
+				color: #fff
 
 .size-selection-block
 	width: 950px
@@ -5237,7 +5254,7 @@ textarea.form-control
 	padding: 10px 26px
 	&:hover,
 	&.active
-		background-color: #D5DDD9
+		background-color: $accent
 
 .pick-up-points-nav-street
 	line-height: 1.1
