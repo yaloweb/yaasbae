@@ -15,6 +15,7 @@
 		p
 			font-size: 18px
 			margin-bottom: 20px
+
 @media (max-width: 1439.98px)
 	.container
 		max-width: 1200px
@@ -103,6 +104,46 @@
 			height: 576px
 	.main-banner img
 		height: 576px
+	.basket-dropdown
+		width: 440px
+		padding: 25px 30px 30px
+		right: -15px
+	.basket-dropdown-content
+		.h4
+			margin-bottom: 14px
+			font-size: 16px
+	.basket-dropdown-items
+		max-height: 300px
+		margin-bottom: 20px
+		.checkout-item
+			padding-top: 12px
+			padding-bottom: 12px
+		.checkout-item-img
+			margin-right: 12px
+			img
+				width: 87px
+				height: 87px
+		.checkout-item-body
+			margin-right: 15px
+			display: flex
+			flex-direction: column
+		.checkout-item-name
+			font-size: 14px
+		.checkout-item-price
+			font-size: 16px
+		.checkout-item-descr
+			font-size: 12px
+	.basket-dropdown-total
+		font-size: 18px
+		margin-bottom: 20px
+	.basket-dropdown-total-text
+		margin-right: 10px
+	.basket-dropdown-btns
+		.btn
+			width: calc(50% - 10px)
+			height: 50px
+			line-height: 48px
+			font-size: 12px
 
 @media (max-width: 1365.98px)
 	.container
@@ -494,6 +535,28 @@
 			width: 278px
 		.owl-nav button
 			top: 200px
+	.basket-dropdown
+		right: -20px
+	.header-catalog-dropdown
+		left: 0
+		right: 0
+	.header-catalog-dropdown-container
+		padding: 30px 20px
+	.header-catalog-list
+		ul
+			li
+				margin-bottom: 7px
+				a
+					font-size: 13px
+	.header-catalog-dropdown-banner-content
+		padding: 13px 15px
+	.header-catalog-dropdown-tab
+		.row
+			margin-left: -2.5px
+			margin-right: -2.5px
+			[class*=col-]
+				padding-left: 2.5px
+				padding-right: 2.5px
 
 @media (max-width: 1159.98px)
 	.left-banners-image
@@ -1018,6 +1081,17 @@
 				width: 14px
 				height: 14px
 				margin-left: 7px
+	.header-catalog-dropdown-wrapper
+		display: none
+	.bg-overlay
+		display: none
+	.size-table-row-left
+		margin-right: 30px
+	.size-selection-block .popup-close
+		top: 20px
+		right: 20px
+	.size-table-img img
+		width: 140px
 
 
 // ≥768px
@@ -2706,6 +2780,23 @@
 		padding: 105px 24px 32px
 	.lookbook-open-full
 		display: block
+	.basket-dropdown
+		display: none
+	.search-link-text
+		display: none
+	.header-catalog>ul>li.has-child ul
+		width: 100vw
+	.size-table-row-right
+		display: none
+	.size-table-row-left
+		width: 100%
+		margin-right: 0
+	.size-selection-block .popup-close
+		right: 0
+		top: 0
+	.product-new-descr-item .h3
+		margin-bottom: 15px
+		font-size: 16px
 
 
 /*==========  Mobile First  ==========*/
