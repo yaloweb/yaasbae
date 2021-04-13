@@ -45,6 +45,8 @@ input
 	min-height: 100vh
 	display: flex
 	flex-direction: column
+	&.visible
+		overflow: visible
 
 main
 	flex-grow: 1
@@ -4535,7 +4537,8 @@ textarea.form-control
 .basket-sidebar
 	padding: 22px 30px 30px
 	border: 1px solid rgba(#848484, .5)
-	position: relative
+	position: sticky
+	top: 20px
 	.h2
 		font-weight: bold
 		font-size: 18px

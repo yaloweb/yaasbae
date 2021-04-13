@@ -1107,4 +1107,8 @@ $(function() {
     $('.mob-menu-catalog-submenu').removeClass('opened')
   });
 
+  if ( $('.basket-sidebar').length > 0 ) {
+    $('.wrapper').addClass('visible')
+  }
+
 });
