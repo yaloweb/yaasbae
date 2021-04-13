@@ -120,7 +120,7 @@ b, strong
 	justify-content: center
 	img,
 	svg
-		width: 160px
+		width: 157px
 		flex-shrink: 0
 	svg
 		path
@@ -192,9 +192,9 @@ b, strong
 
 .basket-qnt
 	position: absolute
-	width: 15px
+	min-width: 15px
 	height: 15px
-	border-radius: 50%
+	border-radius: 8px
 	background-color: $accent
 	top: -5px
 	right: -5px
@@ -203,6 +203,7 @@ b, strong
 	color: #000
 	font-size: 10px
 	font-weight: 500
+	padding: 0
 
 .acc-menu
 	position: absolute
@@ -314,7 +315,9 @@ b, strong
 				margin-bottom: 0
 			a
 				color: rgba(var(--header-text-color), .45)
-				padding: 8px 0
+				// padding: 8px 0
+				height: 67px
+				line-height: 67px
 				display: inline-block
 				+td
 				+tr
@@ -1075,14 +1078,17 @@ b, strong
 	max-height: 390px
 
 .product-image-link
-	display: flex
+	// display: flex
 	overflow: hidden
-	height: 100%
+	// height: 100%
+	flex-shrink: 0
 	img
 		width: 100%
 		object-fit: cover
 		transition: all .8s ease
 		transition-delay: .3s
+		flex-shrink: 0
+		height: auto
 
 .product-stick
 	background-color: #fff
@@ -1350,8 +1356,10 @@ b, strong
 	opacity: 0
 	transform-origin: left top
 	transform: scale(.625) translateY(30px)
+	max-width: 320px
 	+tr
-	white-space: nowrap
+	// white-space: nowrap
+	min-width: 170px
 	font-size: 100%
 	&:nth-child(1)
 		transition-delay: .4s
@@ -1374,11 +1382,13 @@ b, strong
 	.current-price
 		font-weight: normal
 		font-size: 18px
+		white-space: nowrap
 		+ruble2
 	.old-price
 		font-size: 10px
 		color: #000
 		opacity: 0.26
+		white-space: nowrap
 		&:before
 			background-color: #000
 			transform: rotate(-10deg)
@@ -1538,6 +1548,9 @@ b, strong
 
 .footer-soc
 	width: 26%
+	.h5
+		& + .footer-soc-item
+			padding-top: 0
 
 .footer-soc-item
 	display: flex
@@ -1548,6 +1561,7 @@ b, strong
 	border-bottom: 1px solid rgba(#fff, .3)
 	align-items: center
 	padding-bottom: 15px
+	padding-top: 15px
 	&:hover
 		.footer-soc-arrow
 			transform: rotate(360deg)
@@ -4307,17 +4321,17 @@ textarea.form-control
 
 .mob-menu-block
 	position: fixed
-	top: 0
-	left: 0
-	height: 100%
-	width: 375px
+	top: 48px
+	right: 0
+	height: calc(100% - 48px)
+	width: 324px
+	max-width: 100vw
 	z-index: 100
-	background-color: #434242
-	color: #fff
-	padding: 21px 24px 41px
-	overflow: hidden auto
+	background-color: #fff
+	color: #434242
+	// overflow: hidden auto
 	transition: transform .4s ease
-	transform: translateX(-150%)
+	transform: translateX(120%)
 	display: none
 	&.opened
 		transform: translateX(0)
@@ -5174,7 +5188,7 @@ textarea.form-control
 	.header-select-gender
 		margin-left: -25px
 		margin-right: -25px
-		margin-bottom: 25px
+		margin-bottom: 45px
 		a
 			width: 50%
 			flex-shrink: 0
@@ -5849,4 +5863,21 @@ textarea.form-control
 			&:after
 				opacity: 1
 
+
+.product-page
+	.product-quantity
+		> strong
+			display: block
+			font-size: 14px
+			font-weight: 900
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			color: #848484
+			margin-bottom: 5px
+		> div
+			strong
+				font-weight: normal
+				color: #848484
+
 @import "media" // Always at the end
+@import "new-menu" // Always at the end

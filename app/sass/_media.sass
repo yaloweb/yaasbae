@@ -592,99 +592,6 @@
 	.site-header.dark
 		.open-header-catalog-btn
 			color: #fff
-	.header-catalog
-		position: fixed
-		top: 0
-		left: 0
-		width: 375px
-		max-width: 100%
-		height: 100%
-		z-index: 101
-		background-color: #fff
-		padding: 37px 24px 27px
-		margin: 0
-		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.11)
-		display: block
-		overflow-y: auto
-		overflow-x: hidden
-		transform: translateX(-150%)
-		transition: transform .4s ease
-		&.opened
-			transform: translateX(0)
-		> ul
-			flex-wrap: wrap
-			margin: 0 -7px
-			justify-content: flex-start
-			position: static
-			> li
-				width: 50%
-				flex-shrink: 0
-				padding: 0 7px
-				margin: 0 0 15px
-				&:after
-					content: ''
-					display: block
-					padding-bottom: 100%
-				> a
-					background-size: cover
-					background-repeat: no-repeat
-					background-position: center
-					color: #fff !important
-					position: absolute
-					top: 0
-					left: 7px
-					width: calc(100% - 14px)
-					height: 100%
-					display: flex
-					flex-direction: column
-					justify-content: flex-end
-					padding: 16px 18px
-					font-size: 20px
-					font-weight: 900
-					line-height: 1.05
-				&.has-child
-					position: relative
-					ul
-						position: fixed
-						display: block
-						top: 0
-						left: 0
-						width: 375px
-						min-height: 100%
-						z-index: 10
-						background-color: #fff
-						opacity: 1
-						visibility: visible !important
-						transform: translate(-200%, 0) !important
-						box-shadow: none
-						max-width: none
-						min-width: 0
-						opacity: 1 !important
-						padding: 31px 24px 90px
-						overflow: hidden auto
-						max-height: 100vh
-						.header-catalog-close
-							top: -1px
-							right: 6px
-						&.opened
-							transform: translate(0, 0) !important
-
-	.header-catalog-title
-		display: block
-		font-size: 13px
-		font-weight: 800
-		text-transform: uppercase
-		margin-bottom: 34px
-		line-height: 1.05
-	.header-catalog-close
-		position: absolute
-		display: flex
-		align-items: center
-		justify-content: center
-		right: 30px
-		top: 30px
-		font-size: 18px
-		z-index: 0
 	.submenu-header
 		display: block
 		margin-bottom: 47px !important
@@ -751,8 +658,10 @@
 			visibility: visible
 		.owl-nav
 			display: none !important
-	.total-look-prices
-		display: none !important
+	// .total-look-prices
+	// 	display: none !important
+	.total-look-price
+		max-width: 120px
 	.total-look-item
 		.h2
 			bottom: 80px
@@ -1814,7 +1723,7 @@
 			display: none
 	.footer
 		.footer-soc-item
-			padding: 23px 0
+			padding: 23px 0 !important
 			border-bottom-color: rgba(#fff, .1)
 		.footer-soc-arrow
 			font-size: 26px
@@ -1822,7 +1731,7 @@
 		img
 			opacity: 0.6
 	.mob-menu-block
-		width: 100%
+		// width: 100%
 	.header-catalog
 		width: 100%
 	.search-dropdown
@@ -2279,8 +2188,19 @@
 		.product-liked
 			top: 18px
 			right: 18px
+	// .lookbook-dot
+		// display: none
+	.lookbook-dot span
+		max-width: 150px
+		overflow: hidden
+		text-overflow: ellipsis
 	.lookbook-dot
-		display: none
+		&:before
+			transform: scale(1)
+		span
+			visibility: visible
+			opacity: 1
+			transform: translateX(0)
 	.lookbook-images-slider
 		.owl-nav
 			display: none
@@ -2797,6 +2717,12 @@
 	.product-new-descr-item .h3
 		margin-bottom: 15px
 		font-size: 16px
+	.footer-nav ul li a:hover
+		transform: none
+	.product-cart
+		display: none
+	.product-item
+		padding-bottom: 0
 
 
 /*==========  Mobile First  ==========*/
