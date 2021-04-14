@@ -1102,4 +1102,21 @@ $(function() {
     }
   });
 
+  function scrollMobMenu(scr) {
+    if ( $(window).width() < 992 ) {
+      if ( scr > 0 ) {
+        $('.header-top').addClass('fixed')
+      }
+      else {
+        $('.header-top').removeClass('fixed')
+      }
+    }
+  }
+
+  scrollMobMenu($(window).scrollTop());
+
+  $(window).on('scroll', function() {
+    scrollMobMenu($(window).scrollTop());
+  })
+
 });
