@@ -32,6 +32,7 @@
 			--accent-color-hover: #c1c6c4;
 			--btn-text-color: #434242;
 			--header-bg-color: #434242;
+			--header-bottom-bg-color: #505050;
 			/*Для возможности изменения прозрачности нужно использовать RGB палитру*/
 			--header-text-color: 255, 255, 255;
 			--banner-text-color: #000;
@@ -194,11 +195,88 @@
 							<a href="#">Мужское</a>
 						</div>
 
-						<div class="header-menu">
-							<nav class="main-menu">
-								<a href="#">LookBook</a>
-								<a href="#">Контакты</a>
-							</nav>
+						<div class="header-top-search">
+							<form class="header-top-search-form">
+								<input type="search" class="header-top-search-input" placeholder="Найти">
+								<span class="icon-search"></span>
+							</form>
+							<div class="header-top-search-dropdown">
+								<div class="search-results">
+
+									<div class="h6">Товары</div>
+
+									<div class="search-results-items">
+										<div class="product-sm">
+											<a href="#" class="product-sm-link"></a>
+											<div class="product-sm-img">
+												<img src="img/products/1.jpg" alt="">
+											</div>
+											<div class="product-sm-body">
+												<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
+												<div class="product-sm-price">
+													<div class="product-sm-price-current">2 999</div>
+													<div class="product-sm-price-old">6 500</div>
+												</div>
+											</div>
+										</div>
+										<div class="product-sm">
+											<a href="#" class="product-sm-link"></a>
+											<div class="product-sm-img">
+												<img src="img/products/1.jpg" alt="">
+											</div>
+											<div class="product-sm-body">
+												<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
+												<div class="product-sm-price">
+													<div class="product-sm-price-current">2 999</div>
+													<div class="product-sm-price-old">6 500</div>
+												</div>
+											</div>
+										</div>
+										<div class="product-sm">
+											<a href="#" class="product-sm-link"></a>
+											<div class="product-sm-img">
+												<img src="img/products/1.jpg" alt="">
+											</div>
+											<div class="product-sm-body">
+												<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
+												<div class="product-sm-price">
+													<div class="product-sm-price-current">2 999</div>
+													<div class="product-sm-price-old">6 500</div>
+												</div>
+											</div>
+										</div>
+										<div class="product-sm">
+											<a href="#" class="product-sm-link"></a>
+											<div class="product-sm-img">
+												<img src="img/products/1.jpg" alt="">
+											</div>
+											<div class="product-sm-body">
+												<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
+												<div class="product-sm-price">
+													<div class="product-sm-price-current">2 999</div>
+													<div class="product-sm-price-old">6 500</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="h6">Коллекции</div>
+
+									<div class="search-collections">
+										<ul>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
 						</div>
 
 						<div class="header-acc">
@@ -306,127 +384,13 @@
 							<div class="header-catalog-title">Каталог товаров</div>
 							<div class="header-catalog-close"><span class="icon-close-2"></span></div>
 							<ul>
-								<li class="with-dropdown has-child">
-									<a href="#">Одежда</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back">
-												<div class="submenu-header-back-icon"><span class="icon-arrow-left"></span></div>
-												<div class="submenu-header-back-link"></div>
-											</div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								</li>
+								<li class="with-dropdown"><a href="#" data-tab="tab-1">Одежда</a></li>
+								<li><a href="#">Totallook</a></li>
 								<li><a href="#">Аксессуары</a></li>
 								<li><a href="#">Новинки</a></li>
+								<li class="with-dropdown"><a href="#" data-tab="tab-2">Акции</a></li>
 							</ul>
 						</nav>
-
-						<div class="header-search">
-
-							<a href="#" class="search-link">
-								<span class="search-link-text">Поиск по товарам</span>
-								<span class="icon-search"></span>
-							</a>
-
-							<div class="search-dropdown">
-								<div class="search-dropdown-content">
-
-									<div class="search-dropdown-close"><span class="icon-close"></span></div>
-
-									<form class="search-form">
-										<span class="search-autocomplete" style="display: block;">Джоггеры</span>
-										<input type="text" class="search-input" value="Джогг" placeholder="Я хочу найти">
-									</form>
-
-									<div class="search-results">
-
-										<div class="h6">Товары</div>
-
-										<div class="search-results-items">
-											<div class="product-sm">
-												<a href="#" class="product-sm-link"></a>
-												<div class="product-sm-img">
-													<img src="img/products/1.jpg" alt="">
-												</div>
-												<div class="product-sm-body">
-													<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
-													<div class="product-sm-price">
-														<div class="product-sm-price-current">2 999</div>
-														<div class="product-sm-price-old">6 500</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-sm">
-												<a href="#" class="product-sm-link"></a>
-												<div class="product-sm-img">
-													<img src="img/products/1.jpg" alt="">
-												</div>
-												<div class="product-sm-body">
-													<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
-													<div class="product-sm-price">
-														<div class="product-sm-price-current">2 999</div>
-														<div class="product-sm-price-old">6 500</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-sm">
-												<a href="#" class="product-sm-link"></a>
-												<div class="product-sm-img">
-													<img src="img/products/1.jpg" alt="">
-												</div>
-												<div class="product-sm-body">
-													<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
-													<div class="product-sm-price">
-														<div class="product-sm-price-current">2 999</div>
-														<div class="product-sm-price-old">6 500</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-sm">
-												<a href="#" class="product-sm-link"></a>
-												<div class="product-sm-img">
-													<img src="img/products/1.jpg" alt="">
-												</div>
-												<div class="product-sm-body">
-													<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
-													<div class="product-sm-price">
-														<div class="product-sm-price-current">2 999</div>
-														<div class="product-sm-price-old">6 500</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="h6">Коллекции</div>
-
-										<div class="search-collections">
-											<ul>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-											</ul>
-										</div>
-
-									</div>
-
-								</div>
-							</div>
-
-						</div>
 
 					</div>
 
@@ -437,340 +401,109 @@
 				<div class="container">
 					
 					<div class="header-catalog-dropdown">
-						<div class="header-catalog-dropdown-container">
-							
-							<div class="header-catalog-dropdown-left">
-								<div class="header-catalog-list">
-									<ul>
-										<li><a href="#" class="active" data-tab="tab-1">Боди и купальники</a></li>
-										<li><a href="#" data-tab="tab-2">Велосипедки и шорты</a></li>
-										<li><a href="#" data-tab="tab-3">Джогеры</a></li>
-										<li><a href="#" data-tab="tab-4">Костюмы</a></li>
-										<li><a href="#" data-tab="tab-5">Куртки и бомберы</a></li>
-										<li><a href="#" data-tab="tab-6">Лосины и леггенсы</a></li>
-										<li><a href="#" data-tab="tab-7">Рубашки</a></li>
-										<li><a href="#" data-tab="tab-8">Топы</a></li>
-										<li><a href="#" data-tab="tab-9">Худи и свитшоты</a></li>
-										<li><a href="#" data-tab="tab-10">Юбки</a></li>
-									</ul>
-								</div>
-							</div>
 
-							<div class="header-catalog-dropdown-right">
-								<div class="header-catalog-dropdown-tab" data-tab="tab-1" style="display: block;">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner hovered">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/1.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Джоггеры с начесом цвета фисташка</div>
-													<div class="header-catalog-dropdown-banner-footer">
-														<div class="header-catalog-prices">
-															<div class="current-price">4 490</div>
-															<div class="old-price">6 500</div>
-														</div>
-														<span class="icon-arrow-right"></span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/2.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Аксессуары</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/3.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Летняя коллекция</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-2">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/4.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Покупай и получай скидки с нашей программой лояльности</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-8">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/5.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Распродажа сезона Осень-зима 20/21</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-3">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/4.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Покупай и получай скидки с нашей программой лояльности</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/6.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Распродажа сезона Осень-зима 20/21</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/7.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Приглашай друзей и получай скидки</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-4">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner hovered">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/1.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Джоггеры с начесом цвета фисташка</div>
-													<div class="header-catalog-dropdown-banner-footer">
-														<div class="header-catalog-prices">
-															<div class="current-price">4 490</div>
-															<div class="old-price">6 500</div>
-														</div>
-														<span class="icon-arrow-right"></span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/2.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Аксессуары</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/3.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Летняя коллекция</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-5">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/4.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Покупай и получай скидки с нашей программой лояльности</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-8">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/5.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Распродажа сезона Осень-зима 20/21</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-6">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/4.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Покупай и получай скидки с нашей программой лояльности</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/6.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Распродажа сезона Осень-зима 20/21</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/7.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Приглашай друзей и получай скидки</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-7">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner hovered">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/1.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Джоггеры с начесом цвета фисташка</div>
-													<div class="header-catalog-dropdown-banner-footer">
-														<div class="header-catalog-prices">
-															<div class="current-price">4 490</div>
-															<div class="old-price">6 500</div>
-														</div>
-														<span class="icon-arrow-right"></span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/2.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Аксессуары</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/3.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Летняя коллекция</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-8">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/4.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Покупай и получай скидки с нашей программой лояльности</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-8">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/5.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Распродажа сезона Осень-зима 20/21</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-9">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/4.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Покупай и получай скидки с нашей программой лояльности</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/6.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Распродажа сезона Осень-зима 20/21</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/7.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Приглашай друзей и получай скидки</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-catalog-dropdown-tab" data-tab="tab-10">
-									<div class="row">
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner hovered">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/1.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Джоггеры с начесом цвета фисташка</div>
-													<div class="header-catalog-dropdown-banner-footer">
-														<div class="header-catalog-prices">
-															<div class="current-price">4 490</div>
-															<div class="old-price">6 500</div>
-														</div>
-														<span class="icon-arrow-right"></span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/2.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Аксессуары</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="header-catalog-dropdown-banner">
-												<a href="#" class="header-catalog-dropdown-banner-link"></a>
-												<img src="img/catalog-banners/3.jpg" alt="">
-												<div class="header-catalog-dropdown-banner-content">
-													<div class="h6">Летняя коллекция</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="header-catalog-dropdown-tab" data-tab="tab-1" style="display: block;">
+							<div class="header-catalog-dropdown-container">
 
+								<div class="header-catalog-dropdown-left">
+									<div class="header-catalog-list">
+										<div class="h5">Одежда</div>
+										<ul>
+											<li><a href="#">Боди и купальники</a></li>
+											<li><a href="#">Велосипедки и шорты</a></li>
+											<li><a href="#">Джогеры</a></li>
+											<li><a href="#">Костюмы</a></li>
+											<li><a href="#">Куртки и бомберы</a></li>
+											<li><a href="#">Лосины и леггенсы</a></li>
+											<li><a href="#">Рубашки</a></li>
+											<li><a href="#">Топы</a></li>
+											<li><a href="#">Худи и свитшоты</a></li>
+											<li><a href="#">Юбки</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="header-catalog-dropdown-right">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner hovered">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/1.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Джоггеры с начесом цвета фисташка</div>
+													<div class="header-catalog-dropdown-banner-footer">
+														<div class="header-catalog-prices">
+															<div class="current-price">4 490</div>
+															<div class="old-price">6 500</div>
+														</div>
+														<span class="icon-arrow-right"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/2.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Аксессуары</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/3.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Летняя коллекция</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
 						</div>
+
+						<div class="header-catalog-dropdown-tab" data-tab="tab-2">
+							<div class="header-catalog-dropdown-container">
+
+								<div class="header-catalog-dropdown-right">
+									<div class="h5">Готовые подборы от стилистов</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner stocks">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/8.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Скидки до 80%</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner stocks">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/9.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Уличная мода</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner stocks">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/10.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Образы в офис каждый день</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
 					</div>
 
 				</div>
