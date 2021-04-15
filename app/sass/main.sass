@@ -803,7 +803,7 @@ b, strong
 	.h1
 		font-weight: 900
 		line-height: 1.1
-		font-size: 80px
+		font-size: var(--banner-title-size)
 		text-transform: uppercase
 		position: relative
 		z-index: 1
@@ -1357,11 +1357,15 @@ b, strong
 	font-family: $font
 	opacity: 0
 	transform-origin: left top
-	transform: scale(.625) translateY(30px)
+	transform: scale(.626) translateY(30px)
 	max-width: 320px
 	+tr
 	// white-space: nowrap
 	min-width: 170px
+	background-color: rgba(#fff, .5)
+	padding: 5px
+	border-radius: 3px
+	backdrop-filter: blur(10px)
 	font-size: 100%
 	&:nth-child(1)
 		transition-delay: .4s
@@ -5881,6 +5885,51 @@ textarea.form-control
 			strong
 				font-weight: normal
 				color: #848484
+
+.basket-empty
+	margin-left: auto
+	margin-right: auto
+	max-width: 445px
+	text-align: center
+	color: #434242
+	h1, .h1
+		text-transform: uppercase
+		font-size: 26px
+		margin-bottom: 35px
+	p
+		margin-bottom: 44px
+		font-size: 15px
+		font-weight: 500
+
+.basket-empty-btns
+	display: flex
+	align-items: center
+	justify-content: center
+	.btn
+		border-radius: 0
+		height: 48px
+		line-height: 48px
+		margin-right: 20px
+		font-size: 12px
+		&:last-child
+			margin-right: 0
+		&:not(.btn-border)
+			color: #fff !important
+			&:hover:before
+				background-color: #5e5d5d !important
+		&:before
+			border-radius: 0
+			background-color: #434242
+		&.btn-border
+			&:before
+				border-color: #434242
+				background-color: transparent
+		&:hover
+			color: #fff !important
+			&:before
+				background-color: #434242 !important
+		&:last-child
+			margin-right: 0
 
 @import "media" // Always at the end
 @import "new-menu" // Always at the end
