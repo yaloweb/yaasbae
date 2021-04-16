@@ -32,9 +32,11 @@
 			--accent-color-hover: #c1c6c4;
 			--btn-text-color: #434242;
 			--header-bg-color: #434242;
+			--header-bottom-bg-color: #505050;
 			/*Для возможности изменения прозрачности нужно использовать RGB палитру*/
 			--header-text-color: 255, 255, 255;
 			--banner-text-color: #000;
+			--banner-title-size: 80px;
 			--categories-text-color: #fff;
 		}
 	</style>
@@ -45,14 +47,91 @@
 
 	<div class="wrapper">
 
+		<div class="mob-menu-overlay"></div>
+
 		<div class="mob-menu-block">
+			<div class="mob-menu-close"><span class="icon-close-2"></span></div>
 			<div class="mob-menu">
-				<div class="mob-menu-header">
-					<div class="mob-menu-close"><span class="icon-close-2"></span></div>
-					<div class="mob-menu-logo">
-						<a href="#" class="logo">
-							<img src="img/logo.svg" alt="">
-						</a>
+				<div class="header-select-gender">
+					<a href="#" class="active">Женское</a>
+					<a href="#">Мужское</a>
+				</div>
+				<div class="mob-menu-catalog">
+					<div class="mob-menu-catalog-item has-child">
+						<a href="#">Одежда</a>
+						<div class="mob-menu-catalog-submenu">
+							<div class="mob-menu-catalog-submenu-back"><span class="icon-angle-left"></span>Все</div>
+							<div class="mob-menu-catalog-submenu-title"><a href="#">Одежда</a></div>
+							<div class="mob-menu-catalog-submenu-list">
+								<a href="#">Боди и купальники</a>
+								<a href="#">Велосипедки и шорты</a>
+								<a href="#">Джогеры</a>
+								<a href="#">Костюмы</a>
+								<a href="#">Куртки и бомберы</a>
+								<a href="#">Лосины и леггенсы</a>
+								<a href="#">Рубашки</a>
+								<a href="#">Топы</a>
+								<a href="#">Худи и свитшоты</a>
+								<a href="#">Юбки</a>
+							</div>
+						</div>
+					</div>
+					<div class="mob-menu-catalog-item has-child">
+						<a href="#">Аксессуары</a>
+						<div class="mob-menu-catalog-submenu">
+							<div class="mob-menu-catalog-submenu-back"><span class="icon-angle-left"></span>Все</div>
+							<div class="mob-menu-catalog-submenu-title"><a href="#">Аксессуары</a></div>
+							<div class="mob-menu-catalog-submenu-list">
+								<a href="#">Боди и купальники</a>
+								<a href="#">Велосипедки и шорты</a>
+								<a href="#">Джогеры</a>
+								<a href="#">Костюмы</a>
+								<a href="#">Куртки и бомберы</a>
+								<a href="#">Лосины и леггенсы</a>
+								<a href="#">Рубашки</a>
+								<a href="#">Топы</a>
+								<a href="#">Худи и свитшоты</a>
+								<a href="#">Юбки</a>
+							</div>
+						</div>
+					</div>
+					<div class="mob-menu-catalog-item has-child">
+						<a href="#">Новинки</a>
+						<div class="mob-menu-catalog-submenu">
+							<div class="mob-menu-catalog-submenu-back"><span class="icon-angle-left"></span>Все</div>
+							<div class="mob-menu-catalog-submenu-title"><a href="#">Новинки</a></div>
+							<div class="mob-menu-catalog-submenu-list">
+								<a href="#">Боди и купальники</a>
+								<a href="#">Велосипедки и шорты</a>
+								<a href="#">Джогеры</a>
+								<a href="#">Костюмы</a>
+								<a href="#">Куртки и бомберы</a>
+								<a href="#">Лосины и леггенсы</a>
+								<a href="#">Рубашки</a>
+								<a href="#">Топы</a>
+								<a href="#">Худи и свитшоты</a>
+								<a href="#">Юбки</a>
+							</div>
+						</div>
+					</div>
+					<div class="mob-menu-catalog-item has-child">
+						<a href="#">Акции</a>
+						<div class="mob-menu-catalog-submenu">
+							<div class="mob-menu-catalog-submenu-back"><span class="icon-angle-left"></span>Все</div>
+							<div class="mob-menu-catalog-submenu-title"><a href="#">Акции</a></div>
+							<div class="mob-menu-catalog-submenu-list">
+								<a href="#">Боди и купальники</a>
+								<a href="#">Велосипедки и шорты</a>
+								<a href="#">Джогеры</a>
+								<a href="#">Костюмы</a>
+								<a href="#">Куртки и бомберы</a>
+								<a href="#">Лосины и леггенсы</a>
+								<a href="#">Рубашки</a>
+								<a href="#">Топы</a>
+								<a href="#">Худи и свитшоты</a>
+								<a href="#">Юбки</a>
+							</div>
+						</div>
 					</div>
 				</div>
 				<nav class="mob-menu-list">
@@ -60,12 +139,10 @@
 					<a href="#">Медиа</a>
 					<a href="#">Контакты</a>
 				</nav>
-				<div class="mob-menu-soc">
-					<a href="#" class="footer-soc-item">
-						<span class="footer-soc-icon icon-instagram"></span>
-						<span class="footer-soc-name">@yassbae</span>
-						<span class="footer-soc-arrow icon-arrow-right-2"></span>
-					</a>
+				<div class="mob-soc">
+					<a href="#" class="mob-soc-link"><span class="icon-instagram"></span></a>
+					<a href="#" class="mob-soc-link"><span class="icon-vk"></span></a>
+					<a href="#" class="mob-soc-link"><span class="icon-youtube"></span></a>
 				</div>
 				<div class="mob-menu-accordion">
 					<div class="mob-menu-accordion-item">
@@ -100,13 +177,7 @@
 			</div>
 		</div>
 
-		<header class="site-header dark">
-
-			<style>
-				.site-header:after {
-					background-color: #434242;
-				}
-			</style>
+		<header class="site-header">
 
 			<div class="header-top">
 				<div class="container">
@@ -120,27 +191,260 @@
 							</a>
 						</div>
 
-						<div class="header-menu">
-							<nav class="main-menu">
-								<a href="#">Каталог</a>
-								<a href="#">LookBook</a>
-								<a href="#">Медиа</a>
-								<a href="#">Контакты</a>
-							</nav>
+						<div class="header-select-gender">
+							<a href="#" class="active">Женское</a>
+							<a href="#">Мужское</a>
+						</div>
+
+						<div class="header-top-search">
+							<form class="header-top-search-form">
+								<input type="search" class="header-top-search-input" placeholder="Найти">
+								<span class="icon-search"></span>
+							</form>
+							<div class="header-top-search-dropdown">
+								<div class="search-results">
+
+									<div class="h6">Товары</div>
+
+									<div class="search-results-items">
+										<div class="product-sm">
+											<a href="#" class="product-sm-link"></a>
+											<div class="product-sm-img">
+												<img src="img/products/1.jpg" alt="">
+											</div>
+											<div class="product-sm-body">
+												<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
+												<div class="product-sm-price">
+													<div class="product-sm-price-current">2 999</div>
+													<div class="product-sm-price-old">6 500</div>
+												</div>
+											</div>
+										</div>
+										<div class="product-sm">
+											<a href="#" class="product-sm-link"></a>
+											<div class="product-sm-img">
+												<img src="img/products/1.jpg" alt="">
+											</div>
+											<div class="product-sm-body">
+												<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
+												<div class="product-sm-price">
+													<div class="product-sm-price-current">2 999</div>
+													<div class="product-sm-price-old">6 500</div>
+												</div>
+											</div>
+										</div>
+										<div class="product-sm">
+											<a href="#" class="product-sm-link"></a>
+											<div class="product-sm-img">
+												<img src="img/products/1.jpg" alt="">
+											</div>
+											<div class="product-sm-body">
+												<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
+												<div class="product-sm-price">
+													<div class="product-sm-price-current">2 999</div>
+													<div class="product-sm-price-old">6 500</div>
+												</div>
+											</div>
+										</div>
+										<div class="product-sm">
+											<a href="#" class="product-sm-link"></a>
+											<div class="product-sm-img">
+												<img src="img/products/1.jpg" alt="">
+											</div>
+											<div class="product-sm-body">
+												<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
+												<div class="product-sm-price">
+													<div class="product-sm-price-current">2 999</div>
+													<div class="product-sm-price-old">6 500</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="h6">Коллекции</div>
+
+									<div class="search-collections">
+										<ul>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+											<li><a href="#">Summer 2020</a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
 						</div>
 
 						<div class="header-acc">
 							<nav class="acc-links-nav">
 								<a href="#" class="acc-link">
+									<span class="basket-qnt">15</span>
 									<span class="icon-heart"></span>
 								</a>
 								<a href="#sign-in" class="acc-link open-popup">
 									<span class="icon-user"></span>
 								</a>
-								<a href="#" class="acc-link">
+								<!-- Если корзина пуста добавить ссылке basket-link класс is-empty -->
+								<a href="#" class="acc-link basket-link">
+									<span class="basket-qnt">1</span>
 									<span class="icon-bag"></span>
 								</a>
 							</nav>
+							<div class="basket-dropdown">
+								<div class="basket-dropdown-content">
+									<div class="basket-dropdown-close"><span class="icon-close"></span></div>
+									<div class="h4">Корзина (3)</div>
+									<div class="basket-dropdown-items">
+										<div class="checkout-item">
+											<div class="checkout-item-img">
+												<a href="#">
+													<img src="img/thumn.jpg" alt="">
+												</a>
+											</div>
+											<div class="checkout-item-body">
+												<div class="checkout-item-name"><a href="#">Рубашка пальто бежевого цвета · <span>XS</span></a></div>
+												<div class="checkout-item-body-footer">
+													<div class="checkout-item-qnt">
+														<div class="number-group">
+															<button class="number-minus" disabled="">-</button>
+															<input type="text" class="only-number number-input" value="1">
+															<button class="number-plus">+</button>
+														</div>
+													</div>
+													<div class="checkout-item-price">
+														<div class="old-price">3 500</div>
+														<div class="current-price red">3 560</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="checkout-item">
+											<div class="checkout-item-img">
+												<a href="#">
+													<img src="img/thumn.jpg" alt="">
+												</a>
+											</div>
+											<div class="checkout-item-body">
+												<div class="checkout-item-name"><a href="#">Рубашка пальто бежевого цвета · <span>XS</span></a></div>
+												<div class="checkout-item-body-footer">
+													<div class="checkout-item-qnt">
+														<div class="number-group">
+															<button class="number-minus" disabled="">-</button>
+															<input type="text" class="only-number number-input" value="1">
+															<button class="number-plus">+</button>
+														</div>
+													</div>
+													<div class="checkout-item-price">
+														<div class="old-price">3 500</div>
+														<div class="current-price red">3 560</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="checkout-item">
+											<div class="checkout-item-img">
+												<a href="#">
+													<img src="img/thumn.jpg" alt="">
+												</a>
+											</div>
+											<div class="checkout-item-body">
+												<div class="checkout-item-name"><a href="#">Рубашка пальто бежевого цвета · <span>XS</span></a></div>
+												<div class="checkout-item-body-footer">
+													<div class="checkout-item-qnt">
+														<div class="number-group">
+															<button class="number-minus" disabled="">-</button>
+															<input type="text" class="only-number number-input" value="1">
+															<button class="number-plus">+</button>
+														</div>
+													</div>
+													<div class="checkout-item-price">
+														<div class="current-price">3 560</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="checkout-item">
+											<div class="checkout-item-img">
+												<a href="#">
+													<img src="img/thumn.jpg" alt="">
+												</a>
+											</div>
+											<div class="checkout-item-body">
+												<div class="checkout-item-name"><a href="#">Рубашка пальто бежевого цвета · <span>XS</span></a></div>
+												<div class="checkout-item-body-footer">
+													<div class="checkout-item-qnt">
+														<div class="number-group">
+															<button class="number-minus" disabled="">-</button>
+															<input type="text" class="only-number number-input" value="1">
+															<button class="number-plus">+</button>
+														</div>
+													</div>
+													<div class="checkout-item-price">
+														<div class="old-price">3 500</div>
+														<div class="current-price red">3 560</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="checkout-item">
+											<div class="checkout-item-img">
+												<a href="#">
+													<img src="img/thumn.jpg" alt="">
+												</a>
+											</div>
+											<div class="checkout-item-body">
+												<div class="checkout-item-name"><a href="#">Рубашка пальто бежевого цвета · <span>XS</span></a></div>
+												<div class="checkout-item-body-footer">
+													<div class="checkout-item-qnt">
+														<div class="number-group">
+															<button class="number-minus" disabled="">-</button>
+															<input type="text" class="only-number number-input" value="1">
+															<button class="number-plus">+</button>
+														</div>
+													</div>
+													<div class="checkout-item-price">
+														<div class="current-price">3 560</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="checkout-item">
+											<div class="checkout-item-img">
+												<a href="#">
+													<img src="img/thumn.jpg" alt="">
+												</a>
+											</div>
+											<div class="checkout-item-body">
+												<div class="checkout-item-name"><a href="#">Рубашка пальто бежевого цвета · <span>XS</span></a></div>
+												<div class="checkout-item-body-footer">
+													<div class="checkout-item-qnt">
+														<div class="number-group">
+															<button class="number-minus" disabled="">-</button>
+															<input type="text" class="only-number number-input" value="1">
+															<button class="number-plus">+</button>
+														</div>
+													</div>
+													<div class="checkout-item-price">
+														<div class="current-price">3 560</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="basket-dropdown-total">
+										<div class="basket-dropdown-total-price">Итого: 14 490</div>
+									</div>
+									<div class="basket-dropdown-btns">
+										<a href="#" class="btn btn-border">Перейти в корзину</a>
+										<a href="#" class="btn btn-dark">Оформить заказ</a>
+									</div>
+								</div>
+							</div>
 						</div>
 
 					</div>
@@ -149,250 +453,135 @@
 
 			<div class="header-bottom">
 				<div class="container">
-					<div class="header-bottom-row">
 
-						<div class="open-header-catalog-btn">Каталог товаров</div>
+					<div class="header-bottom-row">
 
 						<nav class="header-catalog">
 							<div class="header-catalog-title">Каталог товаров</div>
 							<div class="header-catalog-close"><span class="icon-close-2"></span></div>
 							<ul>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/1.jpg);">Пальто и куртки</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back"></div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/2.jpg);">Футболки</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back"></div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/3.jpg);">Джинсы</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back"></div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/4.jpg);">Одежда на каждый день</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back"></div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/5.jpg);">Сарафаны</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back"></div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/6.jpg);">Худи</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back"></div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/7.jpg);">Боди</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back"></div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/1.jpg);">Платья</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back"></div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
-								<li class="has-child">
-									<a href="#" style="background-image: url(img/categories/2.jpg);">Джоггеры</a>
-									<ul>
-										<li class="submenu-header">
-											<div class="submenu-header-back">Пальто и куртки</div>
-											<div class="header-catalog-close"><span class="icon-close-2"></span></div>
-										</li>
-										<li><a href="#">Пальто</a></li>
-										<li><a href="#">Зимние куртки</a></li>
-										<li><a href="#">Пиджаки</a></li>
-										<li><a href="#">Жилеты</a></li>
-										<li><a href="#">Осенние плащи</a></li>
-										<li><a href="#">Спортивные крутки</a></li>
-									</ul>
-								</li>
+								<li class="with-dropdown"><a href="#" data-tab="tab-1">Одежда</a></li>
+								<li><a href="#">Totallook</a></li>
+								<li><a href="#">Аксессуары</a></li>
+								<li><a href="#">Новинки</a></li>
+								<li class="with-dropdown"><a href="#" data-tab="tab-2">Акции</a></li>
 							</ul>
 						</nav>
 
-						<div class="header-search">
+					</div>
 
-							<a href="#" class="search-link">
-								<span class="icon-search"></span>
-							</a>
+				</div>
+			</div>
 
-							<div class="search-dropdown">
-								<div class="search-dropdown-content">
+			<div class="header-catalog-dropdown-wrapper">	
+				<div class="container">
+					
+					<div class="header-catalog-dropdown">
 
-									<div class="search-dropdown-close"><span class="icon-close"></span></div>
+						<div class="header-catalog-dropdown-tab" data-tab="tab-1" style="display: block;">
+							<div class="header-catalog-dropdown-container">
 
-									<form class="search-form">
-										<span class="search-autocomplete" style="display: block;">Джоггеры</span>
-										<input type="text" class="search-input" value="Джогг" placeholder="Я хочу найти">
-									</form>
-
-									<div class="search-results">
-
-										<div class="h6">Товары</div>
-
-										<div class="search-results-items">
-											<div class="product-sm">
-												<a href="#" class="product-sm-link"></a>
-												<div class="product-sm-img">
-													<img src="img/products/1.jpg" alt="">
-												</div>
-												<div class="product-sm-body">
-													<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
-													<div class="product-sm-price">
-														<div class="product-sm-price-current">2 999</div>
-														<div class="product-sm-price-old">6 500</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-sm">
-												<a href="#" class="product-sm-link"></a>
-												<div class="product-sm-img">
-													<img src="img/products/1.jpg" alt="">
-												</div>
-												<div class="product-sm-body">
-													<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
-													<div class="product-sm-price">
-														<div class="product-sm-price-current">2 999</div>
-														<div class="product-sm-price-old">6 500</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-sm">
-												<a href="#" class="product-sm-link"></a>
-												<div class="product-sm-img">
-													<img src="img/products/1.jpg" alt="">
-												</div>
-												<div class="product-sm-body">
-													<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
-													<div class="product-sm-price">
-														<div class="product-sm-price-current">2 999</div>
-														<div class="product-sm-price-old">6 500</div>
-													</div>
-												</div>
-											</div>
-											<div class="product-sm">
-												<a href="#" class="product-sm-link"></a>
-												<div class="product-sm-img">
-													<img src="img/products/1.jpg" alt="">
-												</div>
-												<div class="product-sm-body">
-													<div class="h5"><span>Джогг</span>еры с начесом в цвете фисташка</div>
-													<div class="product-sm-price">
-														<div class="product-sm-price-current">2 999</div>
-														<div class="product-sm-price-old">6 500</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="h6">Коллекции</div>
-
-										<div class="search-collections">
-											<ul>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-												<li><a href="#">Summer 2020</a></li>
-											</ul>
-										</div>
-
+								<div class="header-catalog-dropdown-left">
+									<div class="header-catalog-list">
+										<div class="h5">Одежда</div>
+										<ul>
+											<li><a href="#">Боди и купальники</a></li>
+											<li><a href="#">Велосипедки и шорты</a></li>
+											<li><a href="#">Джогеры</a></li>
+											<li><a href="#">Костюмы</a></li>
+											<li><a href="#">Куртки и бомберы</a></li>
+											<li><a href="#">Лосины и леггенсы</a></li>
+											<li><a href="#">Рубашки</a></li>
+											<li><a href="#">Топы</a></li>
+											<li><a href="#">Худи и свитшоты</a></li>
+											<li><a href="#">Юбки</a></li>
+										</ul>
 									</div>
-
 								</div>
-							</div>
 
+								<div class="header-catalog-dropdown-right">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner hovered">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/1.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Джоггеры с начесом цвета фисташка</div>
+													<div class="header-catalog-dropdown-banner-footer">
+														<div class="header-catalog-prices">
+															<div class="current-price">4 490</div>
+															<div class="old-price">6 500</div>
+														</div>
+														<span class="icon-arrow-right"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/2.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Аксессуары</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/3.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Летняя коллекция</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="header-catalog-dropdown-tab" data-tab="tab-2">
+							<div class="header-catalog-dropdown-container">
+
+								<div class="header-catalog-dropdown-right">
+									<div class="h5">Готовые подборы от стилистов</div>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner stocks">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/8.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Скидки до 80%</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner stocks">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/9.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Уличная мода</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="header-catalog-dropdown-banner stocks">
+												<a href="#" class="header-catalog-dropdown-banner-link"></a>
+												<img src="img/catalog-banners/10.jpg" alt="">
+												<div class="header-catalog-dropdown-banner-content">
+													<div class="h6">Образы в офис каждый день</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
 						</div>
 
 					</div>
+
 				</div>
 			</div>
 
@@ -727,9 +916,16 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
-													<div class="product-stick">Хит продаж</div>
+													<div class="product-stick" style="background: #FF7346;color: #fff;">Хит продаж</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
 												<div class="product-price">
@@ -747,8 +943,16 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
+													<div class="product-stick" style="background: #FF7346;color: #fff;">− 15 %</div>
 												</div>
 												<div class="product-name"><a href="#">Худи с начесом</a></div>
 												<div class="product-price">
@@ -765,7 +969,14 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
@@ -784,9 +995,15 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
-													<div class="product-stick">Хит продаж</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
 												<div class="product-price">
@@ -804,7 +1021,93 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
+													</div>
+													<div class="product-stick" style="background: linear-gradient(100.07deg, #FF8C39 0.69%, #FB47FF 100%);color: #fff;">Хит продаж</div>
+												</div>
+												<div class="product-name"><a href="#">Худи с начесом</a></div>
+												<div class="product-price">
+													<div class="current-price">1 999</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-4 col-6">
+											<div class="product-item">
+												<div class="product-image">
+													<a href="#" class="product-image-link">
+														<img src="img/products/5.jpg" alt="">
+													</a>
+													<div class="product-liked"></div>
+													<div class="product-cart">
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
+													</div>
+													<div class="product-stick" style="background: linear-gradient(100.07deg, #FF8C39 0.69%, #FB47FF 100%);color: #fff;">− 15 %</div>
+												</div>
+												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
+												<div class="product-price">
+													<div class="current-price red">2 999</div>
+													<div class="old-price">6 500</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-4 col-6">
+											<div class="product-item">
+												<div class="product-image">
+													<a href="#" class="product-image-link">
+														<img src="img/products/3.jpg" alt="">
+													</a>
+													<div class="product-liked"></div>
+													<div class="product-cart">
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
+													</div>
+												</div>
+												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
+												<div class="product-price">
+													<div class="current-price red">2 999</div>
+													<div class="old-price">6 500</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-4 col-6">
+											<div class="product-item">
+												<div class="product-image">
+													<a href="#" class="product-image-link">
+														<img src="img/products/4.jpg" alt="">
+													</a>
+													<div class="product-liked"></div>
+													<div class="product-cart">
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Худи с начесом</a></div>
@@ -822,7 +1125,14 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
@@ -841,9 +1151,15 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
-													<div class="product-stick">Хит продаж</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
 												<div class="product-price">
@@ -861,7 +1177,14 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Худи с начесом</a></div>
@@ -879,7 +1202,14 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
@@ -898,9 +1228,15 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
-													<div class="product-stick">Хит продаж</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
 												<div class="product-price">
@@ -918,7 +1254,14 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Худи с начесом</a></div>
@@ -936,7 +1279,14 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
@@ -955,9 +1305,15 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
-													<div class="product-stick">Хит продаж</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
 												<div class="product-price">
@@ -975,7 +1331,14 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Худи с начесом</a></div>
@@ -993,64 +1356,14 @@
 													</a>
 													<div class="product-liked"></div>
 													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
-													</div>
-												</div>
-												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
-												<div class="product-price">
-													<div class="current-price red">2 999</div>
-													<div class="old-price">6 500</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-md-4 col-6">
-											<div class="product-item">
-												<div class="product-image">
-													<a href="#" class="product-image-link">
-														<img src="img/products/3.jpg" alt="">
-													</a>
-													<div class="product-liked"></div>
-													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
-													</div>
-													<div class="product-stick">Хит продаж</div>
-												</div>
-												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>
-												<div class="product-price">
-													<div class="current-price red">2 999</div>
-													<div class="old-price">6 500</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-md-4 col-6">
-											<div class="product-item">
-												<div class="product-image">
-													<a href="#" class="product-image-link">
-														<img src="img/products/4.jpg" alt="">
-													</a>
-													<div class="product-liked"></div>
-													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
-													</div>
-												</div>
-												<div class="product-name"><a href="#">Худи с начесом</a></div>
-												<div class="product-price">
-													<div class="current-price">1 999</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-md-4 col-6">
-											<div class="product-item">
-												<div class="product-image">
-													<a href="#" class="product-image-link">
-														<img src="img/products/5.jpg" alt="">
-													</a>
-													<div class="product-liked"></div>
-													<div class="product-cart">
-														<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+														<div class="product-cart-size-select">
+															<a href="#" class="size-select-label">XS <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">S <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label disable">M <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">L <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XL <span class="tooltip">В корзину</span></a>
+															<a href="#" class="size-select-label">XXL <span class="tooltip">В корзину</span></a>
+														</div>
 													</div>
 												</div>
 												<div class="product-name"><a href="#">Джоггеры с начесом</a></div>

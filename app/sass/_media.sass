@@ -99,51 +99,13 @@
 			top: 116px
 	.adbanner-text p
 		margin-bottom: 20px
-	.left-banners-image
-		video, img
-			height: 576px
+	// .left-banners-image
+	// 	video, img
+	// 		height: 576px
 	.main-banner img
 		height: 576px
-	.basket-dropdown
-		width: 440px
-		padding: 25px 30px 30px
-		right: -15px
-	.basket-dropdown-content
-		.h4
-			margin-bottom: 14px
-			font-size: 16px
 	.basket-dropdown-items
 		max-height: 300px
-		margin-bottom: 20px
-		.checkout-item
-			padding-top: 12px
-			padding-bottom: 12px
-		.checkout-item-img
-			margin-right: 12px
-			img
-				width: 87px
-				height: 87px
-		.checkout-item-body
-			margin-right: 15px
-			display: flex
-			flex-direction: column
-		.checkout-item-name
-			font-size: 14px
-		.checkout-item-price
-			font-size: 16px
-		.checkout-item-descr
-			font-size: 12px
-	.basket-dropdown-total
-		font-size: 18px
-		margin-bottom: 20px
-	.basket-dropdown-total-text
-		margin-right: 10px
-	.basket-dropdown-btns
-		.btn
-			width: calc(50% - 10px)
-			height: 50px
-			line-height: 48px
-			font-size: 12px
 
 @media (max-width: 1365.98px)
 	.container
@@ -211,9 +173,9 @@
 		margin-left: auto
 	.header-menu
 		flex-grow: 0
-	.left-banners-image
-		video, img
-			height: 554px
+	// .left-banners-image
+	// 	video, img
+	// 		height: 554px
 	.main-banner img
 		height: 554px
 
@@ -230,7 +192,7 @@
 	.search-dropdown
 		width: 455px
 	.main-banner-content
-		left: 45px
+		// left: 45px
 		bottom: 40px
 		.h1
 			font-size: 55px
@@ -535,8 +497,6 @@
 			width: 278px
 		.owl-nav button
 			top: 200px
-	.basket-dropdown
-		right: -20px
 	.header-catalog-dropdown
 		left: 0
 		right: 0
@@ -559,9 +519,9 @@
 				padding-right: 2.5px
 
 @media (max-width: 1159.98px)
-	.left-banners-image
-		video, img
-			height: 48vw
+	// .left-banners-image
+	// 	video, img
+	// 		height: 48vw
 	.main-banner img
 		height: 48vw
 
@@ -616,6 +576,8 @@
 	.main-banners-right
 		width: 69%
 	.main-banner-content
+		.container
+			padding-left: 45px
 		.h1
 			font-size: 36px
 		.promo-stick
@@ -1001,6 +963,10 @@
 		right: 20px
 	.size-table-img img
 		width: 140px
+	.s-catalog
+		overflow: hidden
+	.s-recently-viewed
+		overflow: hidden
 
 
 // ≥768px
@@ -1012,74 +978,74 @@
 		display: block
 	.main-banners-left
 		width: 100%
-	.left-banners-images-block
-		position: fixed
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		z-index: 100
-		background-color: #d6d6d6
-		display: none
-		transition: opacity .4s ease, transform .4s ease
-		opacity: 0
-		transform: scale(1.1)
-		&.opened
-			opacity: 1
-			transform: scale(1)
-		.owl-nav
-			display: block !important
-			button
-				top: 0
-				height: 100%
-				width: 50%
-				opacity: 0 !important
-				z-index: 3
-				&.owl-prev
-					left: 0
-				&.owl-next
-					right: 0
+	// .left-banners-images-block
+	// 	position: fixed
+	// 	top: 0
+	// 	left: 0
+	// 	width: 100%
+	// 	height: 100%
+	// 	z-index: 100
+	// 	background-color: #d6d6d6
+	// 	display: none
+	// 	transition: opacity .4s ease, transform .4s ease
+	// 	opacity: 0
+	// 	transform: scale(1.1)
+	// 	&.opened
+	// 		opacity: 1
+	// 		transform: scale(1)
+	// 	.owl-nav
+	// 		display: block !important
+	// 		button
+	// 			top: 0
+	// 			height: 100%
+	// 			width: 50%
+	// 			opacity: 0 !important
+	// 			z-index: 3
+	// 			&.owl-prev
+	// 				left: 0
+	// 			&.owl-next
+	// 				right: 0
 	.header-menu
 		display: none
-	.left-banners-thumbs
-		position: static
-		padding: 17px 24px 12px
-		margin: -18px -20px 0
-		width: auto
-		border-bottom: 1px solid rgba(#848484, .3)
-	.left-banners-thumb
-		position: relative
-		width: 62px
-		height: auto
-		margin-right: 14px
-		overflow: visible
-		img
-			border-radius: 50%
-			width: 62px
-			height: 62px
-		&:after
-			content: ''
-			position: absolute
-			width: 72px
-			height: 72px
-			top: -5px
-			left: -5px
-			border: 2px solid #C4FFDB
-			border-radius: 50%
-		&.active
-			transform: scale(1)
-		&.viewed
-			&:after
-				border: 1px solid #E5E5E5
-		span
-			display: block
-			text-align: center
-			overflow: hidden
-			text-overflow: ellipsis
-			white-space: nowrap
-			font-size: 10px
-			color: #434242
-			margin-top: 8px
+	// .left-banners-thumbs
+	// 	position: static
+	// 	padding: 17px 24px 12px
+	// 	margin: -18px -20px 0
+	// 	width: auto
+	// 	border-bottom: 1px solid rgba(#848484, .3)
+	// .left-banners-thumb
+	// 	position: relative
+	// 	width: 62px
+	// 	height: auto
+	// 	margin-right: 14px
+	// 	overflow: visible
+	// 	img
+	// 		border-radius: 50%
+	// 		width: 62px
+	// 		height: 62px
+	// 	&:after
+	// 		content: ''
+	// 		position: absolute
+	// 		width: 72px
+	// 		height: 72px
+	// 		top: -5px
+	// 		left: -5px
+	// 		border: 2px solid #C4FFDB
+	// 		border-radius: 50%
+	// 	&.active
+	// 		transform: scale(1)
+	// 	&.viewed
+	// 		&:after
+	// 			border: 1px solid #E5E5E5
+	// 	span
+	// 		display: block
+	// 		text-align: center
+	// 		overflow: hidden
+	// 		text-overflow: ellipsis
+	// 		white-space: nowrap
+	// 		font-size: 10px
+	// 		color: #434242
+	// 		margin-top: 8px
 	.logo
 		img,
 		svg
@@ -1107,76 +1073,76 @@
 			top: 50%
 			left: 50%
 			transform: translate(-50%, -50%)
-	.left-banners-images-stories-tape
-		display: flex
-		position: absolute
-		top: 14px
-		z-index: 2
-		left: 22.5px
-		right: 22.5px
-		span
-			margin: 0 1.5px
-			flex-grow: 1
-			flex-shrink: 0
-			flex-basis: 0
-			height: 2px
-			background-color: rgba(#fff, .4)
-			display: inline-block
-			position: relative
-			b
-				position: absolute
-				top: 0
-				height: 100%
-				left: 0
-				width: 100%
-				transform-origin: center left
-				transform: scaleX(0)
-				background-color: #fff
-	.left-banners-images-stories-current
-		display: flex
-		align-items: center
-		position: absolute
-		top: 29px
-		left: 24px
-		right: 24px
-		z-index: 2
-		img
-			width: 32px
-			height: 32px
-			object-fit: coverc
-			border-radius: 50%
-			margin-right: 6px
-		span
-			font-size: 12px
-			color: #fff
-	.left-banners-images-stories-close
-		font-size: 14px
-		color: #fff
-		position: absolute
-		z-index: 2
-		top: 25px
-		right: 12px
-		display: block
-		width: 40px
-		height: 40px
-		display: flex
-		align-items: center
-		justify-content: center
-	.left-banners-images
-		transition: opacity .3s ease !important
-		opacity: 0
-		height: 100%
-		&.visible
-			opacity: 1
-		.owl-stage-outer
-			height: 100%
-			.owl-stage
-				height: 100%
-	.left-banners-image
-		height: 100%
-		img
-			height: 100%
-			object-fit: cover
+	// .left-banners-images-stories-tape
+	// 	display: flex
+	// 	position: absolute
+	// 	top: 14px
+	// 	z-index: 2
+	// 	left: 22.5px
+	// 	right: 22.5px
+	// 	span
+	// 		margin: 0 1.5px
+	// 		flex-grow: 1
+	// 		flex-shrink: 0
+	// 		flex-basis: 0
+	// 		height: 2px
+	// 		background-color: rgba(#fff, .4)
+	// 		display: inline-block
+	// 		position: relative
+	// 		b
+	// 			position: absolute
+	// 			top: 0
+	// 			height: 100%
+	// 			left: 0
+	// 			width: 100%
+	// 			transform-origin: center left
+	// 			transform: scaleX(0)
+	// 			background-color: #fff
+	// .left-banners-images-stories-current
+	// 	display: flex
+	// 	align-items: center
+	// 	position: absolute
+	// 	top: 29px
+	// 	left: 24px
+	// 	right: 24px
+	// 	z-index: 2
+	// 	img
+	// 		width: 32px
+	// 		height: 32px
+	// 		object-fit: coverc
+	// 		border-radius: 50%
+	// 		margin-right: 6px
+	// 	span
+	// 		font-size: 12px
+	// 		color: #fff
+	// .left-banners-images-stories-close
+	// 	font-size: 14px
+	// 	color: #fff
+	// 	position: absolute
+	// 	z-index: 2
+	// 	top: 25px
+	// 	right: 12px
+	// 	display: block
+	// 	width: 40px
+	// 	height: 40px
+	// 	display: flex
+	// 	align-items: center
+	// 	justify-content: center
+	// .left-banners-images
+	// 	transition: opacity .3s ease !important
+	// 	opacity: 0
+	// 	height: 100%
+	// 	&.visible
+	// 		opacity: 1
+	// 	.owl-stage-outer
+	// 		height: 100%
+	// 		.owl-stage
+	// 			height: 100%
+	// .left-banners-image
+	// 	height: 100%
+	// 	img
+	// 		height: 100%
+	// 		object-fit: cover
 	.main-banners-left
 		.left-banners-promo-slider
 			display: none
@@ -1281,8 +1247,8 @@
 				&.owl-prev
 					left: 15px
 	.main-banner-content
-		width: 100%
-		left: 24px
+		// width: 100%
+		// left: 24px
 		bottom: 18px
 		.h1
 			font-size: 32px
@@ -1492,8 +1458,19 @@
 			width: 40vw
 	.main-banner img
 		height: auto
-	.left-banners-image img, .left-banners-image video
-		height: 100%
+	// .left-banners-image img, .left-banners-image video
+	// 	height: 100%
+	.checkout-success-clipboard
+		width: 100%
+		.form-control
+			height: 50px
+			padding: 0 15px
+			font-size: 12px
+		.checkout-success-clipboard-btn
+			height: 50px !important
+			line-height: 50px !important
+			padding: 0 30px
+			font-size: 12px
 
 
 // ≥576px
@@ -2754,6 +2731,15 @@
 			padding: 0 5px
 			min-width: calc(50% - 5px)
 			font-size: 11px
+	.checkout-redirect
+		margin-top: 120px
+	.checkout-success-clipboard
+		display: block
+		margin-top: 50px
+		.form-control
+			margin-bottom: 10px
+		.btn
+			width: 100%
 
 /*==========  Mobile First  ==========*/
 

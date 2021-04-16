@@ -590,7 +590,7 @@ b, strong
 	left: 0
 	width: 100%
 	padding: 15px
-	overflow: hidden
+	// overflow: hidden
 	z-index: 2
 	.owl-stage-outer
 		overflow: visible
@@ -618,6 +618,21 @@ b, strong
 	// margin-bottom: 49px
 	position: relative
 	height: 100%
+	&.opened
+		opacity: 1
+		transform: scale(1)
+	.owl-nav
+		display: block !important
+		button
+			top: 0
+			height: 100%
+			width: 50%
+			opacity: 0 !important
+			z-index: 3
+			&.owl-prev
+				left: 0
+			&.owl-next
+				right: 0
 
 .left-banners-images
 	height: 100%
@@ -626,26 +641,26 @@ b, strong
 	.owl-stage
 		height: 100%
 
-.left-banners-images-stories-tape
-	display: none
-
-.left-banners-images-stories-current
-	display: none
-
 .left-banners-images-stories-close
-	display: none
+	cursor: pointer
+	z-index: 1
 
 .left-banners-image
 	height: 100%
+	a
+		display: block
+		height: 100%
 	img
 		width: 100%
-		height: 632px
+		height: 100%
 		object-fit: cover
+		display: block
 	video
 		width: 100%
-		height: 632px
+		height: 100%
 		object-fit: cover
 		background-color: #000
+		display: block
 
 .left-banners-promo-slider
 	.owl-nav
@@ -740,8 +755,8 @@ b, strong
 		display: flex
 		align-items: center
 		position: absolute
-		bottom: 81px
-		right: 78px
+		bottom: 60px
+		right: calc(50vw - 648px)
 		button
 			border: 1px solid #434242 !important
 			border-radius: 50%
@@ -783,8 +798,9 @@ b, strong
 	position: relative
 	img
 		width: 100%
-		height: 632px
+		// height: 632px
 		object-fit: cover
+		min-height: 240px
 
 .main-banner-link
 	position: absolute
@@ -796,9 +812,9 @@ b, strong
 .main-banner-content
 	position: absolute
 	z-index: 1
-	left: 75px
-	bottom: 70px
-	width: calc(100% - 300px)
+	left: 0
+	bottom: 60px
+	width: 100%
 	color: var(--banner-text-color)
 	.h1
 		font-weight: 900
@@ -861,8 +877,8 @@ b, strong
 
 .promo-content
 	position: absolute
-	bottom: 25px
-	left: 35px
+	bottom: 20px
+	left: 30px
 	right: 10px
 	line-height: 1.09
 	font-family: $font2
@@ -1095,15 +1111,20 @@ b, strong
 .product-stick
 	background-color: #fff
 	border-radius: 2px
-	padding: 0 7px
+	padding: 0 8px
 	height: 23px
-	line-height: 23px
+	line-height: 24px
+	overflow: hidden
 	font-size: 12px
-	letter-spacing: 1px
-	left: 28px
-	top: 23px
+	// letter-spacing: 1px
+	left: 18px
+	top: 18px
+	border-radius: 12px
 	position: absolute
-	color: #434242
+	text-transform: uppercase
+	// color: #434242
+	color: #fff
+	font-weight: bold
 	&.green
 		background-color: $accent
 		color: #4A5B4C
@@ -1321,6 +1342,13 @@ b, strong
 	position: relative
 	transition: all .4s ease
 	opacity: 0
+	.product-stick
+		background-color: #fff !important
+		color: #434242 !important
+		border-radius: 3px
+		text-transform: none
+		font-weight: normal
+		letter-spacing: 1px
 	.h2
 		font-weight: 900
 		position: absolute
@@ -5098,6 +5126,7 @@ textarea.form-control
 		width: 177px
 
 .checkout-success-box
+	text-align: center
 	.h2
 		font-size: 54px
 		line-height: 1.167
@@ -5160,6 +5189,8 @@ textarea.form-control
 .checkout-success-btn
 	margin-top: 60px
 	text-align: center
+	.btn
+		min-width: 300px
 
 .acc-sidebar-close
 	position: absolute
@@ -5478,21 +5509,23 @@ textarea.form-control
 	font-size: 17px
 	text-transform: uppercase
 	font-weight: 900
-	color: #4A5B4C !important
+	color: #9E9E9E
 	text-decoration: none !important
-	&:after
-		content: ''
-		display: block
-		flex-shrink: 0
-		width: 20px
-		height: 20px
-		background-image: url(../img/icons/arrow-right-2.svg)
-		background-size: contain
-		background-repeat: no-repeat
-		background-position: center
-		margin-left: 11px
-		+tr
+	+tr
+	// &:after
+	// 	content: ''
+	// 	display: block
+	// 	flex-shrink: 0
+	// 	width: 20px
+	// 	height: 20px
+	// 	background-image: url(../img/icons/arrow-right-2.svg)
+	// 	background-size: contain
+	// 	background-repeat: no-repeat
+	// 	background-position: center
+	// 	margin-left: 11px
+	// 	+tr
 	&:hover
+		color: $accent
 		&:after
 			transform: translateX(5px)
 	&.white
@@ -5503,16 +5536,24 @@ textarea.form-control
 .basket-dropdown
 	position: absolute
 	z-index: 10
-	box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.05)
+	border: 1px solid #E5E5E5
 	background-color: #fff
-	width: 525px
-	padding: 35px 44px 43px
+	width: 360px
+	padding: 0 20px 20px
 	top: 100%
-	right: -29px
+	right: 0
 	transition: all .4s ease
 	opacity: 0
 	transform: translateX(40px)
 	visibility: hidden
+	&:after
+		content: ''
+		width: 20px
+		height: 5px
+		position: absolute
+		top: -5px
+		right: -1px
+		background-color: #fff
 	&.opened
 		visibility: visible
 		opacity: 1
@@ -5520,80 +5561,121 @@ textarea.form-control
 
 .basket-dropdown-content
 	.h4
-		margin-bottom: 21px
+		margin-bottom: 8px
 		font-size: 18px
-		font-weight: bold
-		padding-right: 10px
+		font-weight: 600
+		padding-right: 43px
+		position: relative
+		padding-top: 13px
+		padding-bottom: 13px
+		line-height: 1.1
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: -20px
+			right: -20px
+			height: 1px
+			background-color: #E5E5E5
 
 .basket-dropdown-close
 	position: absolute
-	top: 22px
-	right: 22px
+	top: 16px
+	right: 20px
 	cursor: pointer
-	font-size: 13px
+	font-size: 14px
 	display: flex
-	color: #E5E5E5
+	color: #434242
 	+tr
+	z-index: 1
 	&:hover
-		color: #434242
+		color: #E5E5E5
 
 .basket-dropdown-items
 	overflow-y: auto
 	+scroll
-	max-height: 477px
+	max-height: 570px
 	padding-right: 10px
-	border-bottom: 1px solid #C4C4C4
-	margin-bottom: 33px
+	margin-bottom: 8px
+	margin-right: -10px
 	.checkout-item
-		border-bottom-color: #C4C4C4
-		padding-top: 14px
-		padding-bottom: 14px
+		border-bottom: none
+		padding-top: 12px
+		padding-bottom: 12px
 	.checkout-item-img
-		margin-right: 14px
+		margin-right: 11px
 		img
-			width: 107px
-			height: 107px
+			width: 70px
+			height: 70px
 	.checkout-item-body
 		margin-right: 36px
 		display: flex
 		flex-direction: column
+		margin: 0
 	.checkout-item-name
-		font-size: 18px
+		font-size: 14px
 		margin-bottom: 8px
-		line-height: 1.167
+		line-height: 1.286
+		flex-grow: 1
+		font-weight: 600
 		a
 			color: #434242
 			text-decoration: none !important
 			+tr
+			span
+				color: #848484
 			&:hover
-				color: rgba(#434242, .6)
-	.checkout-item-price
-		font-size: 24px
-		font-weight: bold
-		margin-bottom: 10
+				opacity: 0.75
+	.checkout-item-qnt
 		flex-grow: 1
+		margin-right: 10px
+	.number-group
+		width: 56px
+		padding: 0
+		height: auto
+		border: none
+		button
+			font-size: 26px
+			line-height: 15px
+		input
+			font-size: 14px
+	.checkout-item-price
+		margin: 0
+		font-size: inherit
 		white-space: nowrap
-		line-height: 1.1
-		+ruble
-	.checkout-item-descr
-		font-size: 16px
-		color: #848484
-	.checkout-delete
-		.remove-from-basket
-			cursor: pointer
-			font-size: 16px
-			color: #434242
-			+tr
-			&:hover
-				opacity: 0.7
+		flex-wrap: nowrap
+		&:after
+			display: none
+		.old-price
+			font-size: 10px
+			color: #CECECE
+			margin-right: 8px
+			&:before
+				transform: rotate(-6deg)
+		.current-price
+			font-size: 14px
+
+.checkout-item-body-footer
+	display: flex
+	width: 100%
 
 .basket-dropdown-total
 	display: flex
 	align-items: center
 	justify-content: flex-end
-	font-size: 24px
-	margin-bottom: 36px
-	font-weight: bold
+	font-size: 18px
+	margin-bottom: 19px
+	font-weight: 600
+	position: relative
+	padding-top: 20px
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: -20px
+		right: -20px
+		height: 1px
+		background-color: #E5E5E5
 
 .basket-dropdown-total-text
 	margin-right: 22px
@@ -5606,12 +5688,21 @@ textarea.form-control
 	align-items: center
 	justify-content: space-between
 	.btn
-		width: calc(50% - 15px)
+		width: calc(50% - 3.5px)
 		flex-shrink: 0
 		padding: 0 10px
 		height: 70px
 		line-height: 68px
-		font-size: 14px
+		height: 48px
+		line-height: 48px
+		font-size: 12px
+		&:before
+			border-radius: 0
+		&.btn-dark
+			&:before
+				background-color: #434242
+			&:hover:before
+				background-color: rgba(#434242, .9)
 
 .bg-overlay
 	position: absolute
@@ -5930,6 +6021,238 @@ textarea.form-control
 				background-color: #434242 !important
 		&:last-child
 			margin-right: 0
+
+.checkout-redirect
+	margin-top: 170px
+	text-align: center
+	img
+		width: 135px
+		margin-bottom: 37px
+	p
+		font-size: 16px
+		font-weight: bold
+
+.checkout-success-clipboard
+	display: flex
+	width: 654px
+	margin: 60px auto 0
+	.form-control
+		height: 70px
+		padding: 0 27px
+		text-transform: uppercase
+		font-size: 14px
+		font-weight: 600
+		color: #434242
+
+.checkout-success-clipboard-btn
+	&.active
+		span
+			color: transparent
+			&:after
+				opacity: 1
+				visibility: visible
+	span
+		position: relative
+		overflow: visible
+		+tr
+		&:after
+			content: attr(data-copy-text)
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			position: absolute
+			opacity: 0
+			visibility: hidden
+			+tr
+			color: var(--btn-text-color) !important
+
+
+.main-banners-row
+	display: block
+
+.main-banners-left
+	width: 100%
+	margin-bottom: 21px
+
+.left-banners-thumbs
+	padding: 0
+	position: static
+	padding: 5px
+	width: auto
+	max-width: 100%
+	margin-left: auto
+	margin-right: auto
+
+.left-banners-thumb
+	position: relative
+	width: 64px
+	height: auto
+	margin-right: 14px
+	overflow: visible
+	img
+		border-radius: 50%
+		width: 68px
+		height: 68px
+		background-color: #fff
+		padding: 2px
+		position: relative
+		z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		width: 72px
+		height: 72px
+		top: -2px
+		left: -2px
+		// border: 2px solid #C4FFDB
+		background: linear-gradient(135deg, rgba(255, 201, 63, 1) 0%, rgba(255, 115, 70, 1) 100%)
+		border-radius: 50%
+	&.active
+		transform: scale(1)
+	&.viewed
+		&:after
+			border: 1px solid #E5E5E5
+			background: transparent
+
+.left-banners
+	display: flex
+
+.s-stories
+	padding: 0
+	margin: -10px 0 20px
+	overflow: hidden
+
+.left-banners-images-stories-tape
+	display: flex
+	position: absolute
+	top: 14px
+	z-index: 2
+	left: 22.5px
+	right: 22.5px
+	span
+		margin: 0 1.5px
+		flex-grow: 1
+		flex-shrink: 0
+		flex-basis: 0
+		height: 2px
+		background-color: rgba(#fff, .4)
+		display: inline-block
+		position: relative
+		b
+			position: absolute
+			top: 0
+			height: 100%
+			left: 0
+			width: 100%
+			transform-origin: center left
+			transform: scaleX(0)
+			background-color: #fff
+
+.left-banners-images-stories-current
+	display: flex
+	align-items: center
+	position: absolute
+	top: 29px
+	left: 24px
+	right: 24px
+	z-index: 2
+	text-decoration: none !important
+	img
+		width: 32px
+		height: 32px
+		object-fit: coverc
+		border-radius: 50%
+		margin-right: 6px
+	span
+		font-size: 12px
+		color: #fff
+
+.left-banners-images-stories-close
+	font-size: 14px
+	color: #fff
+	position: absolute
+	z-index: 2
+	top: 25px
+	right: 12px
+	display: block
+	width: 40px
+	height: 40px
+	display: flex
+	align-items: center
+	justify-content: center
+
+.left-banners-images
+	transition: opacity .3s ease !important
+	opacity: 0
+	height: 100%
+	&.visible
+		opacity: 1
+	.owl-stage-outer
+		height: 100%
+		.owl-stage
+			height: 100%
+
+.left-banners-image
+	height: 100%
+	img
+		height: 100%
+		object-fit: cover
+
+.product-cart-size-select
+	display: flex
+	align-items: center
+	height: 100%
+	padding: 0 20px 20px
+
+.size-select-label
+	position: relative
+	display: block
+	height: 17px
+	line-height: 18px
+	padding: 0 5px
+	border-radius: 9px
+	background-color: #fff
+	font-size: 12px
+	color: #434242 !important
+	text-decoration: none !important
+	text-align: center
+	margin-right: 6px
+	flex-shrink: 0
+	font-weight: 600
+	&:hover
+		.tooltip
+			opacity: 1
+			visibility: visible
+	.tooltip
+		position: absolute
+		background-color: #fff
+		bottom: 26px
+		left: 50%
+		transform: translateX(-50%)
+		height: 23px
+		line-height: 23px
+		color: #434242
+		font-size: 10px
+		font-weight: 600
+		padding: 0 8px
+		text-transform: uppercase
+		visibility: hidden
+		opacity: 0
+		white-space: nowrap
+		+tr
+		&:after
+			content: ''
+			position: absolute
+			left: 50%
+			top: 100%
+			margin-left: -5px
+			border-style: solid
+			border-width: 5px
+			border-color: #fff transparent transparent transparent
+			width: 10px
+			height: 10px
+
 
 @import "media" // Always at the end
 @import "new-menu" // Always at the end
