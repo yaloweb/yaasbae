@@ -106,6 +106,13 @@
 		height: 576px
 	.basket-dropdown-items
 		max-height: 300px
+	.prof-set-item
+		max-width: 115px
+	.prof-set-item
+		&:before
+			right: -8px
+		&:after
+			right: -17px
 
 @media (max-width: 1365.98px)
 	.container
@@ -517,6 +524,17 @@
 			[class*=col-]
 				padding-left: 2.5px
 				padding-right: 2.5px
+	.wrapper.visible
+		overflow: hidden
+	.product-cart-size-select
+		padding-bottom: 0
+		padding: 20px 0
+	.product-image
+		margin-bottom: 10px
+	.size-select-label
+		background-color: #f5f5f5
+	.size-select-label .tooltip
+		display: none
 
 @media (max-width: 1159.98px)
 	// .left-banners-image
@@ -1471,6 +1489,14 @@
 			line-height: 50px !important
 			padding: 0 30px
 			font-size: 12px
+	.prof-set
+		display: block
+	.prof-set-title
+		margin-bottom: 30px
+	.prof-set-body
+		margin-bottom: 30px
+	.prof-set-price
+		align-items: flex-start
 
 
 // ≥576px
@@ -1861,8 +1887,6 @@
 		padding-right: 20px
 	.search-dropdown-close
 		right: 21px
-	.total-look-link
-		display: none
 	.product-item
 		.product-stick
 			display: none
@@ -2740,6 +2764,18 @@
 			margin-bottom: 10px
 		.btn
 			width: 100%
+	.catalog-list
+		margin-top: 55px
+	.catalog-empty
+		margin-bottom: 50px
+		.h2
+			font-size: 24px
+			margin-bottom: 20px
+		p
+			margin-bottom: 25px
+	.total-look-link
+		height: auto
+		bottom: 60px
 
 /*==========  Mobile First  ==========*/
 

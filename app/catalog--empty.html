@@ -32,9 +32,11 @@
 			--accent-color-hover: #c1c6c4;
 			--btn-text-color: #434242;
 			--header-bg-color: #434242;
+			--header-bottom-bg-color: #505050;
 			/*Для возможности изменения прозрачности нужно использовать RGB палитру*/
 			--header-text-color: 255, 255, 255;
 			--banner-text-color: #000;
+			--banner-title-size: 80px;
 			--categories-text-color: #fff;
 		}
 	</style>
@@ -591,152 +593,424 @@
 				<div class="container">
 					<ul>
 						<li><a href="#">Главная</a></li>
-						<li><a href="#">Корзина</a></li>
+						<li><a href="#">Пальто и куртки</a></li>
 					</ul>
 				</div>
 			</nav>
 
 			<div class="page-title">
 				<div class="container">
-					<h1>Корзина</h1>
+					<h1>Пальто и куртки</h1>
 				</div>
 			</div>
 			
-			<section class="s-basket">
+			<section class="s-catalog">
 				<div class="container">
-					
-					<div class="row">
-						
-						<div class="col-lg-8">
-							<div class="basket-list">
 
-								<div class="basket-item">
-									<div class="basket-item-img">
-										<img src="img/lookbook/1.jpg" alt="">
-									</div>
-									<div class="basket-item-name">
-										<div class="h6"><a href="#">Рубашка пальто бежевого цвета</a></div>
-										<p>Цвет: розовый · Размер: XS · 1 шт</p>
-									</div>
-									<div class="basket-item-qnt">
-										<div class="select-qnt">
-											<div class="number-group">
-												<button class="number-minus">-</button>
-												<input type="text" class="only-number number-input" value="1">
-												<button class="number-plus">+</button>
+					<div class="catalog">
+						<div class="row">
+							
+							<div class="col-lg-3">
+
+								<div class="filter-sidebar">
+									<div class="filter-sidebar-container">
+
+										<div class="filter-header">
+											<div class="h6">Фильтр</div>
+											<div class="filter-close">
+												<span class="icon-close"></span>
 											</div>
 										</div>
-									</div>
-									<div class="basket-item-price">
-										<div class="current-price">4 490</div>
-										<div class="remove-from-basket"><span class="icon-trash"></span></div>
-									</div>
-								</div>
 
-								<div class="basket-item">
-									<div class="basket-item-img">
-										<img src="img/lookbook/1.jpg" alt="">
-									</div>
-									<div class="basket-item-name">
-										<div class="h6"><a href="#">Рубашка пальто бежевого цвета</a></div>
-										<p>Цвет: розовый · Размер: XS · 1 шт</p>
-									</div>
-									<div class="basket-item-qnt">
-										<div class="select-qnt">
-											<div class="number-group">
-												<button class="number-minus">-</button>
-												<input type="text" class="only-number number-input" value="1">
-												<button class="number-plus">+</button>
+										<div class="filter-main">
+
+											<div class="filter-item">
+												<div class="filter-title">Цена</div>
+												<div class="filter-body">
+													<div class="slider-range-item">
+														<div class="slider-range"></div>
+														<div class="slider-range-inputs">
+															<div class="slider-range-inp">
+																<span>от</span>
+																<input type="text" class="slider-range-left only-number form-control" value="1500" data-min="0">
+															</div>
+															<div class="slider-range-inp">
+																<span>до</span>
+																<input type="text" class="slider-range-right only-number form-control" value="10000" data-max="15000">
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="basket-item-price">
-										<div class="current-price red">4 490</div>
-										<div class="old-price">4 490</div>
-										<div class="remove-from-basket"><span class="icon-trash"></span></div>
-									</div>
-								</div>
 
-								<div class="prof-set">
-									<div class="prof-set-title">
-										<style>
-											:root {
-												--gradient-linear: linear-gradient(90deg, rgba(255, 115, 70, 1) 0%, rgba(204, 0, 255, 1) 100%)
-											}
-										</style>
-										<div class="h3"><span>Выгодный <br>комплект</span></div>
-									</div>
-									<div class="prof-set-body">
-										<div class="prof-set-item">
-											<a href="#"><img src="img/complete-1.jpg" alt=""></a>
-											<div class="h4"><a href="#">Рубашка пальто бежевого цвета</a></div>
-											<div class="current-price">4 490</div>
-										</div>
-										<div class="prof-set-item">
-											<a href="#"><img src="img/complete-2.jpg" alt=""></a>
-											<div class="h4"><a href="#">Платье на бретелях</a></div>
-											<div class="current-price">4 490</div>
-										</div>
-									</div>
-									<div class="prof-set-price">
-										<div class="current-price">5 500</div>
-										<div class="old-price">4 490</div>
-										<a href="#" class="btn btn-border"><span>Добавить в корзину</span></a>
-									</div>
-								</div>
-
-								<div class="basket-item">
-									<div class="basket-item-img">
-										<img src="img/lookbook/1.jpg" alt="">
-									</div>
-									<div class="basket-item-name">
-										<div class="h6"><a href="#">Рубашка пальто бежевого цвета</a></div>
-										<p>Цвет: розовый · Размер: XS · 1 шт</p>
-									</div>
-									<div class="basket-item-qnt">
-										<div class="select-qnt">
-											<div class="number-group">
-												<button class="number-minus">-</button>
-												<input type="text" class="only-number number-input" value="1">
-												<button class="number-plus">+</button>
+											<div class="filter-item">
+												<div class="filter-title">Тип продукта</div>
+												<div class="filter-body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" disabled>
+															<span>Блейзеры</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" checked>
+															<span>Блузки</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Боди</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Брюки</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Джемперы</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Джинсы</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Кардиганы</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Джоггеры</span>
+														</label>
+													</div>
+												</div>
 											</div>
+
+											<div class="filter-item">
+												<div class="filter-title">Коллекция</div>
+												<div class="filter-body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Зима</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Весна</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Лето</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>Осень</span>
+														</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="filter-item">
+												<div class="filter-title">Цвет</div>
+												<div class="filter-body">
+													<div class="select-color">
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox" checked>
+																<span style="background-color: #BEE4B9;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #D5B9FF;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #F0AD82;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #FFF0E5;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #C4C4C4;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #434242;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #BEE4B9;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #D5B9FF;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #F0AD82;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #FFF0E5;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #C4C4C4;"></span>
+															</label>
+														</div>
+														<div class="select-color-item">
+															<label>
+																<input type="checkbox">
+																<span style="background-color: #434242;"></span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="filter-item">
+												<div class="filter-title">Размер</div>
+												<div class="filter-body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>XS</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>S</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>M</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>L</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>XL</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox">
+															<span>XXL</span>
+														</label>
+													</div>
+												</div>
+											</div>
+
 										</div>
+
+										<div class="filter-submit">
+											<button class="btn btn-block"><span>Применить фильтр</span></button>
+										</div>
+
+										<div class="filter-clear">
+											<a href="#" class="filter-clear-link">Сбросить <span class="icon-close-3"></span></a>
+										</div>
+
+										<div class="filter-help-btn">Показать <span>999</span> товаров</div>
+
 									</div>
-									<div class="basket-item-price">
-										<div class="current-price">4 490</div>
-										<div class="remove-from-basket"><span class="icon-trash"></span></div>
+
+								</div>
+
+							</div>
+
+							<div class="col-lg-9">
+								
+								<div class="catalog-tabs-row">
+									
+									<div class="catalog-tabs owl-carousel">
+										<a href="#" class="btn btn-sm btn-border">Пуховики</a>
+										<a href="#" class="btn btn-sm btn-border active">КОЖАНЫЕ КУРТКИ</a>
+										<a href="#" class="btn btn-sm btn-border">Тренчи</a>
+										<a href="#" class="btn btn-sm btn-border">Джинсовые крутки</a>
+										<a href="#" class="btn btn-sm btn-border">пальто</a>
+										<a href="#" class="btn btn-sm btn-border">Рубашки</a>
+										<a href="#" class="btn btn-sm btn-border">Зимние крутки</a>
+										<a href="#" class="btn btn-sm btn-border">Тренчи</a>
+										<a href="#" class="btn btn-sm btn-border">Джинсовые крутки</a>
+										<a href="#" class="btn btn-sm btn-border">пальто</a>
+									</div>
+
+								</div>
+
+								<div class="catalog-list">
+									<div class="row">
+
+										<div class="col-12">
+
+											<div class="catalog-empty">
+												<div class="h2">Таких товаров нет :(</div>
+												<p> Попробуйте смягчить условия поиска — то, что вам нужно, наверняка найдётся</p>
+												<a href="#" class="btn">Сбросить фильтры</a>
+											</div>
+
+											<div class="recently-viewed-catalog">
+												
+												<div class="section-title">
+													<div class="h2">Вы недавно смотрели</div>
+												</div>
+
+												<div class="recently-viewed-slider owl-carousel">
+													<div class="product-item">
+														<div class="product-image">
+															<a href="#" class="product-image-link">
+																<img src="img/products/2.jpg" alt="">
+															</a>
+															<div class="product-liked"></div>
+															<div class="product-cart">
+																<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+															</div>
+														</div>
+														<div class="product-name"><a href="#">Бежевая рубашка-пальто</a></div>
+														<div class="product-price">
+															<div class="current-price red">5 999</div>
+															<div class="old-price">6 500</div>
+														</div>
+													</div>
+													<div class="product-item">
+														<div class="product-image">
+															<a href="#" class="product-image-link">
+																<img src="img/products/3.jpg" alt="">
+															</a>
+															<div class="product-liked"></div>
+															<div class="product-cart">
+																<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+															</div>
+														</div>
+														<div class="product-name"><a href="#">Бежевая рубашка-пальто</a></div>
+														<div class="product-price">
+															<div class="current-price red">5 999</div>
+															<div class="old-price">6 500</div>
+														</div>
+													</div>
+													<div class="product-item">
+														<div class="product-image">
+															<a href="#" class="product-image-link">
+																<img src="img/products/4.jpg" alt="">
+															</a>
+															<div class="product-liked"></div>
+															<div class="product-cart">
+																<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+															</div>
+														</div>
+														<div class="product-name"><a href="#">Бежевая рубашка-пальто</a></div>
+														<div class="product-price">
+															<div class="current-price red">5 999</div>
+															<div class="old-price">6 500</div>
+														</div>
+													</div>
+													<div class="product-item">
+														<div class="product-image">
+															<a href="#" class="product-image-link">
+																<img src="img/products/5.jpg" alt="">
+															</a>
+															<div class="product-liked"></div>
+															<div class="product-cart">
+																<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+															</div>
+														</div>
+														<div class="product-name"><a href="#">Бежевая рубашка-пальто</a></div>
+														<div class="product-price">
+															<div class="current-price red">5 999</div>
+															<div class="old-price">6 500</div>
+														</div>
+													</div>
+													<div class="product-item">
+														<div class="product-image">
+															<a href="#" class="product-image-link">
+																<img src="img/products/2.jpg" alt="">
+															</a>
+															<div class="product-liked"></div>
+															<div class="product-cart">
+																<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+															</div>
+														</div>
+														<div class="product-name"><a href="#">Бежевая рубашка-пальто</a></div>
+														<div class="product-price">
+															<div class="current-price red">5 999</div>
+															<div class="old-price">6 500</div>
+														</div>
+													</div>
+													<div class="product-item">
+														<div class="product-image">
+															<a href="#" class="product-image-link">
+																<img src="img/products/3.jpg" alt="">
+															</a>
+															<div class="product-liked"></div>
+															<div class="product-cart">
+																<a href="#" class="btn btn-block"><span>Добавить в корзину</span></a>
+															</div>
+														</div>
+														<div class="product-name"><a href="#">Бежевая рубашка-пальто</a></div>
+														<div class="product-price">
+															<div class="current-price red">5 999</div>
+															<div class="old-price">6 500</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
 									</div>
 								</div>
 
 							</div>
 
 						</div>
-
-						<div class="col-lg-4">
-							<div class="basket-sidebar">
-								<div class="h2">Ваша корзина</div>
-								<ul class="basket-sidebar-list">
-									<li>Количество товаров <span>3</span></li>
-									<li>Вес <span>1,5 кг</span></li>
-								</ul>
-								<div class="basket-total">
-									<div class="basket-total-name">Итого</div>
-									<div class="basket-total-price">
-										<div class="current-price">14 490</div>
-									</div>
-								</div>
-								<div class="promocode">
-									<input type="text" class="promocode-insert-input" placeholder="Введите промокод">
-									<button class="promocode-confirm">
-										<span class="icon-arrow-right-bold"></span>
-									</button>
-								</div>
-								<div class="basket-confirm">
-									<button class="btn btn-xl btn-block btn-black"><span>Перейти к оформлению</span></button>
-								</div>
-							</div>
-						</div>
-
 					</div>
 
 				</div>
