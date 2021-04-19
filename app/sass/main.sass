@@ -5104,6 +5104,7 @@ textarea.form-control
 	padding: 12px 0
 	border-bottom: 1px solid rgba(#434242, .1)
 	display: flex
+	position: relative
 	&:last-child
 		border-bottom: none
 
@@ -5639,6 +5640,7 @@ textarea.form-control
 		line-height: 1.286
 		flex-grow: 1
 		font-weight: 600
+		margin-right: 25px
 		a
 			color: #434242
 			text-decoration: none !important
@@ -6429,6 +6431,17 @@ textarea.form-control
 			right: 3px
 			bottom: 3px
 			background-color: #F7F7F7
+
+.checkout-item-delete
+	position: absolute
+	top: 14px
+	cursor: pointer
+	+tr
+	right: 0
+	opacity: 0.65
+	font-size: 14px
+	&:hover
+		opacity: 1
 
 @import "media" // Always at the end
 @import "new-menu" // Always at the end
