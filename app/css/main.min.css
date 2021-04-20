@@ -7809,7 +7809,15 @@ strong {
 }
 
 .left-banners-thumb span {
-  display: none;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
 }
 
 .left-banners-images-block {
@@ -16790,10 +16798,11 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .left-banners-thumb {
   position: relative;
-  width: 64px;
+  width: 95px;
   height: auto;
-  margin-right: 14px;
+  margin-right: 6px;
   overflow: visible;
+  text-align: center;
 }
 
 .left-banners-thumb img {
@@ -16812,7 +16821,7 @@ textarea.form-control::-webkit-scrollbar-thumb {
   width: 72px;
   height: 72px;
   top: -2px;
-  left: -2px;
+  left: calc(50% - 36px);
   background: -o-linear-gradient(315deg, #ffc93f 0%, #ff7346 100%);
   background: linear-gradient(135deg, #ffc93f 0%, #ff7346 100%);
   border-radius: 50%;
@@ -17299,6 +17308,39 @@ textarea.form-control::-webkit-scrollbar-thumb {
 .basket-empty-icon {
   font-size: 31px;
   margin-bottom: 5px;
+}
+
+.left-banners-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+
+.left-banners-btn a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 38px;
+  white-space: nowrap;
+  border-radius: 25px;
+  background-color: rgba(67, 66, 66, 0.5);
+  color: #fff !important;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none !important;
+  text-decoration: none !important;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.left-banners-btn a:hover {
+  background-color: #000;
 }
 
 /*==========  Desktop First  ==========*/
@@ -20975,6 +21017,13 @@ textarea.form-control::-webkit-scrollbar-thumb {
   .total-look-link {
     height: auto;
     bottom: 60px;
+  }
+  .left-banners-thumb {
+    width: 68px;
+    margin-right: 14px;
+  }
+  .left-banners-thumb:after {
+    left: calc(50% - 35px);
   }
 }
 
