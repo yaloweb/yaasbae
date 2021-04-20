@@ -14208,6 +14208,18 @@ textarea.form-control::-webkit-scrollbar-thumb {
   font-size: 16px;
 }
 
+.basket-item-name .product-stick {
+  position: static;
+  display: inline-block;
+  margin-top: 13px;
+  height: 20px;
+  line-height: 22px;
+  padding: 0 8px;
+  font-size: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .basket-item-qnt {
   margin-right: 20px;
 }
@@ -16606,7 +16618,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
 .basket-empty {
   margin-left: auto;
   margin-right: auto;
-  max-width: 445px;
   text-align: center;
   color: #434242;
 }
@@ -16615,12 +16626,25 @@ textarea.form-control::-webkit-scrollbar-thumb {
   text-transform: uppercase;
   font-size: 26px;
   margin-bottom: 35px;
+  max-width: 596px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .basket-empty p {
   margin-bottom: 44px;
   font-size: 15px;
   font-weight: 500;
+  max-width: 445px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.basket-empty p [class*=icon-] {
+  display: inline-block;
+  -webkit-transform: translateY(0.15em);
+      -ms-transform: translateY(0.15em);
+          transform: translateY(0.15em);
 }
 
 .basket-empty-btns {
@@ -17270,6 +17294,11 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .checkout-item-delete:hover {
   opacity: 1;
+}
+
+.basket-empty-icon {
+  font-size: 31px;
+  margin-bottom: 5px;
 }
 
 /*==========  Desktop First  ==========*/
@@ -18066,7 +18095,8 @@ textarea.form-control::-webkit-scrollbar-thumb {
     bottom: 35px;
   }
   .promo-slider {
-    padding-right: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .promo-slider .owl-stage-outer {
     overflow: visible;

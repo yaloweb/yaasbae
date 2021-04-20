@@ -254,11 +254,13 @@ $(function() {
 		dots: false
 	});
 
-	$('.promo-slider').owlCarousel({
+  let promoSlider = $('.promo-slider')
+	promoSlider.owlCarousel({
 		items: 1,
 		margin: 5,
 		dots: false,
 		nav: true,
+    loop: true,
     responsive: {
       576: {
         items: 1
@@ -280,6 +282,7 @@ $(function() {
 		nav: true,
 		dots: false,
 		margin: 5,
+    loop: true,
     responsive: {
       0: {
         items: 2

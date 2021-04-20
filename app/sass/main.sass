@@ -4559,6 +4559,16 @@ textarea.form-control
 		margin: 0
 		color: #848484
 		font-size: 16px
+	.product-stick
+		position: static
+		display: inline-block
+		margin-top: 13px
+		height: 20px
+		line-height: 22px
+		padding: 0 8px
+		font-size: 10px
+		overflow: hidden
+		white-space: nowrap
 
 .basket-item-qnt
 	margin-right: 20px
@@ -6003,17 +6013,25 @@ textarea.form-control
 .basket-empty
 	margin-left: auto
 	margin-right: auto
-	max-width: 445px
 	text-align: center
 	color: #434242
 	h1, .h1
 		text-transform: uppercase
 		font-size: 26px
 		margin-bottom: 35px
+		max-width: 596px
+		margin-left: auto
+		margin-right: auto
 	p
 		margin-bottom: 44px
 		font-size: 15px
 		font-weight: 500
+		max-width: 445px
+		margin-left: auto
+		margin-right: auto
+		[class*=icon-]
+			display: inline-block
+			transform: translateY(.15em)
 
 .basket-empty-btns
 	display: flex
@@ -6442,6 +6460,10 @@ textarea.form-control
 	font-size: 14px
 	&:hover
 		opacity: 1
+
+.basket-empty-icon
+	font-size: 31px
+	margin-bottom: 5px
 
 @import "media" // Always at the end
 @import "new-menu" // Always at the end
