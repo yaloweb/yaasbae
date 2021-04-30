@@ -19833,7 +19833,7 @@ textarea.form-control::-webkit-scrollbar-thumb {
     -webkit-transition: all .4s ease;
     -o-transition: all .4s ease;
     transition: all .4s ease;
-    opacity: 0;
+    opacity: 0 !important;
     visibility: hidden;
     -webkit-transform: none !important;
         -ms-transform: none !important;
@@ -19844,7 +19844,7 @@ textarea.form-control::-webkit-scrollbar-thumb {
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
     visibility: visible;
-    opacity: 1;
+    opacity: 1 !important;
   }
   .filter-sidebar.opened .filter-sidebar-container {
     -webkit-transform: translateY(0);
