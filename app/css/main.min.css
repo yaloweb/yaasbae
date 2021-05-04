@@ -20142,7 +20142,7 @@ textarea.form-control::-webkit-scrollbar-thumb {
     overflow: hidden;
   }
   .product-page-prices .product-page-liked span {
-    margin: auto;
+    margin: 2px 10px 0;
     font-size: 22px;
   }
   .product-page-prices .product-page-liked span:after {
