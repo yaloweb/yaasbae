@@ -16974,7 +16974,7 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .s-stories {
   padding: 0;
-  margin: -10px 0 20px;
+  margin: -10px 0 10px;
   overflow: hidden;
 }
 
@@ -17472,6 +17472,33 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .position-fix {
   overflow: hidden;
+}
+
+.img-scroll-wrapper {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0 20px;
+  overflow: auto hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.img-scroll-wrapper img {
+  max-height: 70vh;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.img-scroll-wrapper:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 
 /*==========  Desktop First  ==========*/
