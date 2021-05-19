@@ -10849,20 +10849,21 @@ textarea.form-control::-webkit-scrollbar-thumb {
 }
 
 .product-images-gallery-item {
-  height: 100%;
   margin-bottom: auto;
+  position: relative;
 }
 
 .product-images-gallery-item img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  top: 0;
+  left: 0;
 }
 
 .product-video-wrapper {
   position: relative;
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10872,6 +10873,11 @@ textarea.form-control::-webkit-scrollbar-thumb {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 133.3333%;
 }
 
 .product-video-wrapper video {
@@ -10888,19 +10894,19 @@ textarea.form-control::-webkit-scrollbar-thumb {
 .product-video-wrapper-frame {
   margin-top: auto;
   margin-bottom: auto;
-  position: relative;
-  padding-bottom: 56.25%;
+  position: absolute;
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .product-video-wrapper-frame iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -11805,7 +11811,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
       -ms-flex-negative: 0;
           flex-shrink: 0;
   width: 42px;
-  height: 42px;
   border: 1px solid #EDEDED;
 }
 
@@ -13463,7 +13468,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .order-prod-img img {
   width: 71px;
-  height: 71px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -14314,7 +14318,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .basket-item-img img {
   width: 80px;
-  height: 80px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -15359,7 +15362,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .checkout-item-img img {
   width: 54px;
-  height: 54px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
@@ -16133,7 +16135,7 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .basket-dropdown-items {
   overflow-y: auto;
-  max-height: 570px;
+  max-height: 330px;
   padding-right: 10px;
   margin-bottom: 8px;
   margin-right: -10px;
@@ -16161,7 +16163,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .basket-dropdown-items .checkout-item-img img {
   width: 70px;
-  height: 70px;
 }
 
 .basket-dropdown-items .checkout-item-body {
@@ -17327,7 +17328,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .prof-set-item img {
   width: 78px;
-  height: 78px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 10px;
@@ -17609,6 +17609,20 @@ textarea.form-control::-webkit-scrollbar-thumb {
   .not-found-content p {
     font-size: 18px;
     margin-bottom: 20px;
+  }
+  .s-product .row .col-lg-7 {
+    max-width: 52.33333%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 52.33333%;
+        -ms-flex: 0 0 52.33333%;
+            flex: 0 0 52.33333%;
+  }
+  .s-product .row .col-lg-5 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 47.66667%;
+        -ms-flex: 0 0 47.66667%;
+            flex: 0 0 47.66667%;
+    max-width: 47.66667%;
   }
 }
 
@@ -18964,6 +18978,20 @@ textarea.form-control::-webkit-scrollbar-thumb {
     max-width: 524px;
     margin: 40px auto;
   }
+  .s-product .row .col-lg-7 {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .s-product .row .col-lg-5 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -19284,7 +19312,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
   }
   .order-prod-img img {
     width: 50px;
-    height: 50px;
   }
   .order-prod-name .h4 {
     font-size: 15px;
@@ -19930,7 +19957,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
   }
   .lookbook-popup-block .lookbook-prod-img img {
     width: 58px;
-    height: 58px;
   }
   .lookbook-popup-block .lookbook-total {
     display: block;
@@ -20785,7 +20811,6 @@ textarea.form-control::-webkit-scrollbar-thumb {
   }
   .basket-item-img img {
     width: 70px;
-    height: 70px;
   }
   .basket-item-name {
     margin-right: 0;

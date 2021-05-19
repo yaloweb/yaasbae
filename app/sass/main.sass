@@ -2476,18 +2476,26 @@ textarea.form-control
 						content: '\e919'
 
 .product-images-gallery-item
-	height: 100%
+	// height: 100%
 	margin-bottom: auto
+	position: relative
 	img
 		width: 100%
-		height: 100%
+		height: auto
 		object-fit: cover
+		top: 0
+		left: 0
 
 .product-video-wrapper
 	position: relative
-	height: 100%
+	// height: 100%
 	display: flex
 	flex-direction: column
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	padding-bottom: 133.3333%
 	video
 		width: 100%
 		height: 100%
@@ -2500,14 +2508,14 @@ textarea.form-control
 .product-video-wrapper-frame
 	margin-top: auto
 	margin-bottom: auto
-	position: relative
-	padding-bottom: 56.25%
+	position: absolute
 	width: 100%
 	flex-grow: 1
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
 	iframe
-		position: absolute
-		top: 0
-		left: 0
 		width: 100%
 		height: 100%
 
@@ -3078,7 +3086,7 @@ textarea.form-control
 	img
 		flex-shrink: 0
 		width: 42px
-		height: 42px
+		// height: 42px
 		border: 1px solid #EDEDED
 
 .lookbook-liked
@@ -4102,7 +4110,7 @@ textarea.form-control
 	margin-right: 15px
 	img
 		width: 71px
-		height: 71px
+		// height: 71px
 		object-fit: cover
 
 .order-prod-name
@@ -4633,7 +4641,7 @@ textarea.form-control
 	margin-right: 15px
 	img
 		width: 80px
-		height: 80px
+		// height: 80px
 		object-fit: cover
 
 .basket-item-name
@@ -5221,7 +5229,6 @@ textarea.form-control
 	margin-right: 12px
 	img
 		width: 54px
-		height: 54px
 		flex-shrink: 0
 		object-fit: cover
 
@@ -5725,7 +5732,7 @@ textarea.form-control
 .basket-dropdown-items
 	overflow-y: auto
 	+scroll
-	max-height: 570px
+	max-height: 330px
 	padding-right: 10px
 	margin-bottom: 8px
 	margin-right: -10px
@@ -5737,7 +5744,6 @@ textarea.form-control
 		margin-right: 11px
 		img
 			width: 70px
-			height: 70px
 	.checkout-item-body
 		margin-right: 36px
 		display: flex
@@ -6484,7 +6490,7 @@ textarea.form-control
 		background-color: #434242
 	img
 		width: 78px
-		height: 78px
+		// height: 78px
 		object-fit: cover
 		margin-bottom: 10px
 		display: block
