@@ -1593,6 +1593,7 @@ b, strong
 
 .footer-soc
 	width: 26%
+	margin-left: auto
 	.h5
 		& + .footer-soc-item
 			padding-top: 0
@@ -1605,26 +1606,26 @@ b, strong
 	+tr
 	border-bottom: 1px solid rgba(#fff, .3)
 	align-items: center
-	padding-bottom: 15px
-	padding-top: 15px
+	padding-bottom: 10px
+	padding-top: 10px
 	&:hover
 		.footer-soc-arrow
 			transform: rotate(360deg)
 
 .footer-soc-icon
-	font-size: 26px
+	font-size: 18px
 	margin-right: 10px
 
 .footer-soc-name
 	flex-grow: 1
-	font-size: 22px
+	font-size: 16px
 	font-weight: bold
 	font-family: $font2
 	margin-right: 10px
 	transform: translateY(-1px)
 
 .footer-soc-arrow
-	font-size: 28px
+	font-size: 22px
 	+tr
 
 .popup-wrapper
@@ -4041,6 +4042,16 @@ textarea.form-control
 .order-info-btns
 	display: flex
 	align-items: center
+	.btn
+		flex-shrink: 0
+		padding: 0 34px
+		color: #fff !important
+		font-size: 12px
+		font-weight: 900
+		&:before
+			background-color: #434242
+		&:hover:before
+			background-color: rgba(#434242, .9)
 
 .order-info-btn
 	margin-left: 30px
@@ -4214,12 +4225,13 @@ textarea.form-control
 	display: flex
 	align-items: center
 	margin-bottom: 40px
-	background-color: #EEF1F0
-	padding: 17px 35px
-	justify-content: space-between
 	.h5
 		font-weight: 500
 		font-size: 18px
+		flex-grow: 1
+		padding: 17px 35px 16px
+		background-color: #EEF1EF
+		margin-right: 8px
 
 .profile-form
 	max-width: 520px
@@ -4441,17 +4453,6 @@ textarea.form-control
 		color: #4A5B4C
 		&:before
 			background-color: #fff
-
-.promocode-input
-	height: 60px
-	border-color: #f4f4f4
-	background-color: #f4f4f4
-	text-align: center
-	font-size: 20px
-	font-weight: bold
-	font-family: $font2
-	margin-bottom: 5px
-	color: #434242
 
 .promocode-copied
 	margin-bottom: 22px
@@ -5305,7 +5306,7 @@ textarea.form-control
 			line-height: 1.125
 			&:last-child
 				margin-bottom: 0
-			span
+			> span
 				&:first-child
 					font-weight: 500
 					color: #848484
@@ -6172,7 +6173,7 @@ textarea.form-control
 
 .checkout-success-clipboard
 	display: flex
-	width: 654px
+	max-width: 654px
 	margin: 60px auto 0
 	.form-control
 		height: 70px
@@ -6181,6 +6182,7 @@ textarea.form-control
 		font-size: 14px
 		font-weight: 600
 		color: #434242
+		border-color: #c1c1c1
 
 .checkout-success-clipboard-btn
 	&.active
@@ -6605,6 +6607,65 @@ textarea.form-control
 		height: 20px
 		flex-shrink: 0
 
+.checkout-success-detail-products
+	padding: 6px 18px
+	border: 1px solid #E5E5E5
+	.checkout-item-descr
+		font-size: 12px
+
+#invite-friends
+	.popup-block
+		width: 570px
+	.popup-content
+		padding: 37px 42px 54px
+	.popup-close
+		top: 10px
+		right: 10px
+
+.invite-friends-copy-block
+	.h3
+		font-weight: 900
+		font-size: 24px
+		color: #434242
+		line-height: 1.167
+		margin-bottom: 22px
+
+.invite-friends-copy-link
+	position: relative
+
+.promocode-input
+	height: 60px
+	background-color: #F4F4F4
+	font-size: 18px
+	padding: 0 70px 0 18px
+	font-weight: normal
+	&.bold
+		text-transform: uppercase
+		font-weight: bold
+
+.copy-promocode
+	position: absolute
+	top: 18px
+	right: 12px
+	width: 24px
+	height: 24px
+	border: none
+	background-color: transparent
+	outline: none !important
+	cursor: pointer
+	background-image: url(../img/icons/copy.svg)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+	+tr
+	&:hover
+		opacity: 0.5
+
+.invite-friends-copy-block
+	margin-bottom: 69px
+	&:last-child
+		margin-bottom: 0
 
 @import "media" // Always at the end
 @import "new-menu" // Always at the end
+@import "new-pr" // Always at the end

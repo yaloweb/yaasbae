@@ -595,6 +595,15 @@ $(function () {
     prodImgGallery.trigger('to.owl.carousel', i);
     $('.product-image-thumb').removeClass('active');
     $(this).addClass('active');
+    if ( $(this).hasClass('video-thumb') ) {
+      let currOwlItem = prodImgGallery.find(`.owl-item:eq(${i})`)
+          videoFrame = currOwlItem.find('iframe'),
+          videoSrc = videoFrame.attr('src').replace('?mute=1&autoplay=1', '');
+      videoFrame
+        .attr('src', `${videoSrc}?mute=1&autoplay=1`)
+        .attr('allow', 'autoplay');
+    }
+    
   });
 
   prodImgGallery.on('translate.owl.carousel', function (e) {
@@ -761,17 +770,13 @@ $(function () {
     }
   });
 
-  $('.invite-friends').each(function () {
+  $('.invite-friends-copy-link').each(function () {
     let ths = $(this);
     ths.find('.copy-promocode').on('click', function (e) {
       e.preventDefault();
       let inp = ths.find('.promocode-input').eq(0);
       inp.select();
       document.execCommand('copy');
-      ths.find('.promocode-copied').addClass('active');
-      setTimeout(() => {
-        ths.find('.promocode-copied').removeClass('active')
-      }, 3000)
     });
   });
 

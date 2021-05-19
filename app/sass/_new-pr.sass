@@ -1,0 +1,249 @@
+@import "vars"
+
+.promocode
+	&.success
+		.promocode-confirm
+			opacity: 0
+			visibility: hidden
+
+.order-delivery
+	padding-top: 18px
+
+.order-products + .order-delivery
+	padding-top: 0
+
+.select-size-form .product-page-size-list
+	justify-content: flex-start
+
+.pay-step-row
+	display: flex
+	align-items: flex-start
+	.del-form:first-child
+		width: 317px
+		flex-shrink: 0
+
+.pick-up-points
+	border-color: #E5E5E5
+
+.main-banner-link
+	z-index: 1
+
+.acc-sidebar-user
+	padding: 0 33px
+	margin-bottom: 20px
+
+.acc-sidebar
+	padding-top: 28px
+
+.total-look-item
+	.h2
+		padding-right: 60px
+		line-height: 1.1
+		padding-right: 60px
+		overflow: hidden
+		text-overflow: ellipsis
+		padding-bottom: 3px
+
+.catalog
+	.col-lg-12
+		.col-md-4
+			-webkit-box-flex: 0
+			-webkit-flex: 0 0 25%
+			-ms-flex: 0 0 25%
+			flex: 0 0 25%
+			max-width: 25%
+
+.catalog
+	.col-lg-12
+		.catalog-list
+			margin-top: 0 !important
+
+.total-look-price
+	margin-left: 25px
+	margin-top: -5px
+	padding: 2px 4px
+	.h6
+		font-size: 10px
+	&:after
+		content: ''
+		position: absolute
+		top: 5px
+		left: -17px
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		background-color: #fff
+		animation-name: dotScale
+		animation-duration: 1.5s
+		animation-timing-function: linear
+		animation-iteration-count: infinite
+	&:before
+		content: ''
+		position: absolute
+		width: 18px
+		height: 18px
+		top: 0
+		left: -22px
+		border: .4px solid #fff
+		border-radius: 50%
+		+tr
+		transform: scale(1)
+
+.total-look-price
+	min-width: 0
+
+.product-page-liked.active
+	font-size: 0
+	&:after
+		content: 'В избранном'
+		font-size: 12px
+
+.product-page-liked
+	transition: none
+
+.total-look-price
+  background-color: rgba(255, 255, 255, .75)
+
+.acc-sidebar .acc-menu-link:after
+	bottom: -8px
+
+.gift-banner
+	margin-bottom: 30px
+	.btn:before
+		background-color: #fff
+
+.gift-banner-content
+	flex-grow: 1
+	margin-right: 20px
+	max-width: none
+	.h2
+		max-width: 350px
+	p
+		line-height: 1.167
+		max-width: 364px
+
+.gift-banner-row
+	display: flex
+	align-items: flex-start
+	position: relative
+	z-index: 1
+
+.gift-banner-btns
+	display: flex
+	align-items: center
+	position: relative
+	z-index: 1
+	.btn
+		min-width: 291px
+		flex-shrink: 0
+		margin-right: 34px
+		padding: 0 20px
+	.link
+		font-size: 14px
+		font-weight: bold
+		color: #fff
+
+.gift-banner-price
+	text-align: right
+	.h6
+		font-size: 18px
+		line-height: 1.167
+	p
+		font-size: 12px
+		font-weight: 500
+		line-height: 1.167
+		max-width: 252px
+		span
+			font-weight: bold
+
+.gift-banner-price-val
+	font-weight: 900
+	font-size: 60px
+	line-height: 1.167
+	margin-top: 3px
+	margin-bottom: 10px
+	white-space: nowrap
+
+.gift-banner
+	&.only-bg-color
+		background-color: #D4DDD8
+		color: #434242
+		&:after
+			display: none
+		.gift-banner-btns
+			.link
+				color: #4A5B4C
+
+.product-image-thumb
+	height: 104px
+
+.s-product
+	padding-top: 0 !important
+
+@media (max-width: 991.98px)
+	.acc-sidebar
+		padding: 0 !important
+	.catalog
+		.col-lg-12
+			.col-md-4
+				-webkit-box-flex: 0
+				-webkit-flex: 0 0 33.33333%
+				-ms-flex: 0 0 33.33333%
+				flex: 0 0 33.33333%
+				max-width: 33.33333%
+	.acc-sidebar-user
+		padding: 20px 0 0
+
+@media (max-width: 767.98px)
+	.catalog
+		.col-lg-12
+			.col-md-4
+				-webkit-box-flex: 0
+				-webkit-flex: 0 0 50%
+				-ms-flex: 0 0 50%
+				flex: 0 0 50%
+				max-width: 50%
+	.gift-banner
+		padding: 20px
+		margin-bottom: 20px
+	.gift-banner-row
+		display: block
+	.gift-banner-content
+		margin-right: 0
+	.gift-banner-price
+		text-align: left
+		margin-bottom: 20px
+	.gift-banner-btns
+		display: block
+		text-align: center
+		.btn
+			margin-right: 0
+			width: 100%
+			min-width: 0
+			margin-bottom: 20px
+
+.del-form
+	.checkbox
+		&:last-child
+			margin-bottom: 0
+
+@media (max-width: 680px)
+	.pay-step-row
+		display: block
+		.del-form
+			width: 100% !important
+	.stories-popup-content
+		height: 100%
+
+@media (max-width: 575.98px)
+	.gift-banner-btns .btn
+		min-width: 211px
+		margin-right: 15px
+	.gift-banner-content p
+		margin-bottom: 15px
+	.gift-banner-price-val
+		font-size: 40px
+	.gift-banner-price .h6
+		font-size: 14px
+	.product-page-prices .product-page-liked
+		background-color: var(--accent-color)

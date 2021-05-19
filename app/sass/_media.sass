@@ -112,6 +112,11 @@
 			right: -8px
 		&:after
 			right: -17px
+	.checkout-success-clipboard
+		.btn.btn-lg
+			padding: 0 40px
+		.form-control
+			padding: 0 15px
 
 @media (max-width: 1365.98px)
 	.container
@@ -170,7 +175,7 @@
 		padding: 30px
 		ul
 			font-size: 14px
-			li span:first-child
+			li > span:first-child
 				width: 150px
 	.header-logo
 		width: auto
@@ -984,6 +989,9 @@
 		overflow: hidden
 	.s-recently-viewed
 		overflow: hidden
+	.checkout-success-clipboard
+		max-width: 524px
+		margin: 40px auto
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1383,9 +1391,9 @@
 	.order-steps
 		margin-bottom: 30px
 	.order-wait-payment
-		padding: 15px
 		.h5
 			font-size: 14px
+			padding: 20px 35px 19px
 	.contacts-item
 		margin-bottom: 20px
 	.contacts-item-contact
@@ -1733,7 +1741,7 @@
 			display: none
 	.footer
 		.footer-soc-item
-			padding: 23px 0 !important
+			padding: 13px 0 !important
 			border-bottom-color: rgba(#fff, .1)
 		.footer-soc-arrow
 			font-size: 26px
@@ -2790,6 +2798,32 @@
 		margin-right: 14px
 		&:after
 			left: calc(50% - 35px)
+	.order-wait-payment
+		padding-left: 20px
+		padding-right: 20px
+		.h5
+			margin-right: 0
+	.order-info-btns
+		.btn
+			width: 100%
+	.checkout-success-detail-products-wrapper
+		display: block !important
+	.checkout-success-detail-products
+		margin-top: 15px
+	#invite-friends .popup-content
+		padding: 105px 24px 32px
+	.invite-friends-copy-block
+		margin-bottom: 30px
+		.h3
+			font-size: 18px
+	.promocode-input
+		font-size: 12px
+		height: 44px
+		padding-right: 40px
+	.copy-promocode
+		top: 12px
+		width: 20px
+		height: 20px
 
 @media (max-width: 370px)
 	.mob-menu-block
