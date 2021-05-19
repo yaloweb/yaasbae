@@ -17745,6 +17745,11 @@ textarea.form-control::-webkit-scrollbar-thumb {
   color: #000;
 }
 
+.current-price.weight:after {
+  font-weight: bold;
+  font-family: "Raleway", sans-serif !important;
+}
+
 /*==========  Desktop First  ==========*/
 @media (max-width: 1599.98px) {
   .not-found-img {
