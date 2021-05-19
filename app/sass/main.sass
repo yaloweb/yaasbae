@@ -2991,13 +2991,13 @@ textarea.form-control
 	position: absolute
 	z-index: 1
 	cursor: pointer
-	&.active
-		&:before
-			transform: scale(1)
-		a
-			visibility: visible
-			opacity: 1
-			transform: translateX(0)
+	// &.active
+	// 	&:before
+	// 		transform: scale(1)
+	// 	a
+	// 		visibility: visible
+	// 		opacity: 1
+	// 		transform: translateX(0)
 	&:after
 		content: ''
 		position: absolute
@@ -3142,7 +3142,8 @@ textarea.form-control
 		color: #fff !important
 
 .lookbook-total
-	margin-top: 69px
+	// margin-top: 69px
+	margin-bottom: 45px
 	display: flex
 	justify-content: space-between
 
@@ -6671,6 +6672,105 @@ textarea.form-control
 	margin-bottom: 69px
 	&:last-child
 		margin-bottom: 0
+
+.lookbook-total-delivery
+	a
+		color: #434242 !important
+		font-size: 12px
+		cursor: pointer
+		position: relative
+		display: inline-block
+		line-height: 1.2
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #434242 !important
+			-webkit-transition: all .3s ease
+			-o-transition: all .3s ease
+			transition: all .3s ease
+		&:hover
+			text-decoration: none
+			&:after
+				transform: scaleX(0)
+
+.lookbook-products-list-item
+	border-top: 1px solid #E5E5E5
+	padding-top: 12px
+	// padding-bottom: 28px
+
+.lookbook-products-list-header
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+
+.lookbook-products-list-header-left
+	flex-grow: 1
+
+.lookbook-products-list-header-left-img
+	display: flex
+	align-items: center
+	img
+		width: 40px
+	.h3
+		font-size: 18px
+		line-height: 1.167
+		font-weight: bold
+		margin-left: 15px
+		a
+			text-decoration: none !important
+			+tr
+			color: #434242 !important
+			&:hover
+				opacity: 0.75
+
+.lookbook-products-list-header-right
+	display: flex
+	align-items: center
+	.current-price
+		font-size: 18px
+		margin-right: 0
+	.old-price
+		font-size: 12px
+		color: #BDBDBD
+		white-space: nowrap
+		margin-left: 10px
+		&:before
+			background-color: #BDBDBD
+			transform: rotate(-10deg)
+
+.go-to-link
+	width: 36px
+	height: 36px
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	color: var(--btn-text-color) !important
+	background-color: $accent
+	text-decoration: none !important
+	font-size: 18px
+	font-weight: bold
+	+tr
+	margin-left: 20px
+	&:hover
+		background-color: var(--accent-color-hover)
+
+.lookbook-products-list-body
+	.product-new-descr-item
+		.h3
+			color: #000
+			font-size: 12px
+			font-weight: bold
+			margin-bottom: 7px
+			opacity: 1
+		p
+			margin: 0 0 5px
+			font-size: 12px
+			line-height: 1.5
+			color: #000
 
 @import "media" // Always at the end
 @import "new-menu" // Always at the end
