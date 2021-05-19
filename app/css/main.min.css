@@ -14526,12 +14526,12 @@ textarea.form-control::-webkit-scrollbar-thumb {
   visibility: visible;
 }
 
-.promocode.danger .promocode-insert-input {
+.promocode.danger:not(.can-confirm) .promocode-insert-input {
   border-color: #FF7346;
   color: #FF7346;
 }
 
-.promocode.danger .promocode-delete-icon {
+.promocode.danger:not(.can-confirm) .promocode-delete-icon {
   opacity: 1;
   visibility: visible;
 }
@@ -14746,6 +14746,10 @@ textarea.form-control::-webkit-scrollbar-thumb {
 
 .s-basket {
   padding-bottom: 72px;
+}
+
+.s-basket.s-checkout .basket-sidebar {
+  margin-top: 44px;
 }
 
 .size-selection-popup {
@@ -15230,6 +15234,7 @@ textarea.form-control::-webkit-scrollbar-thumb {
   transition: all .3s ease;
   border: 1px solid #e5e5e5;
   padding: 20px 24px;
+  height: 100%;
 }
 
 .del-item-content .h3 {
@@ -18671,6 +18676,7 @@ textarea.form-control::-webkit-scrollbar-thumb {
     padding: 26px 0 0;
     border-width: 1px 0 0 0;
     border-color: rgba(67, 66, 66, 0.1);
+    margin-top: 0 !important;
   }
   .basket-sidebar-list {
     padding-bottom: 0;

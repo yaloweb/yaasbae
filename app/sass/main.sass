@@ -4757,7 +4757,7 @@ textarea.form-control
 		.promocode-success-icon
 			opacity: 1
 			visibility: visible
-	&.danger
+	&.danger:not(.can-confirm)
 		.promocode-insert-input
 			border-color: #FF7346
 			color: #FF7346
@@ -4864,6 +4864,9 @@ textarea.form-control
 
 .s-basket
 	padding-bottom: 72px
+	&.s-checkout
+		.basket-sidebar
+			margin-top: 44px
 
 .size-selection-popup
 	width: 700px
@@ -5150,6 +5153,7 @@ textarea.form-control
 	+tr
 	border: 1px solid #e5e5e5
 	padding: 20px 24px
+	height: 100%
 	.h3
 		font-size: 18px
 		font-weight: bold
