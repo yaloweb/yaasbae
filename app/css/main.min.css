@@ -17745,9 +17745,18 @@ textarea.form-control::-webkit-scrollbar-thumb {
   color: #000;
 }
 
-.current-price.weight:after {
+.basket-sidebar-list .current-price:after {
+  font-size: 0.65em;
+  position: relative;
+  top: -.05em;
+}
+
+.basket-sidebar-list .current-price.weight:after {
+  content: 'кг' !important;
   font-weight: bold;
   font-family: "Raleway", sans-serif !important;
+  font-size: 0.75em;
+  top: 0;
 }
 
 /*==========  Desktop First  ==========*/

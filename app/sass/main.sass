@@ -6772,12 +6772,20 @@ textarea.form-control
 			line-height: 1.5
 			color: #000
 
-.current-price
-	&.weight
+.basket-sidebar-list
+	.current-price
 		&:after
-			// font-size: inherit !important
-			font-weight: bold
-			font-family: $font !important
+			font-size: 0.65em
+			position: relative
+			top: -.05em
+		&.weight
+			&:after
+				content: 'кг' !important
+				// font-size: inherit !important
+				font-weight: bold
+				font-family: $font !important
+				font-size: 0.75em
+				top: 0
 
 @import "media" // Always at the end
 @import "new-menu" // Always at the end
