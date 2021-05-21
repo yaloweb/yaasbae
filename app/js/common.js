@@ -596,7 +596,7 @@ $(function () {
     $('.product-image-thumb').removeClass('active');
     $(this).addClass('active');
     if ( $(this).hasClass('video-thumb') ) {
-      let currOwlItem = prodImgGallery.find(`.owl-item:eq(${i})`)
+      let currOwlItem = prodImgGallery.find(`.owl-item:eq(${i})`),
           videoFrame = currOwlItem.find('iframe'),
           videoSrc = videoFrame.attr('src').replace('?mute=1&autoplay=1', '');
       videoFrame
@@ -607,7 +607,16 @@ $(function () {
   });
 
   prodImgGallery.on('translate.owl.carousel', function (e) {
-    $('.product-image-thumb').removeClass('active').eq(e.item.index).addClass('active');
+    let i = e.item.index,
+        currOwlItem = prodImgGallery.find(`.owl-item:eq(${i})`),
+        videoFrame = currOwlItem.find('iframe');
+    $('.product-image-thumb').removeClass('active').eq(i).addClass('active');
+    if ( videoFrame.length != 0 ) {
+      let videoSrc = videoFrame.attr('src').replace('?mute=1&autoplay=1', '');
+      videoFrame
+        .attr('src', `${videoSrc}?mute=1&autoplay=1`)
+        .attr('allow', 'autoplay');
+    }
   });
 
   $('.product-video-play').on('click', function () {
@@ -1041,18 +1050,29 @@ $(function () {
     $('.bg-overlay').removeClass('opened');
   });
 
-
   $('.product-new-desrc-btn .btn').on('click', function (e) {
     e.preventDefault();
     let ths = $(this),
-        parent = ths.parents('.product-new-descr');
-    if (!ths.hasClass('opened')) {
-      parent.find('.product-new-descr-hidden').css('max-height', parent.find('.product-new-descr-content').outerHeight() + 'px');
-      ths.addClass('opened')
+        parent = ths.parents('.product-new-descr'),
+        hg = parent.find('.product-new-descr-content').outerHeight();
+    if ( hg > parent.outerHeight() || parent.hasClass('is-opened-first') ) {
+      if (!ths.hasClass('opened')) {
+        parent.find('.product-new-descr-hidden').css('max-height', hg + 'px');
+        ths.addClass('opened');
+        parent.addClass('is-opened-first')
+      }
+      else {
+        parent.find('.product-new-descr-hidden').css('max-height', '');
+        ths.removeClass('opened')
+      }
     }
-    else {
-      parent.find('.product-new-descr-hidden').css('max-height', '');
-      ths.removeClass('opened')
+  });
+
+  $('.product-new-descr').each(function() {
+    let parent = $(this),
+        hg = parent.find('.product-new-descr-content').height();
+    if ( hg < parent.outerHeight()) {
+      parent.addClass('no-height')
     }
   });
 

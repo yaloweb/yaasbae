@@ -6060,6 +6060,15 @@ textarea.form-control
 
 .product-new-descr
 	position: relative
+	&.no-height
+		padding-bottom: 50px
+		.product-new-descr-content
+			padding-bottom: 0
+		.product-new-desrc-btn
+			display: none
+		.product-new-descr-hidden
+			max-height: none
+			overflow: visible
 
 .product-new-descr-hidden
 	overflow: hidden
@@ -6771,6 +6780,14 @@ textarea.form-control
 			font-size: 12px
 			line-height: 1.5
 			color: #000
+	.delivery-info-item
+		display: block
+		margin: 0 !important
+		padding: 0 !important
+		border: none !important
+		*
+			font-size: inherit !important
+
 
 .basket-sidebar-list
 	.current-price
@@ -6786,6 +6803,76 @@ textarea.form-control
 				font-family: $font !important
 				font-size: 0.75em
 				top: 0
+
+.checkout-data-form
+	display: flex
+	margin-top: 44px
+
+.checkout-data-form-left
+	width: 67%
+	margin-right: 60px
+
+.checkout-data-form-right
+	flex-grow: 1
+	margin-top: 29px
+
+.form-big-radio
+	position: relative
+	margin-bottom: 40px
+	label
+		display: inline-block
+		position: relative
+		padding-left: 26px
+		margin: 0
+		input
+			position: absolute
+			visibility: hidden
+			opacity: 0
+			z-index: -1
+			&:checked ~ .big-radio-circles:after
+				transform: scale(1)
+
+.big-radio-circles
+	width: 18px
+	height: 18px
+	border-radius: 50%
+	border: 1px solid #434242
+	position: absolute
+	top: 2px
+	left: 0
+	cursor: pointer
+	&:after
+		content: ''
+		position: absolute
+		top: 2px
+		left: 2px
+		border-radius: 50%
+		background-color: #434242
+		width: 12px
+		height: 12px
+		+tr
+		transform: scale(0)
+
+.big-radio-head
+	display: flex
+	align-items: center
+	height: 22px
+	line-height: 22px
+	white-space: nowrap
+	margin-bottom: 8px
+	img
+		height: 100%
+		width: auto
+		max-width: 70px
+		object-fit: contain
+		object-position: top 50% left 0
+		margin-right: 16px
+	.current-price
+		font-weight: 900
+
+.big-radio-descr
+	max-width: 180px
+	color: #848484
 
 @import "media" // Always at the end
 @import "new-menu" // Always at the end
